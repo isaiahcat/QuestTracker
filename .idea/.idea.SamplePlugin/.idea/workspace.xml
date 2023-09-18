@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d550c852-2829-491f-a095-3a552fec279d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/SamplePlugin.sln" beforeDir="false" afterPath="$PROJECT_DIR$/QuestTracker.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SamplePlugin/Configuration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuestTracker/Configuration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SamplePlugin/Plugin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuestTracker/Plugin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SamplePlugin/SamplePlugin.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/QuestTracker/QuestTracker.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SamplePlugin/SamplePlugin.json" beforeDir="false" afterPath="$PROJECT_DIR$/QuestTracker/QuestTracker.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SamplePlugin/Windows/ConfigWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuestTracker/Windows/ConfigWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SamplePlugin/Windows/MainWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuestTracker/Windows/MainWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SamplePlugin/packages.lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/QuestTracker/packages.lock.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "isaiahcat"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="09e81899-d1a7-4288-994c-61f09af338b9" />
+        <option name="url" value="https://github.com/isaiahcat/Completionist" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="Toolset" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2Va0GFVEpNjJCm4M4hNNWi2KD47" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/Users/isaiahcat/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
+      "/Users/isaiahcat/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache",
+      "/Users/isaiahcat/.local/share/Symbols/src"
+    ]
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d550c852-2829-491f-a095-3a552fec279d" name="Changes" comment="" />
+      <created>1695058786292</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695058786292</updated>
+      <workItem from="1695058791101" duration="676000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
