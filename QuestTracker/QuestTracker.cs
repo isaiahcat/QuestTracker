@@ -1,12 +1,15 @@
-﻿using Dalamud.Game.Command;
+﻿using System;
+using System.IO;
+using Dalamud.Game.Command;
 using Dalamud.Plugin;
 using Dalamud.IoC;
-using System.IO;
-using System.Reflection;
+using Dalamud.Logging;
+using FFXIVClientStructs.FFXIV.Client.Game;
+using Newtonsoft.Json;
 
 namespace QuestTracker
 {
-    public class QuestTracker : IDalamudPlugin
+    public class Plugin : IDalamudPlugin
     {
         public string Name => "Quest Tracker";
 
@@ -14,11 +17,15 @@ namespace QuestTracker
 
         public static DalamudPluginInterface PluginInterface { get; private set; }
         public static CommandManager CommandManager { get; private set; }
+        
+        public static QuestManager QuestManager { get; set; }
 
         private Configuration Configuration { get; init; }
         private QuestTrackerUI UI { get; init; }
+        
+        public readonly QuestData QuestData = null!;
 
-        public QuestTracker(
+        public Plugin(
             [RequiredVersion("1.0")] DalamudPluginInterface pluginInterface,
             [RequiredVersion("1.0")] CommandManager commandManager)
         {
@@ -28,12 +35,27 @@ namespace QuestTracker
             this.Configuration = PluginInterface.GetPluginConfig() as Configuration ?? new Configuration();
             this.Configuration.Initialize(PluginInterface);
             
-            this.UI = new QuestTrackerUI(this.Configuration);
+            this.UI = new QuestTrackerUI(this, this.Configuration);
             
             CommandManager.AddHandler(CommandName, new CommandInfo(OnCommand)
             {
                 HelpMessage = "/qt: Opens the Quest Tracker"
             });
+            
+            try
+            {
+                PluginLog.Debug("Loading Quests");
+
+                var path = Path.Combine(PluginInterface.AssemblyLocation.Directory.Parent.Parent.Parent.FullName, "data.json");
+                var jsonString = File.ReadAllText(path);
+                QuestData = JsonConvert.DeserializeObject<QuestData>(jsonString);
+                UpdateQuestData();
+            }
+            catch (Exception e)
+            {
+                PluginLog.Error("Error loading QuestData from data.jason");
+                PluginLog.Error(e.Message);
+            }
 
             PluginInterface.UiBuilder.Draw += DrawUI;
             PluginInterface.UiBuilder.OpenConfigUi += DrawConfigUI;
@@ -60,6 +82,23 @@ namespace QuestTracker
         private void DrawConfigUI()
         {
             this.UI.SettingsVisible = true;
+        }
+
+        public void UpdateQuestData()
+        {
+            foreach (var category in QuestData.Categories)
+            {
+                foreach (var subcategory in category.Subcategories)
+                {
+                    foreach (var quest in subcategory.Quests)
+                    {
+                        if (QuestManager.IsQuestComplete(quest.Id))
+                        {
+                            subcategory.NumComplete++;
+                        }
+                    }
+                }
+            }
         }
     }
 }

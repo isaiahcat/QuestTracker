@@ -1,6 +1,8 @@
 ﻿using ImGuiNET;
 using System;
 using System.Numerics;
+using FFXIVClientStructs.FFXIV.Application.Network.WorkDefinitions;
+using FFXIVClientStructs.FFXIV.Client.Game;
 
 namespace QuestTracker
 {
@@ -8,6 +10,8 @@ namespace QuestTracker
     // It is good to have this be disposable in general, in case you ever need it to do any cleanup
     class QuestTrackerUI : IDisposable
     {
+        private Plugin Plugin;
+        
         private Configuration configuration;
         
         // this extra bool exists for ImGui, since you can't ref a property
@@ -25,8 +29,9 @@ namespace QuestTracker
             set { this.settingsVisible = value; }
         }
         
-        public QuestTrackerUI(Configuration configuration)
+        public QuestTrackerUI(Plugin plugin, Configuration configuration)
         {
+            this.Plugin = plugin;
             this.configuration = configuration;
         }
 
@@ -56,11 +61,37 @@ namespace QuestTracker
 
             ImGui.SetNextWindowSize(new Vector2(375, 330), ImGuiCond.FirstUseEver);
             ImGui.SetNextWindowSizeConstraints(new Vector2(375, 330), new Vector2(float.MaxValue, float.MaxValue));
-            if (ImGui.Begin("My Amazing Window", ref this.visible, ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse))
+            if (ImGui.Begin("Quest Tracker", ref this.visible, ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse))
             {
-                ImGui.Text($"The random config bool is {this.configuration.SomePropertyToBeSavedAndWithADefault}");
+                foreach (var category in Plugin.QuestData.Categories)
+                {
+                    if (ImGui.CollapsingHeader(category.Title))
+                    {
+                        foreach (var subcategory in category.Subcategories)
+                        {
+                            if (ImGui.CollapsingHeader($"{subcategory.Title} {subcategory.NumComplete}/{subcategory.Quests.Count}"))
+                            {
+                                foreach (var quest in subcategory.Quests)
+                                {
+                                    if (QuestManager.IsQuestComplete(quest.Id))
+                                    {
+                                        ImGui.Text(quest.Title);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
 
-                if (ImGui.Button("Show Settings"))
+                unsafe
+                {
+                    QuestWork* qw = Plugin.QuestManager.GetQuestById(0); 
+                    ImGui.Text($"Sequence {qw->Sequence}");
+                    ImGui.Text($"AcceptClassJob {qw->AcceptClassJob}");
+                    ImGui.Text($"Flags {qw->Flags}");
+                }
+                
+                if (ImGui.Button("Settings"))
                 {
                     SettingsVisible = true;
                 }
