@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="432e5cd2-af61-4d5d-a8ce-928a7b98403f" name="Changes" comment="Add view options">
+    <list default="true" id="432e5cd2-af61-4d5d-a8ce-928a7b98403f" name="Changes" comment="Update json file">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QuestTracker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuestTracker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuestTracker/Configuration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuestTracker/Configuration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuestTracker/QuestData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuestTracker/QuestData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuestTracker/QuestTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuestTracker/QuestTracker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuestTracker/QuestTrackerUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuestTracker/QuestTrackerUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuestTracker/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/QuestTracker/data.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +85,7 @@
       <workItem from="1695059471822" duration="3000" />
       <workItem from="1695143008272" duration="404000" />
       <workItem from="1695145450488" duration="21256000" />
-      <workItem from="1695186935216" duration="6807000" />
+      <workItem from="1695186935216" duration="10462000" />
     </task>
     <task id="LOCAL-00001" summary="Plugin template">
       <option name="closed" value="true" />
@@ -181,7 +183,23 @@
       <option name="project" value="LOCAL" />
       <updated>1695191340246</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add view options">
+      <option name="closed" value="true" />
+      <created>1695194220174</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1695194220174</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Update json file">
+      <option name="closed" value="true" />
+      <created>1695194233659</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1695194233659</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +221,7 @@
     <MESSAGE value="Plugin template" />
     <MESSAGE value="Load data from json" />
     <MESSAGE value="Add view options" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add view options" />
+    <MESSAGE value="Update json file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update json file" />
   </component>
 </project>

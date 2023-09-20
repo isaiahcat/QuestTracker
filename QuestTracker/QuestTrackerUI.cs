@@ -1,6 +1,9 @@
 ﻿using ImGuiNET;
 using System;
 using System.Numerics;
+using Dalamud.Game.ClientState.Objects.SubKinds;
+using Dalamud.Interface;
+using Dalamud.Interface.Components;
 using FFXIVClientStructs.FFXIV.Client.Game;
 
 namespace QuestTracker
@@ -9,9 +12,13 @@ namespace QuestTracker
     // It is good to have this be disposable in general, in case you ever need it to do any cleanup
     class QuestTrackerUI : IDisposable
     {
-        private Plugin Plugin;
+        private Plugin plugin;
         
         private Configuration configuration;
+
+        private QuestData currentCategory;
+        
+        private Vector2 iconButtonSize = new(16);
         
         // this extra bool exists for ImGui, since you can't ref a property
         private bool visible = false;
@@ -30,7 +37,7 @@ namespace QuestTracker
         
         public QuestTrackerUI(Plugin plugin, Configuration configuration)
         {
-            this.Plugin = plugin;
+            this.plugin = plugin;
             this.configuration = configuration;
         }
 
@@ -62,38 +69,86 @@ namespace QuestTracker
             ImGui.SetNextWindowSizeConstraints(new Vector2(375, 330), new Vector2(float.MaxValue, float.MaxValue));
             if (ImGui.Begin("Quest Tracker", ref this.visible))
             {
+                ImGui.BeginGroup();
+                ImGui.Text($"Overall {plugin.QuestData.NumComplete}/{plugin.QuestData.Total}");
+                if (ImGui.BeginChild("category_select", ImGuiHelpers.ScaledVector2(180, 0) - iconButtonSize with { X = 0 }, true)) {
+                    DrawSidePanel();
+                }
+                ImGui.EndChild();
                 if (ImGui.Button("Settings"))
                 {
+                    currentCategory = null;
                     SettingsVisible = true;
                 }
-
-                ImGui.Text($"Overall {Plugin.QuestData.NumComplete}/{Plugin.QuestData.Total}");
+                iconButtonSize = ImGui.GetItemRectSize() + ImGui.GetStyle().ItemSpacing;
+                ImGui.EndGroup();
                 
-                foreach (var category in Plugin.QuestData.Categories)
+                ImGui.SameLine();
+                if (ImGui.BeginChild("category_view", ImGuiHelpers.ScaledVector2(0), true))
                 {
-                    if (ImGui.CollapsingHeader($"{category.Title} {category.NumComplete}/{category.Total}"))
+                    DrawDropdown();
+                }
+                ImGui.EndChild();
+            }
+            ImGui.End();
+        }
+
+        public void DrawDropdown()
+        {
+            foreach (var category in currentCategory.Categories) 
+            {
+                if (ImGui.CollapsingHeader(
+                        $"{category.Title} {category.NumComplete}/{category.Quests.Count}"))
+                {
+                    if (category.Categories.Count > 0)
                     {
-                        foreach (var subcategory in category.Subcategories)
+                        foreach (var subcategory in category.Categories)
                         {
-                            if (ImGui.CollapsingHeader($"{subcategory.Title} {subcategory.NumComplete}/{subcategory.Quests.Count}"))
+                            ImGui.TextDisabled($"{subcategory.Title} {subcategory.NumComplete}/{subcategory.Quests.Count}");
+                            ImGui.Separator();
+                            
+                            foreach (var quest in subcategory.Quests)
                             {
-                                foreach (var quest in subcategory.Quests)
+                                ImGui.Text(quest.Title);
+                                /*if (QuestManager.IsQuestComplete(quest.Id))
                                 {
-                                    if (QuestManager.IsQuestComplete(quest.Id))
-                                    {
-                                        ImGui.Text(quest.Title);
-                                    }
-                                    else
-                                    {
-                                        ImGui.TextDisabled(quest.Title);
-                                    }
+                                    ImGui.Text(quest.Title);
                                 }
+                                else
+                                {
+                                    ImGui.TextDisabled(quest.Title);
+                                }*/
                             }
                         }
                     }
+                    else
+                    {
+                        foreach (var quest in category.Quests)
+                        {
+                            ImGui.Text(quest.Title);
+                            /*if (QuestManager.IsQuestComplete(quest.Id))
+                            {
+                                ImGui.Text(quest.Title);
+                            }
+                            else
+                            {
+                                ImGui.TextDisabled(quest.Title);
+                            }*/
+                        }   
+                    }
                 }
             }
-            ImGui.End();
+        }
+
+        public void DrawSidePanel()
+        {
+            foreach (var category in plugin.QuestData.Categories)
+            {
+                if (ImGui.Selectable($"{category.Title} {category.NumComplete}/{category.Total}"))
+                {
+                    currentCategory = category;   
+                }
+            }
         }
 
         public void DrawSettingsWindow()

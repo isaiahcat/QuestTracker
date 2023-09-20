@@ -44,12 +44,14 @@ namespace QuestTracker
             
             try
             {
-                PluginLog.Debug("Loading Quests");
+                PluginLog.Debug("Loading QuestData from data.json");
 
                 var path = Path.Combine(PluginInterface.AssemblyLocation.Directory.Parent.Parent.Parent.FullName, "data.json");
                 var jsonString = File.ReadAllText(path);
                 QuestData = JsonConvert.DeserializeObject<QuestData>(jsonString);
-                UpdateQuestData();
+                UpdateQuestData(QuestData);
+                
+                PluginLog.Debug("Load successful");
             }
             catch (Exception e)
             {
@@ -84,26 +86,28 @@ namespace QuestTracker
             this.UI.SettingsVisible = true;
         }
 
-        public void UpdateQuestData()
+        public void UpdateQuestData(QuestData questData)
         {
-            foreach (var category in QuestData.Categories)
+            if (questData.Categories.Count > 0)
             {
-                foreach (var subcategory in category.Subcategories)
+                foreach (var category in questData.Categories)
                 {
-                    foreach (var quest in subcategory.Quests)
+                    UpdateQuestData(category);
+                    questData.NumComplete += category.NumComplete;
+                    questData.Total += category.Total;
+                }
+            }
+            else
+            {
+                foreach (var quest in questData.Quests)
+                {
+                    if (QuestManager.IsQuestComplete(quest.Id))
                     {
-                        if (QuestManager.IsQuestComplete(quest.Id))
-                        {
-                            subcategory.NumComplete++;
-                        }
+                        questData.NumComplete++;
                     }
-
-                    category.NumComplete += subcategory.NumComplete;
-                    category.Total += subcategory.Quests.Count;
                 }
 
-                QuestData.NumComplete += category.NumComplete;
-                QuestData.Total += category.Total;
+                questData.Total += questData.Quests.Count;
             }
         }
     }
