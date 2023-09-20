@@ -1,7 +1,6 @@
 ﻿using ImGuiNET;
 using System;
 using System.Numerics;
-using FFXIVClientStructs.FFXIV.Application.Network.WorkDefinitions;
 using FFXIVClientStructs.FFXIV.Client.Game;
 
 namespace QuestTracker
@@ -58,14 +57,21 @@ namespace QuestTracker
             {
                 return;
             }
-
+            
             ImGui.SetNextWindowSize(new Vector2(375, 330), ImGuiCond.FirstUseEver);
             ImGui.SetNextWindowSizeConstraints(new Vector2(375, 330), new Vector2(float.MaxValue, float.MaxValue));
-            if (ImGui.Begin("Quest Tracker", ref this.visible, ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse))
+            if (ImGui.Begin("Quest Tracker", ref this.visible))
             {
+                if (ImGui.Button("Settings"))
+                {
+                    SettingsVisible = true;
+                }
+
+                ImGui.Text($"Overall {Plugin.QuestData.NumComplete}/{Plugin.QuestData.Total}");
+                
                 foreach (var category in Plugin.QuestData.Categories)
                 {
-                    if (ImGui.CollapsingHeader(category.Title))
+                    if (ImGui.CollapsingHeader($"{category.Title} {category.NumComplete}/{category.Total}"))
                     {
                         foreach (var subcategory in category.Subcategories)
                         {
@@ -77,23 +83,14 @@ namespace QuestTracker
                                     {
                                         ImGui.Text(quest.Title);
                                     }
+                                    else
+                                    {
+                                        ImGui.TextDisabled(quest.Title);
+                                    }
                                 }
                             }
                         }
                     }
-                }
-
-                unsafe
-                {
-                    QuestWork* qw = Plugin.QuestManager.GetQuestById(0); 
-                    ImGui.Text($"Sequence {qw->Sequence}");
-                    ImGui.Text($"AcceptClassJob {qw->AcceptClassJob}");
-                    ImGui.Text($"Flags {qw->Flags}");
-                }
-                
-                if (ImGui.Button("Settings"))
-                {
-                    SettingsVisible = true;
                 }
             }
             ImGui.End();
@@ -106,15 +103,39 @@ namespace QuestTracker
                 return;
             }
 
-            ImGui.SetNextWindowSize(new Vector2(232, 75), ImGuiCond.Always);
-            if (ImGui.Begin("A Wonderful Configuration Window", ref this.settingsVisible,
+            ImGui.SetNextWindowSize(new Vector2(232, 170), ImGuiCond.Always);
+            if (ImGui.Begin("Settings", ref this.settingsVisible,
                 ImGuiWindowFlags.NoResize | ImGuiWindowFlags.NoCollapse | ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse))
             {
                 // can't ref a property, so use a local copy
-                var configValue = this.configuration.SomePropertyToBeSavedAndWithADefault;
-                if (ImGui.Checkbox("Random Config Bool", ref configValue))
+                var showComplete = this.configuration.ShowComplete;
+                if (ImGui.Checkbox("Show complete", ref showComplete))
                 {
-                    this.configuration.SomePropertyToBeSavedAndWithADefault = configValue;
+                    this.configuration.ShowComplete = showComplete;
+                    // can save immediately on change, if you don't want to provide a "Save and Close" button
+                    this.configuration.Save();
+                }
+                // can't ref a property, so use a local copy
+                var showIncomplete = this.configuration.ShowIncomplete;
+                if (ImGui.Checkbox("Show incomplete", ref showIncomplete))
+                {
+                    this.configuration.ShowIncomplete = showIncomplete;
+                    // can save immediately on change, if you don't want to provide a "Save and Close" button
+                    this.configuration.Save();
+                }
+                // can't ref a property, so use a local copy
+                var showFraction = this.configuration.ShowFraction;
+                if (ImGui.Checkbox("Show fraction", ref showFraction))
+                {
+                    this.configuration.ShowFraction = showFraction;
+                    // can save immediately on change, if you don't want to provide a "Save and Close" button
+                    this.configuration.Save();
+                }
+                // can't ref a property, so use a local copy
+                var showPercentage = this.configuration.ShowPercentage;
+                if (ImGui.Checkbox("Show percentage", ref showPercentage))
+                {
+                    this.configuration.ShowPercentage = showPercentage;
                     // can save immediately on change, if you don't want to provide a "Save and Close" button
                     this.configuration.Save();
                 }

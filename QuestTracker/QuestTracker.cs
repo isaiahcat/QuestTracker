@@ -97,7 +97,13 @@ namespace QuestTracker
                             subcategory.NumComplete++;
                         }
                     }
+
+                    category.NumComplete += subcategory.NumComplete;
+                    category.Total += subcategory.Quests.Count;
                 }
+
+                QuestData.NumComplete += category.NumComplete;
+                QuestData.Total += category.Total;
             }
         }
     }
