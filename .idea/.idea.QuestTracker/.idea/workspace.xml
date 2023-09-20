@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="432e5cd2-af61-4d5d-a8ce-928a7b98403f" name="Changes" comment="Update json file">
+    <list default="true" id="432e5cd2-af61-4d5d-a8ce-928a7b98403f" name="Changes" comment="Create side panel">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QuestTracker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuestTracker/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuestTracker/QuestData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuestTracker/QuestData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuestTracker/QuestTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuestTracker/QuestTracker.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuestTracker/QuestTrackerUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuestTracker/QuestTrackerUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuestTracker/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/QuestTracker/data.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +35,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/43417dbaf53c4cdc1e2df97d8aacdf3b2c95cf2faeb2c766fe4566e32f6d3/Quest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5592999f53ac9286de53ab087431213625d852b4c18753023507cfada407e8b/Path.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/58fc9ba93189d5743c75e10a885a1ec1f5cf98320de9e957137c9a5bbaa48b9/FileSystemInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/isaiahcat/Projects/Rider/QuestTracker/QuestTracker/QuestData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/isaiahcat/Projects/Rider/QuestTracker/QuestTracker/QuestData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/isaiahcat/Projects/Rider/QuestTracker/QuestTracker/QuestTracker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/isaiahcat/Projects/Rider/QuestTracker/QuestTracker/QuestTrackerUI.cs" root0="SKIP_HIGHLIGHTING" />
@@ -85,7 +84,7 @@
       <workItem from="1695059471822" duration="3000" />
       <workItem from="1695143008272" duration="404000" />
       <workItem from="1695145450488" duration="21256000" />
-      <workItem from="1695186935216" duration="10462000" />
+      <workItem from="1695186935216" duration="12572000" />
     </task>
     <task id="LOCAL-00001" summary="Plugin template">
       <option name="closed" value="true" />
@@ -199,7 +198,23 @@
       <option name="project" value="LOCAL" />
       <updated>1695194233659</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Update json file">
+      <option name="closed" value="true" />
+      <created>1695238669113</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1695238669114</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Create side panel">
+      <option name="closed" value="true" />
+      <created>1695238687771</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1695238687771</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +237,7 @@
     <MESSAGE value="Load data from json" />
     <MESSAGE value="Add view options" />
     <MESSAGE value="Update json file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update json file" />
+    <MESSAGE value="Create side panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create side panel" />
   </component>
 </project>

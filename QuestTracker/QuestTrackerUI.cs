@@ -1,5 +1,6 @@
 ﻿using ImGuiNET;
 using System;
+using System.Collections.Generic;
 using System.Numerics;
 using Dalamud.Game.ClientState.Objects.SubKinds;
 using Dalamud.Interface;
@@ -104,40 +105,47 @@ namespace QuestTracker
                     {
                         foreach (var subcategory in category.Categories)
                         {
-                            ImGui.TextDisabled($"{subcategory.Title} {subcategory.NumComplete}/{subcategory.Quests.Count}");
+                            ImGui.TextDisabled($"{subcategory.Title}");
                             ImGui.Separator();
-                            
-                            foreach (var quest in subcategory.Quests)
-                            {
-                                ImGui.Text(quest.Title);
-                                /*if (QuestManager.IsQuestComplete(quest.Id))
-                                {
-                                    ImGui.Text(quest.Title);
-                                }
-                                else
-                                {
-                                    ImGui.TextDisabled(quest.Title);
-                                }*/
-                            }
+                            DrawQuestTable(subcategory.Quests);
                         }
                     }
                     else
                     {
-                        foreach (var quest in category.Quests)
-                        {
-                            ImGui.Text(quest.Title);
-                            /*if (QuestManager.IsQuestComplete(quest.Id))
-                            {
-                                ImGui.Text(quest.Title);
-                            }
-                            else
-                            {
-                                ImGui.TextDisabled(quest.Title);
-                            }*/
-                        }   
+                        DrawQuestTable(category.Quests);
                     }
                 }
             }
+        }
+
+        public void DrawQuestTable(List<Quest> quests)
+        {
+            if (ImGui.BeginTable("quest_table", 4))
+            {
+                ImGui.TableSetupColumn("##icon", ImGuiTableColumnFlags.None, 0.10f);
+                ImGui.TableSetupColumn("Title");
+                ImGui.TableSetupColumn("Area", ImGuiTableColumnFlags.None, 0.80f);
+                ImGui.TableSetupColumn("Level", ImGuiTableColumnFlags.None, 0.30f);
+                ImGui.TableHeadersRow();
+                foreach (var quest in quests)
+                {
+                    ImGui.TableNextColumn();
+                    if (QuestManager.IsQuestComplete(quest.Id))
+                    {
+                        ImGui.PushFont(UiBuilder.IconFont);
+                        ImGui.TextUnformatted(FontAwesomeIcon.Check.ToIconString());
+                        ImGui.PopFont();
+                    }
+                    ImGui.TableNextColumn();
+                    ImGui.Text(quest.Title);
+                    ImGui.TableNextColumn();
+                    ImGui.Text(quest.Area);
+                    ImGui.TableNextColumn();
+                    ImGui.Text($"{quest.Level}");
+                    ImGui.TableNextRow();
+                }
+            }
+            ImGui.EndTable();
         }
 
         public void DrawSidePanel()

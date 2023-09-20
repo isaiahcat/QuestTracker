@@ -17,4 +17,6 @@ public class Quest
 {
     public string Title { get; set; }
     public uint Id { get; set; }
+    public string Area { get; set; } = "";
+    public int Level { get; set; } = 0;
 }
