@@ -72,7 +72,7 @@ namespace QuestTracker
             {
                 ImGui.BeginGroup();
                 ImGui.Text($"Overall {plugin.QuestData.NumComplete}/{plugin.QuestData.Total}");
-                if (ImGui.BeginChild("category_select", ImGuiHelpers.ScaledVector2(180, 0) - iconButtonSize with { X = 0 }, true)) {
+                if (ImGui.BeginChild("category_select", ImGuiHelpers.ScaledVector2(200, 0) - iconButtonSize with { X = 0 }, true)) {
                     DrawSidePanel();
                 }
                 ImGui.EndChild();
@@ -99,7 +99,7 @@ namespace QuestTracker
             foreach (var category in currentCategory.Categories) 
             {
                 if (ImGui.CollapsingHeader(
-                        $"{category.Title} {category.NumComplete}/{category.Quests.Count}"))
+                        $"{category.Title} {category.NumComplete}/{category.Total}"))
                 {
                     if (category.Categories.Count > 0)
                     {
@@ -124,8 +124,8 @@ namespace QuestTracker
             {
                 ImGui.TableSetupColumn("##icon", ImGuiTableColumnFlags.None, 0.10f);
                 ImGui.TableSetupColumn("Title");
-                ImGui.TableSetupColumn("Area", ImGuiTableColumnFlags.None, 0.80f);
-                ImGui.TableSetupColumn("Level", ImGuiTableColumnFlags.None, 0.30f);
+                ImGui.TableSetupColumn("Area", ImGuiTableColumnFlags.None, 0.90f);
+                ImGui.TableSetupColumn("Level", ImGuiTableColumnFlags.None, 0.20f);
                 ImGui.TableHeadersRow();
                 foreach (var quest in quests)
                 {
@@ -136,12 +136,25 @@ namespace QuestTracker
                         ImGui.TextUnformatted(FontAwesomeIcon.Check.ToIconString());
                         ImGui.PopFont();
                     }
-                    ImGui.TableNextColumn();
-                    ImGui.Text(quest.Title);
-                    ImGui.TableNextColumn();
-                    ImGui.Text(quest.Area);
-                    ImGui.TableNextColumn();
-                    ImGui.Text($"{quest.Level}");
+                    
+                    if (quest.Id != 0)
+                    {
+                        ImGui.TableNextColumn();
+                        ImGui.Text(quest.Title);
+                        ImGui.TableNextColumn();
+                        ImGui.Text(quest.Area);
+                        ImGui.TableNextColumn();
+                        ImGui.Text($"{quest.Level}");   
+                    }
+                    else
+                    {
+                        ImGui.TableNextColumn();
+                        ImGui.TextDisabled(quest.Title);
+                        ImGui.TableNextColumn();
+                        ImGui.TextDisabled(quest.Area);
+                        ImGui.TableNextColumn();
+                        ImGui.TextDisabled($"{quest.Level}");      
+                    }
                     ImGui.TableNextRow();
                 }
             }
