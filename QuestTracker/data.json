@@ -1,8 +1,8 @@
 {
     "Categories": [
         {
-            "Title": "Main Scenario Quests (A Realm Reborn through Shadowbringers)",
-            "Subcategories": [
+            "Title": "Main Scenario",
+            "Categories": [
                 {
                     "Title": "Seventh Umbral Era Main Scenario Quests",
                     "Quests": [
@@ -333,12 +333,264 @@
                             "Id": 65964
                         }
                     ]
+                },
+                {
+                    "Title": "Heavensward Main Scenario Quests",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Dragonsong Main Scenario Quests",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Post-Dragonsong Main Scenario Quests",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Stormblood Main Scenario Quests",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Post-Stormblood Main Scenario Quests",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Shadowbringers Main Scenario Quests",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Post-Shadowbringers Main Scenario Quests",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Post-Shadowbringers Main Scenario Quests II",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Endwalker Main Scenario Quests",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Post-Endwalker Main Scenario Quests",
+                    "Quests": [
+
+                    ]
                 }
             ]
         },
         {
-            "Title": "Main Scenario Quests (Endwalker)",
-            "Subcategories": []
+            "Title": "Chronicles of a New Era",
+            "Categories": [
+                {
+                    "Title": "Chronicles of a New Era - Primals",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Chronicles of a New Era - Bahamut",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Chronicles of a New Era - The Crystal Tower",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Chronicles of a New Era - Alexander",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Chronicles of a New Era - The Warring Triad",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Chronicles of a New Era - The Shadow of Mhach",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Chronicles of a New Era - Omega",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Chronicles of a New Era - Return to Ivalice",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Chronicles of a New Era - The Four Lords",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Chronicles of a New Era - Eden",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "YoRHa: Dark Apocalypse",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Chronicles of a New Era - The Sorrow of Werlyt",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Chronicles of a New Era - Pandæmonium",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Chronicles of a New Era - Myths of the Realm",
+                    "Quests": [
+
+                    ]
+                }
+            ]
+        },
+        {
+            "Title": "Sidequests",
+            "Categories": [
+                {
+                    "Title": "Chronicles of Light",
+                    "Quests": [
+
+                    ]
+                }
+            ]
+        },
+        {
+            "Title": "Tribal Quests",
+            "Categories": []
+        },
+        {
+            "Title": "Class & Job Quests",
+            "Categories": []
+        },
+        {
+            "Title": "Other Quests",
+            "Categories": [
+                {
+                    "Title": "Grand Company Quests",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Seasonal Events",
+                    "Quests": [
+
+                    ]
+                },
+                {
+                    "Title": "Special Quests",
+                    "Categories": [
+                        {
+                            "Title": "Special Quests",
+                            "Quests": [
+                                {
+                                    "Title": "The Ties That Bind",
+                                    "Id": 67114
+                                }
+                            ]
+                        },
+                        {
+                            "Title": "Collaboration Quests",
+                            "Quests": [
+                                {
+                                    "Title": "For the Winsome",
+                                    "Id": 66689
+                                },
+                                {
+                                    "Title": "Seeking the Scoop",
+                                    "Id": 66690
+                                },
+                                {
+                                    "Title": "The Knight's Passage",
+                                    "Id": 66691
+                                },
+                                {
+                                    "Title": "Wonder and Lightning",
+                                    "Id": 66692
+                                },
+                                {
+                                    "Title": "Burgeoning Dread",
+                                    "Id": 66823
+                                },
+                                {
+                                    "Title": "Breaking Brick Mountains",
+                                    "Id": 66824
+                                },
+                                {
+                                    "Title": "A Journey to Remember",
+                                    "Id": 67742
+                                },
+                                {
+                                    "Title": "A Complete Game Changer",
+                                    "Id": 67677
+                                },
+                                {
+                                    "Title": "The New King on the Block",
+                                    "Id": 0
+                                },
+                                {
+                                    "Title": "The Newer King on the Block",
+                                    "Id": 0
+                                },
+                                {
+                                    "Title": "The Man in Black",
+                                    "Id": 0
+                                },
+                                {
+                                    "Title": "In the Dark of Night",
+                                    "Id": 0
+                                },
+                                {
+                                    "Title": "Messenger of the Winds",
+                                    "Id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
