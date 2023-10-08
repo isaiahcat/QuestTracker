@@ -8,446 +8,485 @@
                     "Quests": [
                         {
                             "Title": "Close to Home",
-                            "Id": 65621,
+                            "Id": 66104,
                             "Area": "Gridania",
+                            "Start": "Gridania",
                             "Level": 1
                         },
                         {
                             "Title": "Close to Home",
-                            "Id": 65621,
-                            "Area": "Gridania",
-                            "Level": 1
-                        },
-                        {
-                            "Title": "Close to Home",
-                            "Id": 65621,
-                            "Area": "Gridania",
-                            "Level": 1
-                        },
-                        {
-                            "Title": "Close to Home",
-                            "Id": 65621,
+                            "Id": 66105,
                             "Area": "Limsa Lominsa",
+                            "Start": "Limsa Lominsa",
                             "Level": 1
                         },
                         {
                             "Title": "Close to Home",
-                            "Id": 65621,
-                            "Area": "Limsa Lominsa",
-                            "Level": 1
-                        },
-                        {
-                            "Title": "Close to Home",
-                            "Id": 65621,
+                            "Id": 66106,
                             "Area": "Ul'dah",
-                            "Level": 1
-                        },
-                        {
-                            "Title": "Close to Home",
-                            "Id": 65621,
-                            "Area": "Ul'dah",
-                            "Level": 1
-                        },
-                        {
-                            "Title": "Close to Home",
-                            "Id": 65621,
-                            "Area": "Ul'dah",
+                            "Start": "Ul'dah",
                             "Level": 1
                         },
                         {
                             "Title": "To the Bannock",
                             "Id": 65564,
                             "Area": "Gridania",
+                            "Start": "Gridania",
                             "Level": 4
                         },
                         {
                             "Title": "On to Summerford",
                             "Id": 65998,
                             "Area": "Limsa Lominsa",
+                            "Start": "Limsa Lominsa",
                             "Level": 4
                         },
                         {
                             "Title": "We Must Rebuild",
                             "Id": 66131,
                             "Area": "Ul'dah",
+                            "Start": "Ul'dah",
                             "Level": 4
                         },
                         {
                             "Title": "Passing Muster",
                             "Id": 65737,
                             "Area": "Central Shroud",
+                            "Start": "Gridania",
                             "Level": 5
                         },
                         {
                             "Title": "Chasing Shadows",
                             "Id": 65981,
                             "Area": "Central Shroud",
+                            "Start": "Gridania",
                             "Level": 5
                         },
                         {
                             "Title": "Dressed to Call",
                             "Id": 65999,
                             "Area": "Middle La Noscea",
+                            "Start": "Limsa Lominsa",
                             "Level": 5
                         },
                         {
                             "Title": "Lurkers in the Grotto",
                             "Id": 66079,
                             "Area": "Middle La Noscea",
+                            "Start": "Limsa Lominsa",
                             "Level": 5
                         },
                         {
                             "Title": "Nothing to See Here",
                             "Id": 66207,
                             "Area": "Central Thanalan",
+                            "Start": "Ul'dah",
                             "Level": 5
                         },
                         {
                             "Title": "Underneath the Sultantree",
                             "Id": 66086,
                             "Area": "Central Thanalan",
+                            "Start": "Ul'dah",
                             "Level": 5
                         },
                         {
                             "Title": "Washed Up",
                             "Id": 66001,
                             "Area": "Middle La Noscea",
+                            "Start": "Limsa Lominsa",
                             "Level": 7
                         },
                         {
                             "Title": "Step Nine",
                             "Id": 65839,
                             "Area": "Central Thanalan",
+                            "Start": "Ul'dah",
                             "Level": 6
                         },
                         {
                             "Title": "Eggs over Queasy",
                             "Id": 65664,
                             "Area": "Central Shroud",
+                            "Start": "Gridania",
                             "Level": 7
                         },
                         {
                             "Title": "Double Dealing",
                             "Id": 66002,
                             "Area": "Middle La Noscea",
+                            "Start": "Limsa Lominsa",
                             "Level": 8
                         },
                         {
                             "Title": "Surveying the Damage",
                             "Id": 65711,
                             "Area": "Central Shroud",
+                            "Start": "Gridania",
                             "Level": 8
                         },
                         {
                             "Title": "Prudence at This Junction",
                             "Id": 65842,
                             "Area": "Central Thanalan",
+                            "Start": "Ul'dah",
                             "Level": 8
                         },
                         {
                             "Title": "A Soldier's Breakfast",
                             "Id": 65661,
                             "Area": "Central Shroud",
+                            "Start": "Gridania",
                             "Level": 9
                         },
                         {
                             "Title": "Spirithold Broken",
                             "Id": 65665,
                             "Area": "Central Shroud",
+                            "Start": "Gridania",
                             "Level": 9
                         },
                         {
                             "Title": "Loam Maintenance",
                             "Id": 66003,
                             "Area": "Middle La Noscea",
+                            "Start": "Limsa Lominsa",
                             "Level": 9
                         },
                         {
                             "Title": "Plowshares to Swords",
                             "Id": 66004,
                             "Area": "Middle La Noscea",
+                            "Start": "Limsa Lominsa",
                             "Level": 9
                         },
                         {
                             "Title": "Just Deserts",
                             "Id": 66005,
                             "Area": "Middle La Noscea",
+                            "Start": "Limsa Lominsa",
                             "Level": 9
                         },
                         {
                             "Title": "Out of House and Home",
                             "Id": 65843,
                             "Area": "Central Thanalan",
+                            "Start": "Ul'dah",
                             "Level": 9
                         },
                         {
                             "Title": "Way Down in the Hole",
                             "Id": 65856,
                             "Area": "Central Thanalan",
+                            "Start": "Ul'dah",
                             "Level": 9
                         },
                         {
                             "Title": "On to Bentbranch",
                             "Id": 65712,
                             "Area": "Gridania",
+                            "Start": "Gridania",
                             "Level": 10
                         },
                         {
                             "Title": "You Shall Not Trespass",
                             "Id": 65912,
                             "Area": "Central Shroud",
+                            "Start": "Gridania",
                             "Level": 10
                         },
                         {
                             "Title": "Sky-high",
                             "Id": 65933,
                             "Area": "Limsa Lominsa",
+                            "Start": "Limsa Lominsa",
                             "Level": 10
                         },
                         {
                             "Title": "Takin' What They're Givin'",
                             "Id": 66159,
                             "Area": "Ul'dah",
+                            "Start": "Ul'dah",
                             "Level": 10
                         },
                         {
                             "Title": "Supply and Demands",
                             "Id": 65864,
                             "Area": "Western Thanalan",
+                            "Start": "Ul'dah",
                             "Level": 10
                         },
                         {
                             "Title": "Give It to Me Raw",
                             "Id": 66039,
                             "Area": "Western Thanalan",
+                            "Start": "Ul'dah",
                             "Level": 10
                         },
                         {
                             "Title": "Don't Look Down",
                             "Id": 65913,
                             "Area": "Central Shroud",
+                            "Start": "Gridania",
                             "Level": 11
                         },
                         {
                             "Title": "In the Grim Darkness of the Forest",
                             "Id": 65915,
                             "Area": "Central Shroud",
+                            "Start": "Gridania",
                             "Level": 11
                         },
                         {
                             "Title": "Threat Level Elevated",
                             "Id": 65916,
                             "Area": "Central Shroud",
+                            "Start": "Gridania",
                             "Level": 11
                         },
                         {
                             "Title": "Thanks a Million",
                             "Id": 65938,
                             "Area": "Middle La Noscea",
+                            "Start": "Limsa Lominsa",
                             "Level": 11
                         },
                         {
                             "Title": "Relighting the Torch",
                             "Id": 65939,
                             "Area": "Western La Noscea",
+                            "Start": "Limsa Lominsa",
                             "Level": 11
                         },
                         {
                             "Title": "On to the Drydocks",
                             "Id": 65942,
                             "Area": "Limsa Lominsa",
+                            "Start": "Limsa Lominsa",
                             "Level": 11
                         },
                         {
                             "Title": "The Perfect Swarm",
                             "Id": 65865,
                             "Area": "Western Thanalan",
+                            "Start": "Ul'dah",
                             "Level": 11
                         },
                         {
                             "Title": "Last Letter to Lost Hope",
                             "Id": 65866,
                             "Area": "Western Thanalan",
+                            "Start": "Ul'dah",
                             "Level": 11
                         },
                         {
                             "Title": "Migrant Marauders",
                             "Id": 65917,
                             "Area": "Central Shroud",
+                            "Start": "Gridania",
                             "Level": 12
                         },
                         {
                             "Title": "Without a Doubt",
                             "Id": 65948,
                             "Area": "Lower La Noscea",
+                            "Start": "Limsa Lominsa",
                             "Level": 12
                         },
                         {
                             "Title": "Righting the Shipwright",
                             "Id": 65951,
                             "Area": "Lower La Noscea",
+                            "Start": "Limsa Lominsa",
                             "Level": 12
                         },
                         {
                             "Title": "Heir Today, Gone Tomorrow",
                             "Id": 65867,
                             "Area": "Central Thanalan",
+                            "Start": "Ul'dah",
                             "Level": 12
                         },
                         {
                             "Title": "Passing the Blade",
                             "Id": 65868,
                             "Area": "Central Thanalan",
+                            "Start": "Ul'dah",
                             "Level": 12
                         },
                         {
                             "Title": "A Hearer Is Often Late",
                             "Id": 65920,
                             "Area": "Central Shroud",
+                            "Start": "Gridania",
                             "Level": 13
                         },
                         {
                             "Title": "Salvaging the Scene",
                             "Id": 65923,
                             "Area": "Central Shroud",
+                            "Start": "Gridania",
                             "Level": 13
                         },
                         {
                             "Title": "Do Angry Pirates Dream",
                             "Id": 65949,
                             "Area": "Lower La Noscea",
+                            "Start": "Limsa Lominsa",
                             "Level": 13
                         },
                         {
                             "Title": "Following Footfalls",
                             "Id": 65869,
                             "Area": "Western Thanalan",
+                            "Start": "Ul'dah",
                             "Level": 13
                         },
                         {
                             "Title": "Storms on the Horizon",
                             "Id": 65870,
                             "Area": "Western Thanalan",
+                            "Start": "Ul'dah",
                             "Level": 13
                         },
                         {
                             "Title": "Leia's Legacy",
                             "Id": 65697,
                             "Area": "Central Shroud",
+                            "Start": "Gridania",
                             "Level": 14
                         },
                         {
                             "Title": "Dread Is in the Air",
                             "Id": 65982,
                             "Area": "Central Shroud",
+                            "Start": "Gridania",
                             "Level": 14
                         },
                         {
                             "Title": "To Guard a Guardian",
                             "Id": 65983,
                             "Area": "Gridania",
+                            "Start": "Gridania",
                             "Level": 14
                         },
                         {
                             "Title": "Festive Endeavors",
                             "Id": 65984,
                             "Area": "Gridania",
+                            "Start": "Gridania",
                             "Level": 14
                         },
                         {
                             "Title": "Renewing the Covenant",
                             "Id": 65985,
                             "Area": "Gridania",
+                            "Start": "Gridania",
                             "Level": 14
                         },
                         {
                             "Title": "Victory in Peril",
                             "Id": 65950,
                             "Area": "Lower La Noscea",
+                            "Start": "Limsa Lominsa",
                             "Level": 14
                         },
                         {
                             "Title": "Men of the Blue Tattoos",
                             "Id": 66225,
                             "Area": "Lower La Noscea",
+                            "Start": "Limsa Lominsa",
                             "Level": 14
                         },
                         {
                             "Title": "Feint and Strike",
                             "Id": 66080,
                             "Area": "Limsa Lominsa",
+                            "Start": "Limsa Lominsa",
                             "Level": 14
                         },
                         {
                             "Title": "High Society",
                             "Id": 66226,
                             "Area": "Limsa Lominsa",
+                            "Start": "Limsa Lominsa",
                             "Level": 14
                         },
                         {
                             "Title": "A Mizzenmast Repast",
                             "Id": 66081,
                             "Area": "Limsa Lominsa",
+                            "Start": "Limsa Lominsa",
                             "Level": 14
                         },
                         {
                             "Title": "Oh Captain, My Captain",
                             "Id": 65872,
                             "Area": "Western Thanalan",
+                            "Start": "Ul'dah",
                             "Level": 14
                         },
                         {
                             "Title": "Secrets and Lies",
                             "Id": 66164,
                             "Area": "Western Thanalan",
+                            "Start": "Ul'dah",
                             "Level": 14
                         },
                         {
                             "Title": "Duty, Honor, Country",
                             "Id": 66087,
                             "Area": "Ul'dah",
+                            "Start": "Ul'dah",
                             "Level": 14
                         },
                         {
                             "Title": "A Matter of Tradition",
                             "Id": 66177,
                             "Area": "Ul'dah",
+                            "Start": "Ul'dah",
                             "Level": 14
                         },
                         {
                             "Title": "A Royal Reception",
                             "Id": 66088,
                             "Area": "Ul'dah",
+                            "Start": "Ul'dah",
                             "Level": 14
                         },
                         {
                             "Title": "The Gridanian Envoy",
                             "Id": 66043,
                             "Area": "Gridania",
+                            "Start": "Gridania",
                             "Level": 15
                         },
                         {
                             "Title": "The Lominsan Envoy",
                             "Id": 66082,
                             "Area": "Limsa Lominsa",
+                            "Start": "Limsa Lominsa",
                             "Level": 15
                         },
                         {
                             "Title": "The Ul'dahn Envoy",
                             "Id": 66064,
                             "Area": "Ul'dah",
+                            "Start": "Ul'dah",
                             "Level": 15
                         },
                         {
                             "Title": "Call of the Sea",
-                            "Id": 66209,
+                            "Id": 66210,
                             "Area": "Gridania",
+                            "Start": "Gridania",
                             "Level": 15
                         },
                         {
                             "Title": "Call of the Sea",
                             "Id": 66209,
                             "Area": "Ul'dah",
+                            "Start": "Ul'dah",
                             "Level": 15
                         },
                         {
@@ -550,36 +589,42 @@
                             "Title": "The Company You Keep (Twin Adder)",
                             "Id": 66216,
                             "Area": "The Waking Sands",
+                            "Gc": "Twin Adder",
                             "Level": 20
                         },
                         {
                             "Title": "The Company You Keep (Maelstrom)",
                             "Id": 66217,
                             "Area": "The Waking Sands",
+                            "Gc": "Maelstrom",
                             "Level": 20
                         },
                         {
                             "Title": "The Company You Keep (Immortal Flames)",
                             "Id": 66218,
                             "Area": "The Waking Sands",
+                            "Gc": "Immortal Flames",
                             "Level": 20
                         },
                         {
                             "Title": "Wood's Will Be Done",
                             "Id": 66219,
                             "Area": "Gridania",
+                            "Gc": "Twin Adder",
                             "Level": 20
                         },
                         {
                             "Title": "Till Sea Swallows All",
                             "Id": 66220,
                             "Area": "Limsa Lominsa",
+                            "Gc": "Maelstrom",
                             "Level": 20
                         },
                         {
                             "Title": "For Coin and Country",
                             "Id": 66221,
                             "Area": "Ul'dah",
+                            "Gc": "Immortal Flames",
                             "Level": 20
                         },
                         {
@@ -1299,7 +1344,7 @@
                     ]
                 },
                 {
-                    "Title":"Seventh Astral Era Main Scenario Quests",
+                    "Title": "Seventh Astral Era Main Scenario Quests",
                     "Quests": [
                         {
                             "Title": "The Price of Principles",
@@ -5222,651 +5267,225 @@
                     "Title": "Post-Endwalker Main Scenario Quests",
                     "Quests": [
                         {
-                            "Title": "The Next Ship to Sail",
-                            "Id": 69893,
+                            "Title": "Newfound Adventure",
+                            "Id": 70062,
                             "Area": "The Rising Stones",
-                            "Level": 80
-                        },
-                        {
-                            "Title": "Old Sharlayan, New to You",
-                            "Id": 69894,
-                            "Area": "Old Sharlayan",
-                            "Level": 80
-                        },
-                        {
-                            "Title": "Hitting the Books",
-                            "Id": 69895,
-                            "Area": "Old Sharlayan",
-                            "Level": 80
-                        },
-                        {
-                            "Title": "A Seat at the Last Stand",
-                            "Id": 69896,
-                            "Area": "Old Sharlayan",
-                            "Level": 80
-                        },
-                        {
-                            "Title": "A Labyrinthine Descent",
-                            "Id": 69897,
-                            "Area": "Old Sharlayan",
-                            "Level": 80
-                        },
-                        {
-                            "Title": "Glorified Ratcatcher",
-                            "Id": 69898,
-                            "Area": "Labyrinthos",
-                            "Level": 80
-                        },
-                        {
-                            "Title": "Deeper into the Maze",
-                            "Id": 69899,
-                            "Area": "Labyrinthos",
-                            "Level": 80
-                        },
-                        {
-                            "Title": "The Medial Circuit",
-                            "Id": 69900,
-                            "Area": "Labyrinthos",
-                            "Level": 80
-                        },
-                        {
-                            "Title": "The Full Report, Warts and All",
-                            "Id": 69901,
-                            "Area": "Labyrinthos",
-                            "Level": 80
-                        },
-                        {
-                            "Title": "A Guide of Sorts",
-                            "Id": 69902,
-                            "Area": "Labyrinthos",
-                            "Level": 80
-                        },
-                        {
-                            "Title": "Estate Visitor",
-                            "Id": 69903,
-                            "Area": "Old Sharlayan",
-                            "Level": 80
-                        },
-                        {
-                            "Title": "For Thavnair Bound",
-                            "Id": 69904,
-                            "Area": "Old Sharlayan",
-                            "Level": 80
-                        },
-                        {
-                            "Title": "On Low Tide",
-                            "Id": 69905,
-                            "Area": "Thavnair",
-                            "Level": 80
-                        },
-                        {
-                            "Title": "A Fisherman's Friend",
-                            "Id": 69906,
-                            "Area": "Thavnair",
-                            "Level": 80
-                        },
-                        {
-                            "Title": "House of Divinities",
-                            "Id": 69907,
-                            "Area": "Thavnair",
-                            "Level": 80
-                        },
-                        {
-                            "Title": "The Great Work",
-                            "Id": 69908,
-                            "Area": "Thavnair",
-                            "Level": 80
-                        },
-                        {
-                            "Title": "Shadowed Footsteps",
-                            "Id": 69909,
-                            "Area": "Thavnair",
-                            "Level": 80
-                        },
-                        {
-                            "Title": "A Boy's Errand",
-                            "Id": 69910,
-                            "Area": "Thavnair",
-                            "Level": 80
-                        },
-                        {
-                            "Title": "Tipping the Scale",
-                            "Id": 69911,
-                            "Area": "Thavnair",
-                            "Level": 80
-                        },
-                        {
-                            "Title": "The Satrap of Radz-at-Han",
-                            "Id": 69912,
-                            "Area": "Thavnair",
-                            "Level": 80
-                        },
-                        {
-                            "Title": "In the Dark of the Tower",
-                            "Id": 69913,
-                            "Area": "Old Sharlayan",
-                            "Level": 81
-                        },
-                        {
-                            "Title": "The Jewel of Thavnair",
-                            "Id": 69914,
-                            "Area": "Thavnair",
-                            "Level": 81
-                        },
-                        {
-                            "Title": "The Color of Joy",
-                            "Id": 69915,
-                            "Area": "Radz-at-Han",
-                            "Level": 81
-                        },
-                        {
-                            "Title": "Sound the Bell, School's In",
-                            "Id": 69916,
-                            "Area": "Old Sharlayan",
-                            "Level": 82
-                        },
-                        {
-                            "Title": "A Capital Idea",
-                            "Id": 69917,
-                            "Area": "Old Sharlayan",
-                            "Level": 82
-                        },
-                        {
-                            "Title": "Best of the Best",
-                            "Id": 69918,
-                            "Area": "The Lochs",
-                            "Level": 82
-                        },
-                        {
-                            "Title": "A Frosty Reception",
-                            "Id": 69919,
-                            "Area": "The Lochs",
-                            "Level": 82
-                        },
-                        {
-                            "Title": "Tracks in the Snow",
-                            "Id": 69920,
-                            "Area": "Garlemald",
-                            "Level": 82
-                        },
-                        {
-                            "Title": "How the Mighty Are Fallen",
-                            "Id": 69921,
-                            "Area": "Garlemald",
-                            "Level": 82
-                        },
-                        {
-                            "Title": "At the End of the Trail",
-                            "Id": 69922,
-                            "Area": "Garlemald",
-                            "Level": 82
-                        },
-                        {
-                            "Title": "A Way Forward",
-                            "Id": 69923,
-                            "Area": "Garlemald",
-                            "Level": 82
-                        },
-                        {
-                            "Title": "The Last Bastion",
-                            "Id": 69924,
-                            "Area": "Garlemald",
-                            "Level": 82
-                        },
-                        {
-                            "Title": "Personae non Gratae",
-                            "Id": 69925,
-                            "Area": "Garlemald",
-                            "Level": 82
-                        },
-                        {
-                            "Title": "His Park Materials",
-                            "Id": 69926,
-                            "Area": "Garlemald",
-                            "Level": 83
-                        },
-                        {
-                            "Title": "No Good Deed",
-                            "Id": 69927,
-                            "Area": "Garlemald",
-                            "Level": 83
-                        },
-                        {
-                            "Title": "Alea Iacta Est",
-                            "Id": 69928,
-                            "Area": "Garlemald",
-                            "Level": 83
-                        },
-                        {
-                            "Title": "Strange Bedfellows",
-                            "Id": 69929,
-                            "Area": "Garlemald",
-                            "Level": 83
-                        },
-                        {
-                            "Title": "In from the Cold",
-                            "Id": 69930,
-                            "Area": "Garlemald",
-                            "Level": 83
-                        },
-                        {
-                            "Title": "Gateway of the Gods",
-                            "Id": 69931,
-                            "Area": "Garlemald",
-                            "Level": 83
-                        },
-                        {
-                            "Title": "A Trip to the Moon",
-                            "Id": 69932,
-                            "Area": "The Nethergate",
-                            "Level": 83
-                        },
-                        {
-                            "Title": "Sea of Sorrow",
-                            "Id": 69933,
-                            "Area": "Mare Lamentorum",
-                            "Level": 83
-                        },
-                        {
-                            "Title": "The Martyr",
-                            "Id": 69934,
-                            "Area": "Mare Lamentorum",
-                            "Level": 83
-                        },
-                        {
-                            "Title": "In Shadow's Wake",
-                            "Id": 69935,
-                            "Area": "Mare Lamentorum",
-                            "Level": 84
-                        },
-                        {
-                            "Title": "Helping Hands",
-                            "Id": 69936,
-                            "Area": "Mare Lamentorum",
-                            "Level": 84
-                        },
-                        {
-                            "Title": "A Harey Situation",
-                            "Id": 69937,
-                            "Area": "Mare Lamentorum",
-                            "Level": 84
-                        },
-                        {
-                            "Title": "A Taste of the Moon",
-                            "Id": 69938,
-                            "Area": "Mare Lamentorum",
-                            "Level": 84
-                        },
-                        {
-                            "Title": "Styled a Hero",
-                            "Id": 69939,
-                            "Area": "Mare Lamentorum",
-                            "Level": 84
-                        },
-                        {
-                            "Title": "All's Vale That Endsvale",
-                            "Id": 69940,
-                            "Area": "Mare Lamentorum",
-                            "Level": 84
-                        },
-                        {
-                            "Title": "Back to Old Tricks",
-                            "Id": 69941,
-                            "Area": "Mare Lamentorum",
-                            "Level": 84
-                        },
-                        {
-                            "Title": "Setting Things Straight",
-                            "Id": 69942,
-                            "Area": "Mare Lamentorum",
-                            "Level": 84
-                        },
-                        {
-                            "Title": "Heart of the Matter",
-                            "Id": 69943,
-                            "Area": "Mare Lamentorum",
-                            "Level": 84
-                        },
-                        {
-                            "Title": "Returning Home",
-                            "Id": 69944,
-                            "Area": "Mare Lamentorum",
-                            "Level": 84
-                        },
-                        {
-                            "Title": "Skies Aflame",
-                            "Id": 69945,
-                            "Area": "Old Sharlayan",
-                            "Level": 85
-                        },
-                        {
-                            "Title": "The Blasphemy Unmasked",
-                            "Id": 69946,
-                            "Area": "Radz-at-Han",
-                            "Level": 85
-                        },
-                        {
-                            "Title": "Amidst the Apocalypse",
-                            "Id": 69947,
-                            "Area": "Radz-at-Han",
-                            "Level": 85
-                        },
-                        {
-                            "Title": "Beyond the Depths of Despair",
-                            "Id": 69948,
-                            "Area": "Radz-at-Han",
-                            "Level": 85
-                        },
-                        {
-                            "Title": "That We Might Live",
-                            "Id": 69949,
-                            "Area": "Thavnair",
-                            "Level": 85
-                        },
-                        {
-                            "Title": "When All Hope Seems Lost",
-                            "Id": 69950,
-                            "Area": "Thavnair",
-                            "Level": 85
-                        },
-                        {
-                            "Title": "Warm Hearts, Rekindled Hopes",
-                            "Id": 69951,
-                            "Area": "Thavnair",
-                            "Level": 85
-                        },
-                        {
-                            "Title": "Simple Pleasures",
-                            "Id": 69952,
-                            "Area": "Thavnair",
-                            "Level": 85
-                        },
-                        {
-                            "Title": "Under His Wing",
-                            "Id": 69953,
-                            "Area": "Thavnair",
-                            "Level": 85
-                        },
-                        {
-                            "Title": "At World's End",
-                            "Id": 69954,
-                            "Area": "Radz-at-Han",
-                            "Level": 85
-                        },
-                        {
-                            "Title": "Return to the Crystarium",
-                            "Id": 69955,
-                            "Area": "Radz-at-Han",
-                            "Level": 86
-                        },
-                        {
-                            "Title": "Hope Upon a Flower",
-                            "Id": 69956,
-                            "Area": "The Crystarium",
-                            "Level": 86
-                        },
-                        {
-                            "Title": "Petalouda Hunt",
-                            "Id": 69957,
-                            "Area": "Elpis",
-                            "Level": 86
-                        },
-                        {
-                            "Title": "In Search of Hermes",
-                            "Id": 69958,
-                            "Area": "Elpis",
-                            "Level": 86
-                        },
-                        {
-                            "Title": "Ponder, Warrant, Cherish, Welcome",
-                            "Id": 69959,
-                            "Area": "Elpis",
-                            "Level": 86
-                        },
-                        {
-                            "Title": "Lives Apart",
-                            "Id": 69960,
-                            "Area": "Elpis",
-                            "Level": 86
-                        },
-                        {
-                            "Title": "Their Greatest Contribution",
-                            "Id": 69961,
-                            "Area": "Elpis",
-                            "Level": 86
-                        },
-                        {
-                            "Title": "Aether to Aether",
-                            "Id": 69962,
-                            "Area": "Elpis",
-                            "Level": 86
-                        },
-                        {
-                            "Title": "A Sentimental Gift",
-                            "Id": 69963,
-                            "Area": "Elpis",
-                            "Level": 86
-                        },
-                        {
-                            "Title": "Verdict and Execution",
-                            "Id": 69964,
-                            "Area": "Elpis",
-                            "Level": 86
-                        },
-                        {
-                            "Title": "Travelers at the Crossroads",
-                            "Id": 69965,
-                            "Area": "Elpis",
-                            "Level": 87
-                        },
-                        {
-                            "Title": "A Past, Not Yet Come to Pass",
-                            "Id": 69966,
-                            "Area": "Elpis",
-                            "Level": 87
-                        },
-                        {
-                            "Title": "Witness to the Spectacle",
-                            "Id": 69967,
-                            "Area": "Elpis",
-                            "Level": 87
-                        },
-                        {
-                            "Title": "Worthy of His Back",
-                            "Id": 69968,
-                            "Area": "Elpis",
-                            "Level": 87
-                        },
-                        {
-                            "Title": "A Flower upon Your Return",
-                            "Id": 69969,
-                            "Area": "Elpis",
-                            "Level": 87
-                        },
-                        {
-                            "Title": "Hunger in the Garden",
-                            "Id": 69970,
-                            "Area": "Elpis",
-                            "Level": 87
-                        },
-                        {
-                            "Title": "Words without Sound",
-                            "Id": 69971,
-                            "Area": "Elpis",
-                            "Level": 87
-                        },
-                        {
-                            "Title": "Follow, Wander, Stumble, Listen",
-                            "Id": 69972,
-                            "Area": "Elpis",
-                            "Level": 87
-                        },
-                        {
-                            "Title": "Caging the Messenger",
-                            "Id": 69973,
-                            "Area": "Elpis",
-                            "Level": 87
-                        },
-                        {
-                            "Title": "Thou Must Live, Die, and Know",
-                            "Id": 69974,
-                            "Area": "Elpis",
-                            "Level": 87
-                        },
-                        {
-                            "Title": "As the Heavens Burn",
-                            "Id": 69975,
-                            "Area": "Old Sharlayan",
-                            "Level": 88
-                        },
-                        {
-                            "Title": "Outside Help",
-                            "Id": 69976,
-                            "Area": "Garlemald",
-                            "Level": 88
-                        },
-                        {
-                            "Title": "Going Underground",
-                            "Id": 69977,
-                            "Area": "Old Sharlayan",
-                            "Level": 88
-                        },
-                        {
-                            "Title": "No Job Too Small",
-                            "Id": 69978,
-                            "Area": "Labyrinthos",
-                            "Level": 88
-                        },
-                        {
-                            "Title": "Wise Guides",
-                            "Id": 69979,
-                            "Area": "Labyrinthos",
-                            "Level": 88
-                        },
-                        {
-                            "Title": "Agriculture Shock",
-                            "Id": 69980,
-                            "Area": "Labyrinthos",
-                            "Level": 88
-                        },
-                        {
-                            "Title": "Sage Council",
-                            "Id": 69981,
-                            "Area": "Labyrinthos",
-                            "Level": 88
-                        },
-                        {
-                            "Title": "Hither and Yarns",
-                            "Id": 69982,
-                            "Area": "Labyrinthos",
-                            "Level": 88
-                        },
-                        {
-                            "Title": "Once Forged",
-                            "Id": 69983,
-                            "Area": "Labyrinthos",
-                            "Level": 88
-                        },
-                        {
-                            "Title": "Bonds of Adamant(ite)",
-                            "Id": 69984,
-                            "Area": "Labyrinthos",
-                            "Level": 88
-                        },
-                        {
-                            "Title": "Her Children, One and All",
-                            "Id": 69985,
-                            "Area": "Labyrinthos",
-                            "Level": 89
-                        },
-                        {
-                            "Title": "A Bold Decision",
-                            "Id": 69986,
-                            "Area": "Old Sharlayan",
-                            "Level": 89
-                        },
-                        {
-                            "Title": "Friends Gathered",
-                            "Id": 69987,
-                            "Area": "Old Sharlayan",
-                            "Level": 89
-                        },
-                        {
-                            "Title": "Unto the Heavens",
-                            "Id": 69988,
-                            "Area": "Old Sharlayan",
-                            "Level": 89
-                        },
-                        {
-                            "Title": "A §trαnge New World",
-                            "Id": 69989,
-                            "Area": "Ultima Thule",
-                            "Level": 89
-                        },
-                        {
-                            "Title": "On Burdεned ωings",
-                            "Id": 69990,
-                            "Area": "Ultima Thule",
-                            "Level": 89
-                        },
-                        {
-                            "Title": "Α Test of Wιll",
-                            "Id": 69991,
-                            "Area": "Ultima Thule",
-                            "Level": 89
-                        },
-                        {
-                            "Title": "Roads Pαved││Sacri┣ice",
-                            "Id": 69992,
-                            "Area": "Ultima Thule",
-                            "Level": 89
-                        },
-                        {
-                            "Title": "F//εsh AbanΔon┨Δ",
-                            "Id": 69993,
-                            "Area": "Ultima Thule",
-                            "Level": 89
-                        },
-                        {
-                            "Title": "Where Kn∞wledge Leads",
-                            "Id": 69994,
-                            "Area": "Ultima Thule",
-                            "Level": 89
-                        },
-                        {
-                            "Title": "Vic┨οry ̈ ̈ ̈╳, │̆││ε Lost",
-                            "Id": 69995,
-                            "Area": "Ultima Thule",
                             "Level": 90
                         },
                         {
-                            "Title": "┣┨̈//̈ No┨ΦounΔ•••",
-                            "Id": 69996,
-                            "Area": "Ultima Thule",
+                            "Title": "Bountiful Ruins",
+                            "Id": 70063,
+                            "Area": "Revenant's Toll",
                             "Level": 90
                         },
                         {
-                            "Title": "Hello, World",
-                            "Id": 69997,
-                            "Area": "Ultima Thule",
+                            "Title": "Friends for the Road",
+                            "Id": 70064,
+                            "Area": "Thavnair",
                             "Level": 90
                         },
                         {
-                            "Title": "Forge Ahead",
-                            "Id": 69998,
-                            "Area": "Ultima Thule",
+                            "Title": "Alzadaal's Legacy",
+                            "Id": 70065,
+                            "Area": "Thavnair",
                             "Level": 90
                         },
                         {
-                            "Title": "You're Not Alone",
-                            "Id": 69999,
-                            "Area": "Ultima Thule",
+                            "Title": "A Brother's Grief",
+                            "Id": 70066,
+                            "Area": "Weaver's Warding",
                             "Level": 90
                         },
                         {
-                            "Title": "Endwalker",
-                            "Id": 70000,
-                            "Area": "Ultima Thule",
+                            "Title": "Sharing the Wealth",
+                            "Id": 70067,
+                            "Area": "Radz-at-Han",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "Bridging the Rift",
+                            "Id": 70068,
+                            "Area": "Radz-at-Han",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "Restricted Reading",
+                            "Id": 70069,
+                            "Area": "Old Sharlayan",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "Void Theory",
+                            "Id": 70070,
+                            "Area": "Thavnair",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "A Satrap's Duty",
+                            "Id": 70071,
+                            "Area": "Weaver's Warding",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "In Search of Azdaja",
+                            "Id": 70128,
+                            "Area": "Radz-at-Han",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "Shadowed Remnants",
+                            "Id": 70129,
+                            "Area": "Hydromantic Terraces",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "Where Everything Begins",
+                            "Id": 70130,
+                            "Area": "Carcere IV",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "Groping in the Dark",
+                            "Id": 70131,
+                            "Area": "Troia Keep",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "Nowhere to Run",
+                            "Id": 70132,
+                            "Area": "Zero's Domain",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "The Wind Rises",
+                            "Id": 70133,
+                            "Area": "Zero's Domain",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "Return from the Void",
+                            "Id": 70134,
+                            "Area": "Zero's Domain",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "A World with Light and Life",
+                            "Id": 70135,
+                            "Area": "Radz-at-Han",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "Buried Memory",
+                            "Id": 70136,
+                            "Area": "Radz-at-Han",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "Once More unto the Void",
+                            "Id": 70206,
+                            "Area": "Radz-at-Han",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "A Cold Reunion",
+                            "Id": 70207,
+                            "Area": "Radz-at-Han",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "Kindled Spirit",
+                            "Id": 70208,
+                            "Area": "Garlemald",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "An Unforeseen Bargain",
+                            "Id": 70209,
+                            "Area": "Garlemald",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "King of the Mountain",
+                            "Id": 70210,
+                            "Area": "Garlemald",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "A Dragon's Resolve",
+                            "Id": 70211,
+                            "Area": "Lapis Manalis",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "Paths Barred",
+                            "Id": 70212,
+                            "Area": "Garlemald",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "Desires Untold",
+                            "Id": 70213,
+                            "Area": "Thavnair",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "Gods Revel, Lands Tremble",
+                            "Id": 70214,
+                            "Area": "Thavnair",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "Currying Flavor",
+                            "Id": 70271,
+                            "Area": "Radz-at-Han",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "Going Haam",
+                            "Id": 70272,
+                            "Area": "Estinien's Chambers",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "Like Fear to Flame",
+                            "Id": 70273,
+                            "Area": "Old Sharlayan",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "The Fallen Empire",
+                            "Id": 70274,
+                            "Area": "Garlemald",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "Bonds of Trust",
+                            "Id": 70275,
+                            "Area": "Garlemald",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "Lunar Rendezvous",
+                            "Id": 70276,
+                            "Area": "Garlemald",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "The Red Side of the Moon",
+                            "Id": 70277,
+                            "Area": "Mare Lamentorum",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "Abyssal Dark",
+                            "Id": 70278,
+                            "Area": "The Red Moon",
+                            "Level": 90
+                        },
+                        {
+                            "Title": "The Dark Throne",
+                            "Id": 70279,
+                            "Area": "Mare Lamentorum",
                             "Level": 90
                         }
                     ]
@@ -6963,7 +6582,7 @@
                                     "Area": "Idyllshire",
                                     "Level": 60
                                 }
-                            ] 
+                            ]
                         },
                         {
                             "Title": "Tales from the Shadows",
@@ -8567,18 +8186,21 @@
                                     "Title": "Coming to Limsa Lominsa",
                                     "Id": 65643,
                                     "Area": "Limsa Lominsa",
+                                    "Start": "Limsa Lominsa",
                                     "Level": 1
                                 },
                                 {
                                     "Title": "Making a Name",
                                     "Id": 65647,
                                     "Area": "Limsa Lominsa",
+                                    "Start": "Limsa Lominsa",
                                     "Level": 1
                                 },
                                 {
                                     "Title": "Suspiciously Sober",
                                     "Id": 65648,
                                     "Area": "Limsa Lominsa",
+                                    "Start": "Limsa Lominsa",
                                     "Level": 1
                                 },
                                 {
@@ -8657,6 +8279,7 @@
                                     "Title": "Glory Days",
                                     "Id": 65658,
                                     "Area": "Limsa Lominsa",
+                                    "Start": "Limsa Lominsa",
                                     "Level": 4
                                 },
                                 {
@@ -8669,12 +8292,14 @@
                                     "Title": "Fool Me Once",
                                     "Id": 66199,
                                     "Area": "Limsa Lominsa",
+                                    "Start": "Limsa Lominsa",
                                     "Level": 4
                                 },
                                 {
                                     "Title": "Leves of Swiftperch",
                                     "Id": 66229,
                                     "Area": "Limsa Lominsa",
+                                    "Start": "Limsa Lominsa",
                                     "Level": 10
                                 },
                                 {
@@ -8699,12 +8324,14 @@
                                     "Title": "An Ill-conceived Venture",
                                     "Id": 66968,
                                     "Area": "Limsa Lominsa",
+                                    "Start": "Limsa Lominsa",
                                     "Level": 17
                                 },
                                 {
                                     "Title": "My Little Chocobo (Maelstrom)",
                                     "Id": 66237,
                                     "Area": "Limsa Lominsa",
+                                    "Gc": "Maelstrom",
                                     "Level": 20
                                 },
                                 {
@@ -8781,24 +8408,28 @@
                                     "Title": "The Time Is Ripe",
                                     "Id": 66008,
                                     "Area": "Middle La Noscea",
+                                    "Start": "Limsa Lominsa",
                                     "Level": 6
                                 },
                                 {
                                     "Title": "Yarzon, Yarzoff",
                                     "Id": 66006,
                                     "Area": "Middle La Noscea",
+                                    "Start": "Limsa Lominsa",
                                     "Level": 7
                                 },
                                 {
                                     "Title": "Orange Crush",
                                     "Id": 66009,
                                     "Area": "Middle La Noscea",
+                                    "Start": "Limsa Lominsa",
                                     "Level": 7
                                 },
                                 {
                                     "Title": "A Pound of Cure",
                                     "Id": 66010,
                                     "Area": "Middle La Noscea",
+                                    "Start": "Limsa Lominsa",
                                     "Level": 8
                                 },
                                 {
@@ -8811,12 +8442,14 @@
                                     "Title": "Keeping It Fresh",
                                     "Id": 65936,
                                     "Area": "Middle La Noscea",
+                                    "Start": "Limsa Lominsa",
                                     "Level": 10
                                 },
                                 {
                                     "Title": "Baiting Buzzards",
                                     "Id": 65937,
                                     "Area": "Middle La Noscea",
+                                    "Start": "Limsa Lominsa",
                                     "Level": 10
                                 }
                             ]
@@ -8828,6 +8461,7 @@
                                     "Title": "Cry Me a Liver",
                                     "Id": 66011,
                                     "Area": "Lower La Noscea",
+                                    "Start": "Limsa Lominsa",
                                     "Level": 5
                                 },
                                 {
@@ -8846,6 +8480,7 @@
                                     "Title": "Wool's Errand",
                                     "Id": 66012,
                                     "Area": "Lower La Noscea",
+                                    "Start": "Limsa Lominsa",
                                     "Level": 6
                                 },
                                 {
@@ -8870,6 +8505,7 @@
                                     "Title": "Flour Power",
                                     "Id": 66013,
                                     "Area": "Lower La Noscea",
+                                    "Start": "Limsa Lominsa",
                                     "Level": 8
                                 },
                                 {
@@ -8888,18 +8524,21 @@
                                     "Title": "Kobolds Ahoy",
                                     "Id": 66022,
                                     "Area": "Lower La Noscea",
+                                    "Start": "Limsa Lominsa",
                                     "Level": 8
                                 },
                                 {
                                     "Title": "Kobolds and Indigents",
                                     "Id": 66014,
                                     "Area": "Lower La Noscea",
+                                    "Start": "Limsa Lominsa",
                                     "Level": 9
                                 },
                                 {
                                     "Title": "Bait and Swat",
                                     "Id": 66015,
                                     "Area": "Lower La Noscea",
+                                    "Start": "Limsa Lominsa",
                                     "Level": 9
                                 },
                                 {
@@ -8951,7 +8590,7 @@
                                     "Level": 20
                                 }
                             ]
-                        },                        
+                        },
                         {
                             "Title": "Eastern La Noscea",
                             "Quests": [
@@ -9066,12 +8705,14 @@
                                     "Title": "Simply the Hest",
                                     "Id": 65595,
                                     "Area": "Western La Noscea",
+                                    "Start": "Limsa Lominsa",
                                     "Level": 10
                                 },
                                 {
                                     "Title": "Need to Breed",
                                     "Id": 65941,
                                     "Area": "Western La Noscea",
+                                    "Start": "Limsa Lominsa",
                                     "Level": 12
                                 },
                                 {
@@ -9127,7 +8768,7 @@
                                     "Id": 66827,
                                     "Area": "Western La Noscea",
                                     "Level": 15
-                                },                                
+                                },
                                 {
                                     "Title": "Nest We Forget",
                                     "Id": 66683,
@@ -9380,12 +9021,14 @@
                                     "Title": "Coming to Gridania",
                                     "Id": 65575,
                                     "Area": "Gridania",
+                                    "Start": "Gridania",
                                     "Level": 1
                                 },
                                 {
                                     "Title": "A Good Adventurer Is Hard to Find",
                                     "Id": 65537,
                                     "Area": "Gridania",
+                                    "Start": "Gridania",
                                     "Level": 1
                                 },
                                 {
@@ -9458,24 +9101,28 @@
                                     "Title": "A Hard Nut to Crack",
                                     "Id": 65568,
                                     "Area": "Gridania",
+                                    "Start": "Gridania",
                                     "Level": 4
                                 },
                                 {
                                     "Title": "Derision of Labor",
                                     "Id": 65570,
                                     "Area": "Gridania",
+                                    "Start": "Gridania",
                                     "Level": 4
                                 },
                                 {
                                     "Title": "Population Control",
                                     "Id": 65573,
                                     "Area": "Gridania",
+                                    "Start": "Gridania",
                                     "Level": 4
                                 },
                                 {
                                     "Title": "Leves of Bentbranch",
                                     "Id": 65756,
                                     "Area": "Gridania",
+                                    "Start": "Gridania",
                                     "Level": 10
                                 },
                                 {
@@ -9488,6 +9135,7 @@
                                     "Title": "An Ill-conceived Venture",
                                     "Id": 66969,
                                     "Area": "Gridania",
+                                    "Start": "Gridania",
                                     "Level": 17
                                 },
                                 {
@@ -9500,6 +9148,7 @@
                                     "Title": "My Little Chocobo (Twin Adder)",
                                     "Id": 66236,
                                     "Area": "Gridania",
+                                    "Gc": "Twin Adder",
                                     "Level": 20
                                 },
                                 {
@@ -9565,6 +9214,7 @@
                                     "Title": "More than a Flesh Wound",
                                     "Id": 65708,
                                     "Area": "Central Shroud",
+                                    "Start": "Gridania",
                                     "Level": 7
                                 },
                                 {
@@ -9577,18 +9227,21 @@
                                     "Title": "Parasite Cleave",
                                     "Id": 65663,
                                     "Area": "Central Shroud",
+                                    "Start": "Gridania",
                                     "Level": 8
                                 },
                                 {
                                     "Title": "Soil Despoilers",
                                     "Id": 65666,
                                     "Area": "Central Shroud",
+                                    "Start": "Gridania",
                                     "Level": 8
                                 },
                                 {
                                     "Title": "Simply the Hest",
                                     "Id": 65596,
                                     "Area": "Central Shroud",
+                                    "Start": "Gridania",
                                     "Level": 10
                                 },
                                 {
@@ -9601,6 +9254,7 @@
                                     "Title": "Look, but Won't Touch",
                                     "Id": 65914,
                                     "Area": "Central Shroud",
+                                    "Start": "Gridania",
                                     "Level": 10
                                 },
                                 {
@@ -10112,6 +9766,7 @@
                                     "Title": "Coming to Ul'dah",
                                     "Id": 66130,
                                     "Area": "Ul'dah",
+                                    "Start": "Ul'dah",
                                     "Level": 1
                                 },
                                 {
@@ -10202,18 +9857,21 @@
                                     "Title": "Fantastic Voyage",
                                     "Id": 65925,
                                     "Area": "Ul'dah",
+                                    "Start": "Ul'dah",
                                     "Level": 4
                                 },
                                 {
                                     "Title": "Catch Your Breath",
                                     "Id": 65926,
                                     "Area": "Ul'dah",
+                                    "Start": "Ul'dah",
                                     "Level": 4
                                 },
                                 {
                                     "Title": "Leves of Horizon",
                                     "Id": 66223,
                                     "Area": "Ul'dah",
+                                    "Start": "Ul'dah",
                                     "Level": 10
                                 },
                                 {
@@ -10232,12 +9890,14 @@
                                     "Title": "An Ill-conceived Venture",
                                     "Id": 66970,
                                     "Area": "Ul'dah",
+                                    "Start": "Ul'dah",
                                     "Level": 17
                                 },
                                 {
                                     "Title": "My Little Chocobo (Immortal Flames)",
                                     "Id": 66238,
                                     "Area": "Ul'dah",
+                                    "Gc": "Immortal Flames",
                                     "Level": 20
                                 },
                                 {
@@ -10426,6 +10086,7 @@
                                     "Title": "Simply the Hest",
                                     "Id": 65594,
                                     "Area": "Western Thanalan",
+                                    "Start": "Ul'dah",
                                     "Level": 10
                                 },
                                 {
@@ -10444,30 +10105,35 @@
                                     "Title": "The Scent of a Mongrel",
                                     "Id": 65877,
                                     "Area": "Western Thanalan",
+                                    "Start": "Ul'dah",
                                     "Level": 11
                                 },
                                 {
                                     "Title": "No Tool Gets Left Behind",
                                     "Id": 66040,
                                     "Area": "Western Thanalan",
+                                    "Start": "Ul'dah",
                                     "Level": 11
                                 },
                                 {
                                     "Title": "This Fishwife's Life",
                                     "Id": 66042,
                                     "Area": "Western Thanalan",
+                                    "Start": "Ul'dah",
                                     "Level": 12
                                 },
                                 {
                                     "Title": "Lominsan Rubbish",
                                     "Id": 65878,
                                     "Area": "Western Thanalan",
+                                    "Start": "Ul'dah",
                                     "Level": 13
                                 },
                                 {
                                     "Title": "Angling Ankle-biters",
                                     "Id": 66041,
                                     "Area": "Western Thanalan",
+                                    "Start": "Ul'dah",
                                     "Level": 13
                                 },
                                 {
@@ -10539,54 +10205,63 @@
                                     "Title": "The Slaying of the Shrews",
                                     "Id": 65857,
                                     "Area": "Central Thanalan",
+                                    "Start": "Ul'dah",
                                     "Level": 6
                                 },
                                 {
                                     "Title": "The Tasting of the Shrews",
                                     "Id": 65840,
                                     "Area": "Central Thanalan",
+                                    "Start": "Ul'dah",
                                     "Level": 7
                                 },
                                 {
                                     "Title": "Listen to Your Fish",
                                     "Id": 65858,
                                     "Area": "Central Thanalan",
+                                    "Start": "Ul'dah",
                                     "Level": 7
                                 },
                                 {
                                     "Title": "Bloodied and Bowed",
                                     "Id": 65924,
                                     "Area": "Central Thanalan",
+                                    "Start": "Ul'dah",
                                     "Level": 8
                                 },
                                 {
                                     "Title": "In the Court of the Rat King",
                                     "Id": 65844,
                                     "Area": "Central Thanalan",
+                                    "Start": "Ul'dah",
                                     "Level": 9
                                 },
                                 {
                                     "Title": "Sometimes the Old Ways Are Best",
                                     "Id": 65862,
                                     "Area": "Central Thanalan",
+                                    "Start": "Ul'dah",
                                     "Level": 9
                                 },
                                 {
                                     "Title": "Need Not Apply in Person",
                                     "Id": 66067,
                                     "Area": "Central Thanalan",
+                                    "Start": "Ul'dah",
                                     "Level": 11
                                 },
                                 {
                                     "Title": "Alternative Medicine",
                                     "Id": 66066,
                                     "Area": "Central Thanalan",
+                                    "Start": "Ul'dah",
                                     "Level": 12
                                 },
                                 {
                                     "Title": "Fringe Benefits",
                                     "Id": 66109,
                                     "Area": "Central Thanalan",
+                                    "Start": "Ul'dah",
                                     "Level": 12
                                 },
                                 {
@@ -18412,7 +18087,7 @@
                                     "Id": 66811,
                                     "Area": "East Shroud",
                                     "Level": 45
-                                },                                
+                                },
                                 {
                                     "Title": "Fungal Foulness",
                                     "Id": 66812,
@@ -18466,7 +18141,7 @@
                                     "Id": 66820,
                                     "Area": "East Shroud",
                                     "Level": 48
-                                },                                
+                                },
                                 {
                                     "Title": "Moxia's Magnum Opus",
                                     "Id": 66821,
@@ -18856,7 +18531,7 @@
                                     "Id": 66932,
                                     "Area": "Western La Noscea",
                                     "Level": 46
-                                },                                
+                                },
                                 {
                                     "Title": "A Nap Before Drowning",
                                     "Id": 66933,
@@ -24725,7 +24400,7 @@
                                     "Level": 80
                                 }
                             ]
-                        },                       
+                        },
                         {
                             "Title": "Warrior Quests",
                             "Quests": [
@@ -25094,7 +24769,7 @@
                                     "Level": 80
                                 }
                             ]
-                        },                       
+                        },
                         {
                             "Title": "Ninja Quests",
                             "Quests": [
@@ -25481,7 +25156,7 @@
                                     "Level": 80
                                 }
                             ]
-                        },                       
+                        },
                         {
                             "Title": "Samurai Quests",
                             "Quests": [
@@ -25658,7 +25333,7 @@
                                     "Level": 80
                                 }
                             ]
-                        },                       
+                        },
                         {
                             "Title": "Reaper Quests",
                             "Quests": [

@@ -2,9 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Numerics;
-using Dalamud.Game.ClientState.Objects.SubKinds;
 using Dalamud.Interface;
-using Dalamud.Interface.Components;
+using Dalamud.Interface.Utility;
 using FFXIVClientStructs.FFXIV.Client.Game;
 
 namespace QuestTracker
@@ -165,7 +164,7 @@ namespace QuestTracker
         {
             foreach (var category in plugin.QuestData.Categories)
             {
-                if (ImGui.Selectable($"{category.Title} {category.NumComplete}/{category.Total}"))
+                if (ImGui.Selectable($"{category.Title} {category.NumComplete}/{category.Total}", currentCategory == category))
                 {
                     currentCategory = category;   
                 }
