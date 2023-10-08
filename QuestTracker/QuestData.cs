@@ -8,8 +8,8 @@ public class QuestData
     public string Title { get; set; }
     public List<QuestData> Categories { get; set; } = new();
     public List<Quest> Quests { get; set; } = new();
-    public int NumComplete { get; set; } = 0;
-    public int Total { get; set; } = 0;
+    public float NumComplete { get; set; } = 0;
+    public float Total { get; set; } = 0;
 }
 
 [Serializable]

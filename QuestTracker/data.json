@@ -21656,13 +21656,7 @@
                             "Quests": [
                                 {
                                     "Title": "Way of the Gladiator",
-                                    "Id": 65789,
-                                    "Area": "Ul'dah",
-                                    "Level": 1
-                                },
-                                {
-                                    "Title": "Way of the Gladiator",
-                                    "Id": 65789,
+                                    "Id": 65821,
                                     "Area": "Ul'dah",
                                     "Level": 1
                                 },
@@ -21721,13 +21715,7 @@
                             "Quests": [
                                 {
                                     "Title": "Way of the Pugilist",
-                                    "Id": 66068,
-                                    "Area": "Ul'dah",
-                                    "Level": 1
-                                },
-                                {
-                                    "Title": "Way of the Pugilist",
-                                    "Id": 66068,
+                                    "Id": 66069,
                                     "Area": "Ul'dah",
                                     "Level": 1
                                 },
@@ -21786,13 +21774,7 @@
                             "Quests": [
                                 {
                                     "Title": "Way of the Marauder",
-                                    "Id": 65846,
-                                    "Area": "Limsa Lominsa",
-                                    "Level": 1
-                                },
-                                {
-                                    "Title": "Way of the Marauder",
-                                    "Id": 65846,
+                                    "Id": 65847,
                                     "Area": "Limsa Lominsa",
                                     "Level": 1
                                 },
@@ -21851,13 +21833,7 @@
                             "Quests": [
                                 {
                                     "Title": "Way of the Lancer",
-                                    "Id": 65559,
-                                    "Area": "Gridania",
-                                    "Level": 1
-                                },
-                                {
-                                    "Title": "Way of the Lancer",
-                                    "Id": 65559,
+                                    "Id": 65668,
                                     "Area": "Gridania",
                                     "Level": 1
                                 },
@@ -21916,13 +21892,7 @@
                             "Quests": [
                                 {
                                     "Title": "Way of the Archer",
-                                    "Id": 65557,
-                                    "Area": "Gridania",
-                                    "Level": 1
-                                },
-                                {
-                                    "Title": "Way of the Archer",
-                                    "Id": 65557,
+                                    "Id": 65667,
                                     "Area": "Gridania",
                                     "Level": 1
                                 },
@@ -22051,13 +22021,7 @@
                             "Quests": [
                                 {
                                     "Title": "Way of the Conjurer",
-                                    "Id": 65558,
-                                    "Area": "Gridania",
-                                    "Level": 1
-                                },
-                                {
-                                    "Title": "Way of the Conjurer",
-                                    "Id": 65558,
+                                    "Id": 65669,
                                     "Area": "Gridania",
                                     "Level": 1
                                 },
@@ -22075,13 +22039,7 @@
                                 },
                                 {
                                     "Title": "Trial by Wind",
-                                    "Id": 65627,
-                                    "Area": "Gridania",
-                                    "Level": 10
-                                },
-                                {
-                                    "Title": "Trial by Wind",
-                                    "Id": 65627,
+                                    "Id": 65683,
                                     "Area": "Gridania",
                                     "Level": 10
                                 },
@@ -22116,13 +22074,7 @@
                             "Quests": [
                                 {
                                     "Title": "Way of the Thaumaturge",
-                                    "Id": 65880,
-                                    "Area": "Ul'dah",
-                                    "Level": 1
-                                },
-                                {
-                                    "Title": "Way of the Thaumaturge",
-                                    "Id": 65880,
+                                    "Id": 65881,
                                     "Area": "Ul'dah",
                                     "Level": 1
                                 },
@@ -22186,12 +22138,6 @@
                                     "Level": 1
                                 },
                                 {
-                                    "Title": "Way of the Arcanist",
-                                    "Id": 65988,
-                                    "Area": "Limsa Lominsa",
-                                    "Level": 1
-                                },
-                                {
                                     "Title": "My First Grimoire",
                                     "Id": 65990,
                                     "Area": "Limsa Lominsa",
@@ -22205,13 +22151,7 @@
                                 },
                                 {
                                     "Title": "Tactical Planning",
-                                    "Id": 65992,
-                                    "Area": "Limsa Lominsa",
-                                    "Level": 10
-                                },
-                                {
-                                    "Title": "Tactical Planning",
-                                    "Id": 65992,
+                                    "Id": 65993,
                                     "Area": "Limsa Lominsa",
                                     "Level": 10
                                 },

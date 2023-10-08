@@ -77,7 +77,9 @@ namespace QuestTracker
         private void OnCommand(string command, string args)
         {
             // in response to the slash command, just display our main ui
-            this.UI.Visible = true;
+            this.UI.Visible = true; 
+            this.UI.SettingsVisible = false;
+            this.UI.CurrentCategory = null;
         }
 
         private void DrawUI()
@@ -87,7 +89,9 @@ namespace QuestTracker
 
         private void DrawConfigUI()
         {
+            this.UI.Visible = true;
             this.UI.SettingsVisible = true;
+            this.UI.CurrentCategory = null;
         }
 
         public string DetermineStartArea()
