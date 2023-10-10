@@ -105,11 +105,35 @@ namespace QuestTracker
                                          QuestManager.IsQuestComplete(66218) ? "Immortal Flames" : "";
         }
 
+        private void DetermineStartClass()
+        {
+            Configuration.StartClass =
+                // Gladiator
+                QuestManager.IsQuestComplete(65792) && !QuestManager.IsQuestComplete(65822) ? 65822 :
+                // Pugilist
+                QuestManager.IsQuestComplete(66090) && !QuestManager.IsQuestComplete(66089) ? 66089 :
+                // Marauder
+                QuestManager.IsQuestComplete(65849) && !QuestManager.IsQuestComplete(65848) ? 65848 :
+                // Lancer
+                QuestManager.IsQuestComplete(65583) && !QuestManager.IsQuestComplete(65754) ? 65754 :
+                // Archer
+                QuestManager.IsQuestComplete(65582) && !QuestManager.IsQuestComplete(65755) ? 65755 :
+                // Rogue
+                QuestManager.IsQuestComplete(65640) && !QuestManager.IsQuestComplete(65638) ? 65638 :
+                // Conjurer
+                QuestManager.IsQuestComplete(65584) && !QuestManager.IsQuestComplete(65747) ? 65747 :
+                // Thaumaturge
+                QuestManager.IsQuestComplete(65883) && !QuestManager.IsQuestComplete(65882) ? 65882 :
+                // Arcanist
+                QuestManager.IsQuestComplete(65991) && !QuestManager.IsQuestComplete(65990) ? 65990 : 0;
+        }
+
         public void UpdateQuestData(QuestData questData)
         {
             questData.NumComplete = questData.Total = 0;
             if (Configuration.StartArea == "") DetermineStartArea();
             if (Configuration.GrandCompany == "") DetermineGrandCompany();
+            if (Configuration.StartClass == 0) DetermineStartClass();
 
             if (questData.Categories.Count > 0)
             {
@@ -145,6 +169,12 @@ namespace QuestTracker
                             PluginLog.Error($"Quest {quest.Id} is restricted but completed");
                         }
 
+                        questData.Quests.Remove(quest);
+                        continue;
+                    }
+
+                    if (Configuration.StartClass != 0 && Configuration.StartClass == quest.Id)
+                    {
                         questData.Quests.Remove(quest);
                         continue;
                     }
