@@ -79,7 +79,7 @@ namespace QuestTracker
             // in response to the slash command, just display our main ui
             this.UI.Visible = true; 
             this.UI.SettingsVisible = false;
-            this.UI.CurrentCategory = null;
+            this.UI.SidePanelSelection = null;
         }
 
         private void DrawUI()
@@ -91,7 +91,7 @@ namespace QuestTracker
         {
             this.UI.Visible = true;
             this.UI.SettingsVisible = true;
-            this.UI.CurrentCategory = null;
+            this.UI.SidePanelSelection = null;
         }
 
         public string DetermineStartArea()

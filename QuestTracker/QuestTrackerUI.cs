@@ -6,7 +6,6 @@ using System.Numerics;
 using Dalamud.Interface;
 using Dalamud.Interface.Utility;
 using FFXIVClientStructs.FFXIV.Client.Game;
-using Lumina.Excel.GeneratedSheets;
 
 namespace QuestTracker
 {
@@ -29,14 +28,16 @@ namespace QuestTracker
         }
 
         private bool settingsVisible = false;
+
         public bool SettingsVisible
         {
             get { return this.settingsVisible; }
             set { this.settingsVisible = value; }
         }
-        
-        public QuestData CurrentCategory;
-        
+
+        public QuestData SidePanelSelection;
+        public QuestData DropdownSelection;
+
         public QuestTrackerUI(Plugin plugin, Configuration configuration)
         {
             this.plugin = plugin;
@@ -68,40 +69,35 @@ namespace QuestTracker
             {
                 width += 30;
             }
+
             if (configuration.ShowPercentage)
             {
                 width += 20;
             }
-            ImGui.SetNextWindowSize(new Vector2(375, 330), ImGuiCond.FirstUseEver);
-            ImGui.SetNextWindowSizeConstraints(new Vector2(375, 330), new Vector2(float.MaxValue, float.MaxValue));
+
+            ImGui.SetNextWindowSize(new Vector2(375, 440), ImGuiCond.FirstUseEver);
+            ImGui.SetNextWindowSizeConstraints(new Vector2(375, 440), new Vector2(float.MaxValue, float.MaxValue));
             if (ImGui.Begin("Quest Tracker", ref this.visible))
             {
                 ImGui.BeginGroup();
-                if (ImGui.BeginChild("category_select",
+                if (ImGui.BeginChild("##category_select",
                                      ImGuiHelpers.ScaledVector2(width, 0) - iconButtonSize with { X = 0 }, true))
                 {
                     if (configuration.ShowOverall)
                     {
-                        var text = "Overall";
-                        if (configuration.ShowCount)
-                        {
-                            text += $" {plugin.QuestData.NumComplete}/{plugin.QuestData.Total}";
-                        }
-                        if (configuration.ShowPercentage)
-                        {
-                            text += $" {plugin.QuestData.NumComplete / plugin.QuestData.Total:P0}%";
-                        }
-                        ImGui.Text(text);
+                        ImGui.Text("Overall" + GetDisplayText(plugin.QuestData, true));
                         ImGui.Spacing();
                         ImGui.Separator();
                         ImGui.Spacing();
                     }
+
                     DrawSidePanel();
                 }
+
                 ImGui.EndChild();
                 if (ImGui.Button("Settings"))
                 {
-                    CurrentCategory = null;
+                    SidePanelSelection = null;
                     SettingsVisible = true;
                 }
 
@@ -109,15 +105,26 @@ namespace QuestTracker
                 ImGui.EndGroup();
 
                 ImGui.SameLine();
-                if (ImGui.BeginChild("category_view", ImGuiHelpers.ScaledVector2(0), true))
+                if (ImGui.BeginChild("##category_view", ImGuiHelpers.ScaledVector2(0), true))
                 {
-                    if (CurrentCategory == null && SettingsVisible)
+                    if (SidePanelSelection == null && SettingsVisible)
                     {
                         DrawSettings();
                     }
                     else
                     {
-                        DrawDropdown();
+                        switch (this.configuration.LayoutOption)
+                        {
+                            case 0:
+                                DrawLayout1();
+                                break;
+                            case 1:
+                                DrawLayout2();
+                                break;
+                            case 2:
+                                DrawLayout3();
+                                break;
+                        }
                     }
                 }
 
@@ -127,41 +134,85 @@ namespace QuestTracker
             ImGui.End();
         }
 
-        public void DrawDropdown()
+        private void DrawLayout1()
         {
-            foreach (var category in CurrentCategory.Categories)
+            foreach (var category in SidePanelSelection.Categories)
             {
-                var text = $"{category.Title}";
-                if (configuration.ShowCount)
+                if (ImGui.CollapsingHeader(GetDisplayText(category, false)))
                 {
-                    text += $" {category.NumComplete}/{category.Total}";
+                    DrawQuestList(category);
                 }
-                if (configuration.ShowPercentage)
+            }
+        }
+
+        private void DrawLayout2()
+        {
+            DrawDropdown();
+            DrawQuestList(DropdownSelection);
+        }
+
+        private void DrawLayout3()
+        {
+            DrawDropdown();
+            if (DropdownSelection.Categories.Count > 0)
+            {
+                foreach (var subcategory in DropdownSelection.Categories)
                 {
-                    text += $" {category.NumComplete/category.Total:P0}";
-                }
-                if (ImGui.CollapsingHeader(text))
-                {
-                    if (category.Categories.Count > 0)
+                    if (ImGui.CollapsingHeader(GetDisplayText(subcategory, false)))
                     {
-                        foreach (var subcategory in category.Categories)
-                        {
-                            ImGui.TextDisabled($"{subcategory.Title}");
-                            ImGui.Separator();
-                            DrawQuestTable(subcategory.Quests);
-                        }
-                    }
-                    else
-                    {
-                        DrawQuestTable(category.Quests);
+                        DrawQuestTable(subcategory.Quests);
                     }
                 }
+            }
+            else
+            {
+                DrawQuestTable(DropdownSelection.Quests);
+            }
+        }
+
+        private void DrawDropdown()
+        {
+            if (ImGui.BeginCombo("##subcategory_select", GetDisplayText(DropdownSelection, false)))
+            {
+                foreach (var category in SidePanelSelection.Categories)
+                {
+                    if (ImGui.Selectable(GetDisplayText(category, false), DropdownSelection == category))
+                    {
+                        DropdownSelection = category;
+                    }
+
+                    if (DropdownSelection == category)
+                    {
+                        ImGui.SetItemDefaultFocus();
+                    }
+                }
+
+                ImGui.EndCombo();
+            }
+
+            ImGui.Spacing();
+        }
+
+        private void DrawQuestList(QuestData category)
+        {
+            if (category.Categories.Count > 0)
+            {
+                foreach (var subcategory in category.Categories)
+                {
+                    ImGui.TextDisabled($"{subcategory.Title}");
+                    ImGui.Separator();
+                    DrawQuestTable(subcategory.Quests);
+                }
+            }
+            else
+            {
+                DrawQuestTable(category.Quests);
             }
         }
 
         public void DrawQuestTable(List<Quest> quests)
         {
-            if (ImGui.BeginTable("quest_table", 4))
+            if (ImGui.BeginTable("##quest_table", 4))
             {
                 ImGui.TableSetupColumn("##icon", ImGuiTableColumnFlags.None, 0.10f);
                 ImGui.TableSetupColumn("Title");
@@ -201,7 +252,7 @@ namespace QuestTracker
                             ImGui.TextDisabled($"{quest.Level}");
                         }
 
-                        ImGui.TableNextRow();   
+                        ImGui.TableNextRow();
                     }
                 }
             }
@@ -213,19 +264,11 @@ namespace QuestTracker
         {
             foreach (var category in plugin.QuestData.Categories)
             {
-                var text = $"{category.Title}";
-                if (configuration.ShowCount)
+                if (ImGui.Selectable(GetDisplayText(category, false), SidePanelSelection == category))
                 {
-                    text += $" {category.NumComplete}/{category.Total}";
-                }
-                if (configuration.ShowPercentage)
-                {
-                    text += $" {category.NumComplete/category.Total:P0}";
-                }
-                if (ImGui.Selectable(text, CurrentCategory == category))
-                {
-                    CurrentCategory = category;
+                    SidePanelSelection = category;
                     SettingsVisible = false;
+                    DropdownSelection = SidePanelSelection.Categories.First();
                 }
             }
         }
@@ -240,6 +283,7 @@ namespace QuestTracker
                 // can save immediately on change, if you don't want to provide a "Save and Close" button
                 this.configuration.Save();
             }
+
             ImGui.Spacing();
 
             // can't ref a property, so use a local copy
@@ -250,6 +294,7 @@ namespace QuestTracker
                 // can save immediately on change, if you don't want to provide a "Save and Close" button
                 this.configuration.Save();
             }
+
             ImGui.Spacing();
 
             // can't ref a property, so use a local copy
@@ -260,6 +305,7 @@ namespace QuestTracker
                 // can save immediately on change, if you don't want to provide a "Save and Close" button
                 this.configuration.Save();
             }
+
             ImGui.Spacing();
 
             // can't ref a property, so use a local copy
@@ -270,8 +316,9 @@ namespace QuestTracker
                 // can save immediately on change, if you don't want to provide a "Save and Close" button
                 this.configuration.Save();
             }
+
             ImGui.Spacing();
-            
+
             // can't ref a property, so use a local copy
             var showOverall = this.configuration.ShowOverall;
             if (ImGui.Checkbox("Show overall", ref showOverall))
@@ -280,8 +327,9 @@ namespace QuestTracker
                 // can save immediately on change, if you don't want to provide a "Save and Close" button
                 this.configuration.Save();
             }
+
             ImGui.Spacing();
-            
+
             // can't ref a property, so use a local copy
             var excludeOther = this.configuration.ExcludeOther;
             if (ImGui.Checkbox("Exclude Other Quests from overall", ref excludeOther))
@@ -290,11 +338,48 @@ namespace QuestTracker
                 // can save immediately on change, if you don't want to provide a "Save and Close" button
                 this.configuration.Save();
             }
+
             ImGui.Spacing();
 
+            ImGui.SetNextItemWidth(150);
             var layoutOption = this.configuration.LayoutOption;
-            string[] layoutList = {"Option 1", "Option 2", "Option 3"};
-            ImGui.Combo("Layout", ref layoutOption, layoutList, layoutList.Length);
+            string[] layoutList = { "Layout 1", "Layout 2", "Layout 3" };
+            if (ImGui.BeginCombo("##layout_option", layoutList[layoutOption]))
+            {
+                for (int i = 0; i < layoutList.Length; i++)
+                {
+                    if (ImGui.Selectable(layoutList[i]))
+                    {
+                        this.configuration.LayoutOption = i;
+                        this.configuration.Save();
+                    }
+
+                    if (layoutOption == i)
+                    {
+                        ImGui.SetItemDefaultFocus();
+                    }
+                }
+
+                ImGui.EndCombo();
+            }
+        }
+
+        private string GetDisplayText(QuestData questData, bool addSymbol)
+        {
+            var text = $"{questData.Title}";
+            if (configuration.ShowCount)
+            {
+                text += $" {questData.NumComplete}/{questData.Total}";
+            }
+
+            if (configuration.ShowPercentage)
+            {
+                text += addSymbol
+                            ? $" {questData.NumComplete / questData.Total:P0}%"
+                            : $" {questData.NumComplete / questData.Total:P0}";
+            }
+
+            return text;
         }
     }
 }
