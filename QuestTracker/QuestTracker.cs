@@ -4,7 +4,6 @@ using System.Linq;
 using Dalamud.Game.Command;
 using Dalamud.Plugin;
 using Dalamud.IoC;
-using Dalamud.Logging;
 using Dalamud.Plugin.Services;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using Newtonsoft.Json;
@@ -19,6 +18,7 @@ namespace QuestTracker
 
         public static DalamudPluginInterface PluginInterface { get; private set; }
         public static ICommandManager CommandManager { get; private set; }
+        public static IPluginLog PluginLog { get; private set; }
 
         private Configuration Configuration { get; init; }
         private QuestTrackerUI UI { get; init; }
@@ -27,10 +27,12 @@ namespace QuestTracker
 
         public Plugin(
             [RequiredVersion("1.0")] DalamudPluginInterface pluginInterface,
-            [RequiredVersion("1.0")] ICommandManager commandManager)
+            [RequiredVersion("1.0")] ICommandManager commandManager,
+            [RequiredVersion("1.0")] IPluginLog pluginLog)
         {
             PluginInterface = pluginInterface;
             CommandManager = commandManager;
+            PluginLog = pluginLog;
 
             this.Configuration = PluginInterface.GetPluginConfig() as Configuration ?? new Configuration();
             this.Configuration.Initialize(PluginInterface);
@@ -49,7 +51,6 @@ namespace QuestTracker
                 var path = Path.Combine(PluginInterface.AssemblyLocation.Directory.Parent.Parent.FullName, "data.json");
                 var jsonString = File.ReadAllText(path);
                 QuestData = JsonConvert.DeserializeObject<QuestData>(jsonString);
-                UpdateQuestData(QuestData);
 
                 PluginLog.Debug("Load successful");
             }
@@ -73,7 +74,6 @@ namespace QuestTracker
         private void OnCommand(string command, string args)
         {
             // in response to the slash command, just display our main ui
-            UpdateQuestData(QuestData);
             this.UI.Visible = true;
             this.UI.SettingsVisible = false;
             this.UI.Reset();
@@ -128,7 +128,13 @@ namespace QuestTracker
                 QuestManager.IsQuestComplete(65991) && !QuestManager.IsQuestComplete(65990) ? 65990 : 0;
         }
 
-        public void UpdateQuestData(QuestData questData)
+        public void UpdateQuestData()
+        {
+            if (QuestData == null) return;
+            UpdateQuestData(QuestData);
+        }
+
+        private void UpdateQuestData(QuestData questData)
         {
             questData.NumComplete = questData.Total = 0;
             if (Configuration.StartArea == "") DetermineStartArea();

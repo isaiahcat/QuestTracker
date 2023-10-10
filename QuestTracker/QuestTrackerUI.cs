@@ -66,8 +66,9 @@ namespace QuestTracker
         {
             if (!Visible) return;
 
+            plugin.UpdateQuestData();
             ImGui.SetNextWindowSize(new Vector2(375, 440), ImGuiCond.FirstUseEver);
-            ImGui.SetNextWindowSizeConstraints(new Vector2(375, 440), new Vector2(float.MaxValue, float.MaxValue));
+            ImGui.SetNextWindowSizeConstraints(new Vector2(375, 240), new Vector2(float.MaxValue, float.MaxValue));
             if (ImGui.Begin(plugin.Name, ref this.visible))
             {
                 ImGui.BeginGroup();
@@ -224,8 +225,8 @@ namespace QuestTracker
             {
                 ImGui.TableSetupColumn("##icon", ImGuiTableColumnFlags.None, 0.10f);
                 ImGui.TableSetupColumn("Title");
-                ImGui.TableSetupColumn("Area", ImGuiTableColumnFlags.None, 0.90f);
-                ImGui.TableSetupColumn("Level", ImGuiTableColumnFlags.None, 0.20f);
+                ImGui.TableSetupColumn("Area", ImGuiTableColumnFlags.None, 0.80f);
+                ImGui.TableSetupColumn("Level", ImGuiTableColumnFlags.None, 0.30f);
                 ImGui.TableHeadersRow();
                 foreach (var quest in quests)
                 {
@@ -243,8 +244,10 @@ namespace QuestTracker
                         {
                             ImGui.TableNextColumn();
                             ImGui.Text(quest.Title);
+                            //TODO: if(ImGui.Selectable(quest.Title)) OpenQuestInJournal();
                             ImGui.TableNextColumn();
                             ImGui.Text(quest.Area);
+                            //TODO: if(ImGui.Selectable(quest.Area)) OpenAreaMap();
                             ImGui.TableNextColumn();
                             ImGui.Text($"{quest.Level}");
                         }
@@ -316,7 +319,6 @@ namespace QuestTracker
                     {
                         this.configuration.DisplayOption = i;
                         this.configuration.Save();
-                        this.plugin.UpdateQuestData(plugin.QuestData);
                         Reset();
                     }
 
@@ -387,5 +389,14 @@ namespace QuestTracker
             if (configuration.ShowPercentage) width += 20;
             return width;
         }
+
+
+        //TODO:
+        /*private void OpenAreaMap(uint questId, uint mapId)
+        {
+            var questRow = Plugin.DataManager.GetExcelSheet<Lumina.Excel.GeneratedSheets.Quest>().GetRow(questId);
+            var mapRow = Plugin.DataManager.GetExcelSheet<Map>().GetRow(mapId);
+            PLugin.GameGui.OpenMapWithMapLink();
+        }*/
     }
 }
