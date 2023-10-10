@@ -21679,12 +21679,6 @@
                                     "Level": 10
                                 },
                                 {
-                                    "Title": "Ul'dah's Most Wanted",
-                                    "Id": 65797,
-                                    "Area": "Ul'dah",
-                                    "Level": 10
-                                },
-                                {
                                     "Title": "That Old Familiar Feeling",
                                     "Id": 65798,
                                     "Area": "Ul'dah",
@@ -21730,12 +21724,6 @@
                                     "Id": 66090,
                                     "Area": "Ul'dah",
                                     "Level": 5
-                                },
-                                {
-                                    "Title": "Burning Up the Quarter Malm",
-                                    "Id": 66091,
-                                    "Area": "Ul'dah",
-                                    "Level": 10
                                 },
                                 {
                                     "Title": "Burning Up the Quarter Malm",
@@ -21797,12 +21785,6 @@
                                     "Level": 10
                                 },
                                 {
-                                    "Title": "Wake of Destruction",
-                                    "Id": 65850,
-                                    "Area": "Limsa Lominsa",
-                                    "Level": 10
-                                },
-                                {
                                     "Title": "Brutal Strength",
                                     "Id": 65852,
                                     "Area": "Limsa Lominsa",
@@ -21856,12 +21838,6 @@
                                     "Level": 10
                                 },
                                 {
-                                    "Title": "Courage of Stone",
-                                    "Id": 65571,
-                                    "Area": "Gridania",
-                                    "Level": 10
-                                },
-                                {
                                     "Title": "A Dangerous Proposition",
                                     "Id": 65591,
                                     "Area": "Gridania",
@@ -21907,12 +21883,6 @@
                                     "Id": 65582,
                                     "Area": "Gridania",
                                     "Level": 5
-                                },
-                                {
-                                    "Title": "School of Hard Nocks",
-                                    "Id": 65603,
-                                    "Area": "Gridania",
-                                    "Level": 10
                                 },
                                 {
                                     "Title": "Training with Leih",
@@ -22089,12 +22059,6 @@
                                     "Id": 65883,
                                     "Area": "Ul'dah",
                                     "Level": 5
-                                },
-                                {
-                                    "Title": "The Threat of Paucity",
-                                    "Id": 65884,
-                                    "Area": "Ul'dah",
-                                    "Level": 10
                                 },
                                 {
                                     "Title": "The Threat of Paucity",
