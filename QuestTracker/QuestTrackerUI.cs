@@ -64,29 +64,16 @@ namespace QuestTracker
 
         private void DrawMainWindow()
         {
-            if (!Visible)
-            {
-                return;
-            }
-
-            var width = 170;
-            if (configuration.ShowCount)
-            {
-                width += 30;
-            }
-
-            if (configuration.ShowPercentage)
-            {
-                width += 20;
-            }
+            if (!Visible) return;
 
             ImGui.SetNextWindowSize(new Vector2(375, 440), ImGuiCond.FirstUseEver);
             ImGui.SetNextWindowSizeConstraints(new Vector2(375, 440), new Vector2(float.MaxValue, float.MaxValue));
-            if (ImGui.Begin("Quest Tracker", ref this.visible))
+            if (ImGui.Begin(plugin.Name, ref this.visible))
             {
                 ImGui.BeginGroup();
                 if (ImGui.BeginChild("##category_select",
-                                     ImGuiHelpers.ScaledVector2(width, 0) - iconButtonSize with { X = 0 }, true))
+                                     ImGuiHelpers.ScaledVector2(GetAdjustedWidth(170), 0) -
+                                     iconButtonSize with { X = 0 }, true))
                 {
                     if (configuration.ShowOverall)
                     {
@@ -185,6 +172,7 @@ namespace QuestTracker
         private void DrawDropdown()
         {
             if (DropdownSelection == null) return;
+            ImGui.SetNextItemWidth(GetAdjustedWidth(300));
             if (ImGui.BeginCombo("##subcategory_select", GetDisplayText(DropdownSelection, false)))
             {
                 foreach (var category in SidePanelSelection.Categories)
@@ -316,7 +304,7 @@ namespace QuestTracker
             }
 
             ImGui.Spacing();
-            
+
             ImGui.SetNextItemWidth(130);
             var displayOption = this.configuration.DisplayOption;
             string[] displayList = { "Show All", "Show Complete", "Show Incomplete" };
@@ -342,7 +330,7 @@ namespace QuestTracker
             }
 
             ImGui.Spacing();
-            
+
             // can't ref a property, so use a local copy
             var showOverall = this.configuration.ShowOverall;
             if (ImGui.Checkbox("Show overall", ref showOverall))
@@ -391,6 +379,13 @@ namespace QuestTracker
             }
 
             return text;
+        }
+
+        private int GetAdjustedWidth(int width)
+        {
+            if (configuration.ShowCount) width += 30;
+            if (configuration.ShowPercentage) width += 20;
+            return width;
         }
     }
 }
