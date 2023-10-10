@@ -26649,30 +26649,35 @@
                                     "Title": "A Pup No Longer (Maelstrom)",
                                     "Id": 66640,
                                     "Area": "Limsa Lominsa",
+                                    "Gc": "Maelstrom",
                                     "Level": 30
                                 },
                                 {
                                     "Title": "Like Civilized Men and Women (Maelstrom)",
                                     "Id": 67064,
                                     "Area": "Limsa Lominsa",
+                                    "Gc": "Maelstrom",
                                     "Level": 30
                                 },
                                 {
                                     "Title": "Shadows Uncast (Maelstrom)",
                                     "Id": 66664,
                                     "Area": "Limsa Lominsa",
+                                    "Gc": "Maelstrom",
                                     "Level": 44
                                 },
                                 {
                                     "Title": "Gilding the Bilious (Maelstrom)",
                                     "Id": 66667,
                                     "Area": "Limsa Lominsa",
+                                    "Gc": "Maelstrom",
                                     "Level": 47
                                 },
                                 {
                                     "Title": "Let the Hunt Begin (Maelstrom)",
                                     "Id": 67100,
                                     "Area": "Limsa Lominsa",
+                                    "Gc": "Maelstrom",
                                     "Level": 50
                                 }
                             ]
@@ -26684,30 +26689,35 @@
                                     "Title": "A Pup No Longer (Twin Adder)",
                                     "Id": 66641,
                                     "Area": "Gridania",
+                                    "Gc": "Twin Adder",
                                     "Level": 30
                                 },
                                 {
                                     "Title": "Like Civilized Men and Women (Twin Adder)",
                                     "Id": 67063,
                                     "Area": "Gridania",
+                                    "Gc": "Twin Adder",
                                     "Level": 30
                                 },
                                 {
                                     "Title": "Shadows Uncast (Twin Adder)",
                                     "Id": 66665,
                                     "Area": "Gridania",
+                                    "Gc": "Twin Adder",
                                     "Level": 44
                                 },
                                 {
                                     "Title": "Gilding the Bilious (Twin Adder)",
                                     "Id": 66668,
                                     "Area": "Gridania",
+                                    "Gc": "Twin Adder",
                                     "Level": 47
                                 },
                                 {
                                     "Title": "Let the Hunt Begin (Twin Adder)",
                                     "Id": 67099,
                                     "Area": "Gridania",
+                                    "Gc": "Twin Adder",
                                     "Level": 50
                                 }
                             ]
@@ -26719,30 +26729,35 @@
                                     "Title": "A Pup No Longer (Immortal Flames)",
                                     "Id": 66642,
                                     "Area": "Ul'dah",
+                                    "Gc": "Immortal Flames",
                                     "Level": 30
                                 },
                                 {
                                     "Title": "Like Civilized Men and Women (Immortal Flames)",
                                     "Id": 67065,
                                     "Area": "Ul'dah",
+                                    "Gc": "Immortal Flames",
                                     "Level": 30
                                 },
                                 {
                                     "Title": "Shadows Uncast (Immortal Flames)",
                                     "Id": 66666,
                                     "Area": "Ul'dah",
+                                    "Gc": "Immortal Flames",
                                     "Level": 44
                                 },
                                 {
                                     "Title": "Gilding the Bilious (Immortal Flames)",
                                     "Id": 66669,
                                     "Area": "Ul'dah",
+                                    "Gc": "Immortal Flames",
                                     "Level": 47
                                 },
                                 {
                                     "Title": "Let the Hunt Begin (Immortal Flames)",
                                     "Id": 67101,
                                     "Area": "Ul'dah",
+                                    "Gc": "Immortal Flames",
                                     "Level": 50
                                 }
                             ]

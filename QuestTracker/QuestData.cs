@@ -10,6 +10,7 @@ public class QuestData
     public List<Quest> Quests { get; set; } = new();
     public float NumComplete { get; set; } = 0;
     public float Total { get; set; } = 0;
+    public bool Hide { get; set; } = false;
 }
 
 [Serializable]
@@ -21,4 +22,5 @@ public class Quest
     public string Start { get; set; } = "";
     public string Gc { get; set; } = "";
     public int Level { get; set; } = 0;
+    public bool Hide { get; set; } = false;
 }

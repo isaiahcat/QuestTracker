@@ -1,7 +1,6 @@
 ﻿using ImGuiNET;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Numerics;
 using Dalamud.Interface;
 using Dalamud.Interface.Utility;
@@ -44,6 +43,12 @@ namespace QuestTracker
             this.configuration = configuration;
         }
 
+        public void Reset()
+        {
+            SidePanelSelection = null;
+            DropdownSelection = null;
+        }
+
         public void Dispose() { }
 
         public void Draw()
@@ -57,7 +62,7 @@ namespace QuestTracker
             DrawMainWindow();
         }
 
-        public void DrawMainWindow()
+        private void DrawMainWindow()
         {
             if (!Visible)
             {
@@ -136,11 +141,15 @@ namespace QuestTracker
 
         private void DrawLayout1()
         {
+            if (SidePanelSelection == null) return;
             foreach (var category in SidePanelSelection.Categories)
             {
-                if (ImGui.CollapsingHeader(GetDisplayText(category, false)))
+                if (!category.Hide)
                 {
-                    DrawQuestList(category);
+                    if (ImGui.CollapsingHeader(GetDisplayText(category, false)))
+                    {
+                        DrawQuestList(category);
+                    }
                 }
             }
         }
@@ -158,9 +167,12 @@ namespace QuestTracker
             {
                 foreach (var subcategory in DropdownSelection.Categories)
                 {
-                    if (ImGui.CollapsingHeader(GetDisplayText(subcategory, false)))
+                    if (!subcategory.Hide)
                     {
-                        DrawQuestTable(subcategory.Quests);
+                        if (ImGui.CollapsingHeader(GetDisplayText(subcategory, false)))
+                        {
+                            DrawQuestTable(subcategory.Quests);
+                        }
                     }
                 }
             }
@@ -172,18 +184,22 @@ namespace QuestTracker
 
         private void DrawDropdown()
         {
+            if (DropdownSelection == null) return;
             if (ImGui.BeginCombo("##subcategory_select", GetDisplayText(DropdownSelection, false)))
             {
                 foreach (var category in SidePanelSelection.Categories)
                 {
-                    if (ImGui.Selectable(GetDisplayText(category, false), DropdownSelection == category))
+                    if (!category.Hide)
                     {
-                        DropdownSelection = category;
-                    }
+                        if (ImGui.Selectable(GetDisplayText(category, false), DropdownSelection == category))
+                        {
+                            DropdownSelection = category;
+                        }
 
-                    if (DropdownSelection == category)
-                    {
-                        ImGui.SetItemDefaultFocus();
+                        if (DropdownSelection == category)
+                        {
+                            ImGui.SetItemDefaultFocus();
+                        }
                     }
                 }
 
@@ -195,13 +211,17 @@ namespace QuestTracker
 
         private void DrawQuestList(QuestData category)
         {
+            if (category == null) return;
             if (category.Categories.Count > 0)
             {
                 foreach (var subcategory in category.Categories)
                 {
-                    ImGui.TextDisabled($"{subcategory.Title}");
-                    ImGui.Separator();
-                    DrawQuestTable(subcategory.Quests);
+                    if (!subcategory.Hide)
+                    {
+                        ImGui.TextDisabled($"{subcategory.Title}");
+                        ImGui.Separator();
+                        DrawQuestTable(subcategory.Quests);
+                    }
                 }
             }
             else
@@ -210,7 +230,7 @@ namespace QuestTracker
             }
         }
 
-        public void DrawQuestTable(List<Quest> quests)
+        private void DrawQuestTable(List<Quest> quests)
         {
             if (ImGui.BeginTable("##quest_table", 4))
             {
@@ -221,9 +241,7 @@ namespace QuestTracker
                 ImGui.TableHeadersRow();
                 foreach (var quest in quests)
                 {
-                    var hide = (configuration.HideComplete && QuestManager.IsQuestComplete(quest.Id)) ||
-                               (configuration.HideIncomplete && !QuestManager.IsQuestComplete(quest.Id));
-                    if (!hide)
+                    if (!quest.Hide)
                     {
                         ImGui.TableNextColumn();
                         if (QuestManager.IsQuestComplete(quest.Id))
@@ -260,7 +278,7 @@ namespace QuestTracker
             ImGui.EndTable();
         }
 
-        public void DrawSidePanel()
+        private void DrawSidePanel()
         {
             foreach (var category in plugin.QuestData.Categories)
             {
@@ -268,29 +286,68 @@ namespace QuestTracker
                 {
                     SidePanelSelection = category;
                     SettingsVisible = false;
-                    DropdownSelection = SidePanelSelection.Categories.First();
+                    DropdownSelection = SidePanelSelection.Categories.Find(c => !c.Hide);
                 }
             }
         }
 
-        public void DrawSettings()
+        private void DrawSettings()
         {
-            // can't ref a property, so use a local copy
-            var hideComplete = this.configuration.HideComplete;
-            if (ImGui.Checkbox("Hide complete", ref hideComplete))
+            ImGui.SetNextItemWidth(90);
+            var layoutOption = this.configuration.LayoutOption;
+            string[] layoutList = { "Layout 1", "Layout 2", "Layout 3" };
+            if (ImGui.BeginCombo("##layout_option", layoutList[layoutOption]))
             {
-                this.configuration.HideComplete = hideComplete;
-                // can save immediately on change, if you don't want to provide a "Save and Close" button
-                this.configuration.Save();
+                for (int i = 0; i < layoutList.Length; i++)
+                {
+                    if (ImGui.Selectable(layoutList[i]))
+                    {
+                        this.configuration.LayoutOption = i;
+                        this.configuration.Save();
+                    }
+
+                    if (layoutOption == i)
+                    {
+                        ImGui.SetItemDefaultFocus();
+                    }
+                }
+
+                ImGui.EndCombo();
             }
 
             ImGui.Spacing();
-
-            // can't ref a property, so use a local copy
-            var hideIncomplete = this.configuration.HideIncomplete;
-            if (ImGui.Checkbox("Hide incomplete", ref hideIncomplete))
+            
+            ImGui.SetNextItemWidth(130);
+            var displayOption = this.configuration.DisplayOption;
+            string[] displayList = { "Show All", "Show Complete", "Show Incomplete" };
+            if (ImGui.BeginCombo("##display_option", displayList[displayOption]))
             {
-                this.configuration.HideIncomplete = hideIncomplete;
+                for (int i = 0; i < displayList.Length; i++)
+                {
+                    if (ImGui.Selectable(displayList[i]))
+                    {
+                        this.configuration.DisplayOption = i;
+                        this.configuration.Save();
+                        this.plugin.UpdateQuestData(plugin.QuestData);
+                        Reset();
+                    }
+
+                    if (displayOption == i)
+                    {
+                        ImGui.SetItemDefaultFocus();
+                    }
+                }
+
+                ImGui.EndCombo();
+            }
+
+            ImGui.Spacing();
+            
+            // can't ref a property, so use a local copy
+            var showOverall = this.configuration.ShowOverall;
+            if (ImGui.Checkbox("Show overall", ref showOverall))
+            {
+                this.configuration.ShowOverall = showOverall;
                 // can save immediately on change, if you don't want to provide a "Save and Close" button
                 this.configuration.Save();
             }
@@ -315,52 +372,6 @@ namespace QuestTracker
                 this.configuration.ShowPercentage = showPercentage;
                 // can save immediately on change, if you don't want to provide a "Save and Close" button
                 this.configuration.Save();
-            }
-
-            ImGui.Spacing();
-
-            // can't ref a property, so use a local copy
-            var showOverall = this.configuration.ShowOverall;
-            if (ImGui.Checkbox("Show overall", ref showOverall))
-            {
-                this.configuration.ShowOverall = showOverall;
-                // can save immediately on change, if you don't want to provide a "Save and Close" button
-                this.configuration.Save();
-            }
-
-            ImGui.Spacing();
-
-            // can't ref a property, so use a local copy
-            var excludeOther = this.configuration.ExcludeOther;
-            if (ImGui.Checkbox("Exclude Other Quests from overall", ref excludeOther))
-            {
-                this.configuration.ExcludeOther = excludeOther;
-                // can save immediately on change, if you don't want to provide a "Save and Close" button
-                this.configuration.Save();
-            }
-
-            ImGui.Spacing();
-
-            ImGui.SetNextItemWidth(150);
-            var layoutOption = this.configuration.LayoutOption;
-            string[] layoutList = { "Layout 1", "Layout 2", "Layout 3" };
-            if (ImGui.BeginCombo("##layout_option", layoutList[layoutOption]))
-            {
-                for (int i = 0; i < layoutList.Length; i++)
-                {
-                    if (ImGui.Selectable(layoutList[i]))
-                    {
-                        this.configuration.LayoutOption = i;
-                        this.configuration.Save();
-                    }
-
-                    if (layoutOption == i)
-                    {
-                        ImGui.SetItemDefaultFocus();
-                    }
-                }
-
-                ImGui.EndCombo();
             }
         }
 

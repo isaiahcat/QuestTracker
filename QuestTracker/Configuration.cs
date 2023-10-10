@@ -8,13 +8,11 @@ namespace QuestTracker
     public class Configuration : IPluginConfiguration
     {
         public int Version { get; set; } = 0;
-        public bool HideComplete { get; set; } = false;
-        public bool HideIncomplete { get; set; } = false;
         public bool ShowCount { get; set; } = true;
         public bool ShowPercentage { get; set; } = false;
         public bool ShowOverall { get; set; } = true;
-        public bool ExcludeOther { get; set; } = false;
         public int LayoutOption { get; set; } = 0;
+        public int DisplayOption { get; set; } = 0;
 
         // the below exist just to make saving less cumbersome
 

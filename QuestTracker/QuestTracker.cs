@@ -25,6 +25,9 @@ namespace QuestTracker
 
         public readonly QuestData QuestData = null!;
 
+        private string start = "";
+        private string gc = "";
+
         public Plugin(
             [RequiredVersion("1.0")] DalamudPluginInterface pluginInterface,
             [RequiredVersion("1.0")] ICommandManager commandManager)
@@ -42,8 +45,6 @@ namespace QuestTracker
                 HelpMessage = "/qt: Opens the Quest Tracker"
             });
 
-            DataConverter dc = new DataConverter(pluginInterface);
-
             try
             {
                 PluginLog.Debug("Loading QuestData from data.json");
@@ -51,9 +52,9 @@ namespace QuestTracker
                 var path = Path.Combine(PluginInterface.AssemblyLocation.Directory.Parent.Parent.FullName, "data.json");
                 var jsonString = File.ReadAllText(path);
                 QuestData = JsonConvert.DeserializeObject<QuestData>(jsonString);
-                var start = DetermineStartArea();
-                var gc = DetermineGrandCompany();
-                UpdateQuestData(QuestData, start, gc);
+                start = DetermineStartArea();
+                gc = DetermineGrandCompany();
+                UpdateQuestData(QuestData);
 
                 PluginLog.Debug("Load successful");
             }
@@ -77,9 +78,10 @@ namespace QuestTracker
         private void OnCommand(string command, string args)
         {
             // in response to the slash command, just display our main ui
+            UpdateQuestData(QuestData);
             this.UI.Visible = true; 
             this.UI.SettingsVisible = false;
-            this.UI.SidePanelSelection = null;
+            this.UI.Reset();
         }
 
         private void DrawUI()
@@ -91,36 +93,40 @@ namespace QuestTracker
         {
             this.UI.Visible = true;
             this.UI.SettingsVisible = true;
-            this.UI.SidePanelSelection = null;
+            this.UI.Reset();
         }
 
-        public string DetermineStartArea()
+        private string DetermineStartArea()
         {
             return QuestManager.IsQuestComplete(66104) ? "Gridania" :
                    QuestManager.IsQuestComplete(66105) ? "Limsa Lominsa" :
                    QuestManager.IsQuestComplete(66106) ? "Ul'dah" : "";
         }
 
-        public string DetermineGrandCompany()
+        private string DetermineGrandCompany()
         {
             return QuestManager.IsQuestComplete(66216) ? "Twin Adder" :
                    QuestManager.IsQuestComplete(66217) ? "Maelstrom" :
                    QuestManager.IsQuestComplete(66218) ? "Immortal Flames" : "";
         }
 
-        public void UpdateQuestData(QuestData questData, string start, string gc)
+        public void UpdateQuestData(QuestData questData)
         {
+            questData.NumComplete = questData.Total = 0;
             if (questData.Categories.Count > 0)
             {
+                questData.Hide = true;
                 foreach (var category in questData.Categories)
                 {
-                    UpdateQuestData(category, start, gc);
+                    UpdateQuestData(category);
                     questData.NumComplete += category.NumComplete;
                     questData.Total += category.Total;
+                    if (!category.Hide) questData.Hide = false;
                 }
             }
             else
             {
+                questData.Hide = true;
                 foreach (var quest in questData.Quests.ToList())
                 {
                     if (start != "" && quest.Start != "" && start != quest.Start)
@@ -131,6 +137,7 @@ namespace QuestTracker
                         }
 
                         questData.Quests.Remove(quest);
+                        continue;
                     }
 
                     if (gc != "" && quest.Gc != "" && gc != quest.Gc)
@@ -141,14 +148,18 @@ namespace QuestTracker
                         }
 
                         questData.Quests.Remove(quest);
+                        continue;
                     }
 
                     if (QuestManager.IsQuestComplete(quest.Id))
                     {
                         questData.NumComplete++;
                     }
+                    
+                    quest.Hide = (Configuration.DisplayOption==1 && !QuestManager.IsQuestComplete(quest.Id)) ||
+                                 (Configuration.DisplayOption==2 && QuestManager.IsQuestComplete(quest.Id));
+                    if (!quest.Hide) questData.Hide = false;
                 }
-
                 questData.Total += questData.Quests.Count;
             }
         }
