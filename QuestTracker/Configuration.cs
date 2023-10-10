@@ -13,6 +13,8 @@ namespace QuestTracker
         public bool ShowOverall { get; set; } = true;
         public int LayoutOption { get; set; } = 0;
         public int DisplayOption { get; set; } = 0;
+        public string StartArea { get; set; } = "";
+        public string GrandCompany { get; set; } = "";
 
         // the below exist just to make saving less cumbersome
 
