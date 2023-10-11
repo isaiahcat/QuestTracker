@@ -76,7 +76,6 @@ namespace QuestTracker
             // in response to the slash command, just display our main ui
             this.UI.Visible = true;
             this.UI.SettingsVisible = false;
-            this.UI.Reset();
         }
 
         private void DrawUI()
@@ -88,7 +87,7 @@ namespace QuestTracker
         {
             this.UI.Visible = true;
             this.UI.SettingsVisible = true;
-            this.UI.Reset();
+            this.Configuration.ResetSelections();
         }
 
         private void DetermineStartArea()

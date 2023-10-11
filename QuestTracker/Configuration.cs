@@ -16,6 +16,8 @@ namespace QuestTracker
         public string StartArea { get; set; } = "";
         public string GrandCompany { get; set; } = "";
         public int StartClass { get; set; } = 0;
+        public QuestData SidePanelSelection { get; set; } = null;
+        public QuestData DropdownSelection { get; set; } = null;
 
         // the below exist just to make saving less cumbersome
 
@@ -30,6 +32,13 @@ namespace QuestTracker
         public void Save()
         {
             this.pluginInterface.SavePluginConfig(this);
+        }
+
+        public void ResetSelections()
+        {
+            SidePanelSelection = null;
+            DropdownSelection = null;
+            Save();
         }
     }
 }

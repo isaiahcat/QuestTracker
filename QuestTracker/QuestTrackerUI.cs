@@ -34,19 +34,10 @@ namespace QuestTracker
             set { this.settingsVisible = value; }
         }
 
-        public QuestData SidePanelSelection;
-        public QuestData DropdownSelection;
-
         public QuestTrackerUI(Plugin plugin, Configuration configuration)
         {
             this.plugin = plugin;
             this.configuration = configuration;
-        }
-
-        public void Reset()
-        {
-            SidePanelSelection = null;
-            DropdownSelection = null;
         }
 
         public void Dispose() { }
@@ -69,7 +60,7 @@ namespace QuestTracker
             plugin.UpdateQuestData();
             ImGui.SetNextWindowSize(new Vector2(375, 440), ImGuiCond.FirstUseEver);
             ImGui.SetNextWindowSizeConstraints(new Vector2(375, 240), new Vector2(float.MaxValue, float.MaxValue));
-            if (ImGui.Begin(plugin.Name, ref this.visible))
+            if (ImGui.Begin(plugin.Name, ref visible))
             {
                 ImGui.BeginGroup();
                 if (ImGui.BeginChild("##category_select",
@@ -90,7 +81,7 @@ namespace QuestTracker
                 ImGui.EndChild();
                 if (ImGui.Button("Settings"))
                 {
-                    SidePanelSelection = null;
+                    configuration.ResetSelections();
                     SettingsVisible = true;
                 }
 
@@ -100,13 +91,13 @@ namespace QuestTracker
                 ImGui.SameLine();
                 if (ImGui.BeginChild("##category_view", ImGuiHelpers.ScaledVector2(0), true))
                 {
-                    if (SidePanelSelection == null && SettingsVisible)
+                    if (configuration.SidePanelSelection == null && SettingsVisible)
                     {
                         DrawSettings();
                     }
                     else
                     {
-                        switch (this.configuration.LayoutOption)
+                        switch (configuration.LayoutOption)
                         {
                             case 0:
                                 DrawLayout1();
@@ -129,8 +120,8 @@ namespace QuestTracker
 
         private void DrawLayout1()
         {
-            if (SidePanelSelection == null) return;
-            foreach (var category in SidePanelSelection.Categories)
+            if (configuration.SidePanelSelection == null) return;
+            foreach (var category in configuration.SidePanelSelection.Categories)
             {
                 if (!category.Hide)
                 {
@@ -145,15 +136,15 @@ namespace QuestTracker
         private void DrawLayout2()
         {
             DrawDropdown();
-            DrawQuestList(DropdownSelection);
+            DrawQuestList(configuration.DropdownSelection);
         }
 
         private void DrawLayout3()
         {
             DrawDropdown();
-            if (DropdownSelection.Categories.Count > 0)
+            if (configuration.DropdownSelection.Categories.Count > 0)
             {
-                foreach (var subcategory in DropdownSelection.Categories)
+                foreach (var subcategory in configuration.DropdownSelection.Categories)
                 {
                     if (!subcategory.Hide)
                     {
@@ -166,29 +157,27 @@ namespace QuestTracker
             }
             else
             {
-                DrawQuestTable(DropdownSelection.Quests);
+                DrawQuestTable(configuration.DropdownSelection.Quests);
             }
         }
 
         private void DrawDropdown()
         {
-            if (DropdownSelection == null) return;
+            if (configuration.DropdownSelection == null) return;
             ImGui.SetNextItemWidth(GetAdjustedWidth(300));
-            if (ImGui.BeginCombo("##subcategory_select", GetDisplayText(DropdownSelection, false)))
+            if (ImGui.BeginCombo("##subcategory_select", GetDisplayText(configuration.DropdownSelection, false)))
             {
-                foreach (var category in SidePanelSelection.Categories)
+                foreach (var category in configuration.SidePanelSelection.Categories)
                 {
                     if (!category.Hide)
                     {
-                        if (ImGui.Selectable(GetDisplayText(category, false), DropdownSelection == category))
+                        if (ImGui.Selectable(GetDisplayText(category, false),
+                                             configuration.DropdownSelection == category))
                         {
-                            DropdownSelection = category;
+                            configuration.DropdownSelection = category;
                         }
 
-                        if (DropdownSelection == category)
-                        {
-                            ImGui.SetItemDefaultFocus();
-                        }
+                        if (configuration.DropdownSelection == category) ImGui.SetItemDefaultFocus();
                     }
                 }
 
@@ -273,11 +262,12 @@ namespace QuestTracker
         {
             foreach (var category in plugin.QuestData.Categories)
             {
-                if (ImGui.Selectable(GetDisplayText(category, false), SidePanelSelection == category))
+                if (ImGui.Selectable(GetDisplayText(category, false), configuration.SidePanelSelection == category))
                 {
-                    SidePanelSelection = category;
+                    configuration.SidePanelSelection = category;
                     SettingsVisible = false;
-                    DropdownSelection = SidePanelSelection.Categories.Find(c => !c.Hide);
+                    configuration.DropdownSelection = configuration.SidePanelSelection.Categories.Find(c => !c.Hide);
+                    configuration.Save();
                 }
             }
         }
@@ -285,7 +275,7 @@ namespace QuestTracker
         private void DrawSettings()
         {
             ImGui.SetNextItemWidth(90);
-            var layoutOption = this.configuration.LayoutOption;
+            var layoutOption = configuration.LayoutOption;
             string[] layoutList = { "Layout 1", "Layout 2", "Layout 3" };
             if (ImGui.BeginCombo("##layout_option", layoutList[layoutOption]))
             {
@@ -293,14 +283,11 @@ namespace QuestTracker
                 {
                     if (ImGui.Selectable(layoutList[i]))
                     {
-                        this.configuration.LayoutOption = i;
-                        this.configuration.Save();
+                        configuration.LayoutOption = i;
+                        configuration.Save();
                     }
 
-                    if (layoutOption == i)
-                    {
-                        ImGui.SetItemDefaultFocus();
-                    }
+                    if (layoutOption == i) ImGui.SetItemDefaultFocus();
                 }
 
                 ImGui.EndCombo();
@@ -309,7 +296,7 @@ namespace QuestTracker
             ImGui.Spacing();
 
             ImGui.SetNextItemWidth(130);
-            var displayOption = this.configuration.DisplayOption;
+            var displayOption = configuration.DisplayOption;
             string[] displayList = { "Show All", "Show Complete", "Show Incomplete" };
             if (ImGui.BeginCombo("##display_option", displayList[displayOption]))
             {
@@ -317,15 +304,11 @@ namespace QuestTracker
                 {
                     if (ImGui.Selectable(displayList[i]))
                     {
-                        this.configuration.DisplayOption = i;
-                        this.configuration.Save();
-                        Reset();
+                        configuration.DisplayOption = i;
+                        configuration.ResetSelections();
                     }
 
-                    if (displayOption == i)
-                    {
-                        ImGui.SetItemDefaultFocus();
-                    }
+                    if (displayOption == i) ImGui.SetItemDefaultFocus();
                 }
 
                 ImGui.EndCombo();
@@ -334,52 +317,42 @@ namespace QuestTracker
             ImGui.Spacing();
 
             // can't ref a property, so use a local copy
-            var showOverall = this.configuration.ShowOverall;
+            var showOverall = configuration.ShowOverall;
             if (ImGui.Checkbox("Show overall", ref showOverall))
             {
-                this.configuration.ShowOverall = showOverall;
-                // can save immediately on change, if you don't want to provide a "Save and Close" button
-                this.configuration.Save();
+                configuration.ShowOverall = showOverall;
+                configuration.Save();
             }
 
             ImGui.Spacing();
 
             // can't ref a property, so use a local copy
-            var showCount = this.configuration.ShowCount;
+            var showCount = configuration.ShowCount;
             if (ImGui.Checkbox("Show count \"Main Scenario 502/843\"", ref showCount))
             {
-                this.configuration.ShowCount = showCount;
-                // can save immediately on change, if you don't want to provide a "Save and Close" button
-                this.configuration.Save();
+                configuration.ShowCount = showCount;
+                configuration.Save();
             }
 
             ImGui.Spacing();
 
             // can't ref a property, so use a local copy
-            var showPercentage = this.configuration.ShowPercentage;
+            var showPercentage = configuration.ShowPercentage;
             if (ImGui.Checkbox("Show percentage \"Tribal Quests 54%\"", ref showPercentage))
             {
-                this.configuration.ShowPercentage = showPercentage;
-                // can save immediately on change, if you don't want to provide a "Save and Close" button
-                this.configuration.Save();
+                configuration.ShowPercentage = showPercentage;
+                configuration.Save();
             }
         }
 
         private string GetDisplayText(QuestData questData, bool addSymbol)
         {
             var text = $"{questData.Title}";
-            if (configuration.ShowCount)
-            {
-                text += $" {questData.NumComplete}/{questData.Total}";
-            }
-
+            if (configuration.ShowCount) text += $" {questData.NumComplete}/{questData.Total}";
             if (configuration.ShowPercentage)
-            {
                 text += addSymbol
                             ? $" {questData.NumComplete / questData.Total:P0}%"
                             : $" {questData.NumComplete / questData.Total:P0}";
-            }
-
             return text;
         }
 
@@ -389,7 +362,6 @@ namespace QuestTracker
             if (configuration.ShowPercentage) width += 20;
             return width;
         }
-
 
         //TODO:
         /*private void OpenAreaMap(uint questId, uint mapId)
