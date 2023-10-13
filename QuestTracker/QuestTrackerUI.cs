@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Numerics;
 using Dalamud.Interface;
 using Dalamud.Interface.Utility;
-using FFXIVClientStructs.FFXIV.Client.Game;
 
 namespace QuestTracker
 {
@@ -222,34 +221,20 @@ namespace QuestTracker
                     if (!quest.Hide)
                     {
                         ImGui.TableNextColumn();
-                        if (QuestManager.IsQuestComplete(quest.Id))
+                        if (Plugin.IsQuestComplete(quest))
                         {
                             ImGui.PushFont(UiBuilder.IconFont);
                             ImGui.TextUnformatted(FontAwesomeIcon.Check.ToIconString());
                             ImGui.PopFont();
                         }
-
-                        if (quest.Id != 0)
-                        {
-                            ImGui.TableNextColumn();
-                            ImGui.Text(quest.Title);
-                            //TODO: if(ImGui.Selectable(quest.Title)) OpenQuestInJournal();
-                            ImGui.TableNextColumn();
-                            ImGui.Text(quest.Area);
-                            //TODO: if(ImGui.Selectable(quest.Area)) OpenAreaMap();
-                            ImGui.TableNextColumn();
-                            ImGui.Text($"{quest.Level}");
-                        }
-                        else
-                        {
-                            ImGui.TableNextColumn();
-                            ImGui.TextDisabled(quest.Title);
-                            ImGui.TableNextColumn();
-                            ImGui.TextDisabled(quest.Area);
-                            ImGui.TableNextColumn();
-                            ImGui.TextDisabled($"{quest.Level}");
-                        }
-
+                        ImGui.TableNextColumn();
+                        ImGui.Text(quest.Title);
+                        //TODO: if(ImGui.Selectable(quest.Title)) OpenQuestInJournal();
+                        ImGui.TableNextColumn();
+                        ImGui.Text(quest.Area);
+                        //TODO: if(ImGui.Selectable(quest.Area)) OpenAreaMap();
+                        ImGui.TableNextColumn();
+                        ImGui.Text($"{quest.Level}");
                         ImGui.TableNextRow();
                     }
                 }

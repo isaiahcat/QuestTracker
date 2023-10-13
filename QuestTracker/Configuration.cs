@@ -15,7 +15,7 @@ namespace QuestTracker
         public int DisplayOption { get; set; } = 0;
         public string StartArea { get; set; } = "";
         public string GrandCompany { get; set; } = "";
-        public int StartClass { get; set; } = 0;
+        public uint StartClass { get; set; } = 0;
         public QuestData SidePanelSelection { get; set; } = null;
         public QuestData DropdownSelection { get; set; } = null;
 

@@ -106,7 +106,7 @@ namespace QuestTracker
 
         private void DetermineStartClass()
         {
-            Configuration.StartClass =
+            Configuration.StartClass = (uint) (
                 // Gladiator
                 QuestManager.IsQuestComplete(65792) && !QuestManager.IsQuestComplete(65822) ? 65822 :
                 // Pugilist
@@ -124,7 +124,7 @@ namespace QuestTracker
                 // Thaumaturge
                 QuestManager.IsQuestComplete(65883) && !QuestManager.IsQuestComplete(65882) ? 65882 :
                 // Arcanist
-                QuestManager.IsQuestComplete(65991) && !QuestManager.IsQuestComplete(65990) ? 65990 : 0;
+                QuestManager.IsQuestComplete(65991) && !QuestManager.IsQuestComplete(65990) ? 65990 : 0);
         }
 
         public void UpdateQuestData()
@@ -158,7 +158,7 @@ namespace QuestTracker
                 {
                     if (Configuration.StartArea != "" && quest.Start != "" && Configuration.StartArea != quest.Start)
                     {
-                        if (QuestManager.IsQuestComplete(quest.Id))
+                        if (IsQuestComplete(quest))
                         {
                             PluginLog.Error($"Quest {quest.Id} is restricted but completed");
                         }
@@ -169,7 +169,7 @@ namespace QuestTracker
 
                     if (Configuration.GrandCompany != "" && quest.Gc != "" && Configuration.GrandCompany != quest.Gc)
                     {
-                        if (QuestManager.IsQuestComplete(quest.Id))
+                        if (IsQuestComplete(quest))
                         {
                             PluginLog.Error($"Quest {quest.Id} is restricted but completed");
                         }
@@ -178,24 +178,30 @@ namespace QuestTracker
                         continue;
                     }
 
-                    if (Configuration.StartClass != 0 && Configuration.StartClass == quest.Id)
+                    if (Configuration.StartClass != 0 && quest.Id.Contains(Configuration.StartClass))
                     {
                         questData.Quests.Remove(quest);
                         continue;
                     }
 
-                    if (QuestManager.IsQuestComplete(quest.Id))
-                    {
-                        questData.NumComplete++;
-                    }
+                    if (IsQuestComplete(quest)) questData.NumComplete++;
 
-                    quest.Hide = (Configuration.DisplayOption == 1 && !QuestManager.IsQuestComplete(quest.Id)) ||
-                                 (Configuration.DisplayOption == 2 && QuestManager.IsQuestComplete(quest.Id));
+                    quest.Hide = (Configuration.DisplayOption == 1 && !IsQuestComplete(quest)) ||
+                                 (Configuration.DisplayOption == 2 && IsQuestComplete(quest));
                     if (!quest.Hide) questData.Hide = false;
                 }
 
                 questData.Total += questData.Quests.Count;
             }
+        }
+
+        public static bool IsQuestComplete(Quest quest)
+        {
+            foreach (var id in quest.Id)
+            {
+                if (QuestManager.IsQuestComplete(id)) return true;                
+            }
+            return false;
         }
     }
 }
