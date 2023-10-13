@@ -60,6 +60,9 @@ namespace QuestTracker
                 PluginLog.Error(e.Message);
             }
 
+            //TODO: Remove
+            DetermineStartArea();
+
             PluginInterface.UiBuilder.Draw += DrawUI;
             PluginInterface.UiBuilder.OpenConfigUi += DrawConfigUI;
         }
@@ -92,9 +95,30 @@ namespace QuestTracker
 
         private void DetermineStartArea()
         {
-            Configuration.StartArea = QuestManager.IsQuestComplete(66104) ? "Gridania" :
+            uint[] closetohome = {65621,65644,65645,65659,65660,66104,66105,66106};
+            
+            foreach (var id in closetohome)
+                if (QuestManager.IsQuestComplete(id))
+                    PluginLog.Debug($"Completed Close to Home {id}");
+
+            uint[] illconceivedventure = {66968,66969,66970};
+            
+            foreach (var id in illconceivedventure)
+                if (QuestManager.IsQuestComplete(id))
+                    PluginLog.Debug($"Completed An Ill-conceived Venture {id}");
+
+            uint[] simplythehest = {65594, 65595, 65596};
+            
+            foreach (var id in simplythehest)
+                if (QuestManager.IsQuestComplete(id))
+                    PluginLog.Debug($"Completed Simply the Hest {id}");
+            
+            Configuration.StartArea = QuestManager.IsQuestComplete(66106) ? "Ul'dah" : "";
+            
+            //TODO: Test and update
+           /* Configuration.StartArea = QuestManager.IsQuestComplete(66104) ? "Gridania" :
                                       QuestManager.IsQuestComplete(66105) ? "Limsa Lominsa" :
-                                      QuestManager.IsQuestComplete(66106) ? "Ul'dah" : "";
+                                      QuestManager.IsQuestComplete(66106) ? "Ul'dah" : "";*/
         }
 
         private void DetermineGrandCompany()
@@ -160,7 +184,7 @@ namespace QuestTracker
                     {
                         if (IsQuestComplete(quest))
                         {
-                            PluginLog.Error($"Quest {quest.Id} is restricted but completed");
+                            PluginLog.Error($"Quest {quest.Title} {EnumerateQuestId(quest)} is restricted but completed");
                         }
 
                         questData.Quests.Remove(quest);
@@ -171,7 +195,7 @@ namespace QuestTracker
                     {
                         if (IsQuestComplete(quest))
                         {
-                            PluginLog.Error($"Quest {quest.Id} is restricted but completed");
+                            PluginLog.Error($"Quest {quest.Title} {EnumerateQuestId(quest)} is restricted but completed");
                         }
 
                         questData.Quests.Remove(quest);
@@ -193,6 +217,16 @@ namespace QuestTracker
 
                 questData.Total += questData.Quests.Count;
             }
+        }
+        
+        private string EnumerateQuestId(Quest quest)
+        {
+            var text = "";
+            foreach (var id in quest.Id)
+            {
+                text += id + " ";
+            }
+            return text;
         }
 
         public static bool IsQuestComplete(Quest quest)

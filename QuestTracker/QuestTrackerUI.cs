@@ -64,7 +64,7 @@ namespace QuestTracker
                 ImGui.BeginGroup();
                 if (ImGui.BeginChild("##category_select",
                                      ImGuiHelpers.ScaledVector2(GetAdjustedWidth(170), 0) -
-                                     iconButtonSize with { X = 0 }, true))
+                                     iconButtonSize with { X = 0 }, true, ImGuiWindowFlags.AlwaysAutoResize))
                 {
                     if (configuration.ShowOverall)
                     {
