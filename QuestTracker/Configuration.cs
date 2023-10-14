@@ -34,6 +34,14 @@ namespace QuestTracker
             this.pluginInterface.SavePluginConfig(this);
         }
 
+        public void ResetFilters()
+        {
+            StartArea = "";
+            GrandCompany = "";
+            StartClass = 0;
+            Save();
+        }
+
         public void ResetSelections()
         {
             SidePanelSelection = null;

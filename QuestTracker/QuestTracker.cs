@@ -73,9 +73,6 @@ namespace QuestTracker
                 PluginLog.Error(e.Message);
             }
 
-            //TODO: Remove
-            DetermineStartArea();
-
             PluginInterface.UiBuilder.Draw += DrawUI;
             PluginInterface.UiBuilder.OpenConfigUi += DrawConfigUI;
         }
@@ -83,6 +80,7 @@ namespace QuestTracker
         public void Dispose()
         {
             this.UI.Dispose();
+            Configuration.ResetFilters();
             CommandManager.RemoveHandler(CommandName);
             CommandManager.RemoveHandler(CommandNameAlt);
         }
@@ -108,6 +106,12 @@ namespace QuestTracker
 
         private void DetermineStartArea()
         {
+            uint[] closetohome = {65621,65644,65645,65659,65660,66104,66105,66106};
+            
+            foreach (var id in closetohome)
+                if (QuestManager.IsQuestComplete(id))
+                    PluginLog.Debug($"Completed Close to Home {id}");
+
             uint[] illconceivedventure = {66968,66969,66970};
             
             foreach (var id in illconceivedventure)
