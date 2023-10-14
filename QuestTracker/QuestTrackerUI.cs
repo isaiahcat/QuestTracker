@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using Dalamud.Interface;
 using Dalamud.Interface.Utility;
+using Lumina.Excel.GeneratedSheets;
 
 namespace QuestTracker
 {
@@ -353,7 +354,7 @@ namespace QuestTracker
         {
             var questRow = Plugin.DataManager.GetExcelSheet<Lumina.Excel.GeneratedSheets.Quest>().GetRow(questId);
             var mapRow = Plugin.DataManager.GetExcelSheet<Map>().GetRow(mapId);
-            PLugin.GameGui.OpenMapWithMapLink();
+            Plugin.GameGui.OpenMapWithMapLink();
         }*/
     }
 }

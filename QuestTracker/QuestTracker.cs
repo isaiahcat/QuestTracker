@@ -18,6 +18,8 @@ namespace QuestTracker
 
         public static DalamudPluginInterface PluginInterface { get; private set; }
         public static ICommandManager CommandManager { get; private set; }
+        public static IDataManager DataManager { get; private set; }
+        public static IGameGui GameGui { get; private set; }
         public static IPluginLog PluginLog { get; private set; }
 
         private Configuration Configuration { get; init; }
@@ -28,10 +30,14 @@ namespace QuestTracker
         public Plugin(
             [RequiredVersion("1.0")] DalamudPluginInterface pluginInterface,
             [RequiredVersion("1.0")] ICommandManager commandManager,
+            [RequiredVersion("1.0")] IDataManager dataManager,
+            [RequiredVersion("1.0")] IGameGui gameGui,
             [RequiredVersion("1.0")] IPluginLog pluginLog)
         {
             PluginInterface = pluginInterface;
             CommandManager = commandManager;
+            DataManager = dataManager;
+            GameGui = gameGui;
             PluginLog = pluginLog;
 
             this.Configuration = PluginInterface.GetPluginConfig() as Configuration ?? new Configuration();
@@ -95,12 +101,6 @@ namespace QuestTracker
 
         private void DetermineStartArea()
         {
-            uint[] closetohome = {65621,65644,65645,65659,65660,66104,66105,66106};
-            
-            foreach (var id in closetohome)
-                if (QuestManager.IsQuestComplete(id))
-                    PluginLog.Debug($"Completed Close to Home {id}");
-
             uint[] illconceivedventure = {66968,66969,66970};
             
             foreach (var id in illconceivedventure)
@@ -113,12 +113,9 @@ namespace QuestTracker
                 if (QuestManager.IsQuestComplete(id))
                     PluginLog.Debug($"Completed Simply the Hest {id}");
             
-            Configuration.StartArea = QuestManager.IsQuestComplete(66106) ? "Ul'dah" : "";
-            
-            //TODO: Test and update
-           /* Configuration.StartArea = QuestManager.IsQuestComplete(66104) ? "Gridania" :
-                                      QuestManager.IsQuestComplete(66105) ? "Limsa Lominsa" :
-                                      QuestManager.IsQuestComplete(66106) ? "Ul'dah" : "";*/
+            Configuration.StartArea = QuestManager.IsQuestComplete(65575) ? "Gridania" :
+                                      QuestManager.IsQuestComplete(65643) ? "Limsa Lominsa" :
+                                      QuestManager.IsQuestComplete(66130) ? "Ul'dah" : "";
         }
 
         private void DetermineGrandCompany()
