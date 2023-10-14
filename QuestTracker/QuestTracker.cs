@@ -23,7 +23,6 @@ namespace QuestTracker
         public static IDataManager DataManager { get; private set; }
         public static IGameGui GameGui { get; private set; }
         public static IPluginLog PluginLog { get; private set; }
-
         private Configuration Configuration { get; init; }
         private QuestTrackerUI UI { get; init; }
 
@@ -192,7 +191,7 @@ namespace QuestTracker
                     {
                         if (IsQuestComplete(quest))
                         {
-                            PluginLog.Error($"Quest {quest.Title} {EnumerateQuestId(quest)} is restricted but completed");
+                            PluginLog.Error($"Quest {quest.Title} {string.Join(" ", quest.Id)} is restricted but completed");
                         }
 
                         questData.Quests.Remove(quest);
@@ -203,7 +202,7 @@ namespace QuestTracker
                     {
                         if (IsQuestComplete(quest))
                         {
-                            PluginLog.Error($"Quest {quest.Title} {EnumerateQuestId(quest)} is restricted but completed");
+                            PluginLog.Error($"Quest {quest.Title} {string.Join(" ", quest.Id)} is restricted but completed");
                         }
 
                         questData.Quests.Remove(quest);
@@ -225,16 +224,6 @@ namespace QuestTracker
 
                 questData.Total += questData.Quests.Count;
             }
-        }
-        
-        private string EnumerateQuestId(Quest quest)
-        {
-            var text = "";
-            foreach (var id in quest.Id)
-            {
-                text += id + " ";
-            }
-            return text;
         }
 
         public static bool IsQuestComplete(Quest quest)

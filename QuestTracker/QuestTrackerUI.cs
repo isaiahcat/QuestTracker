@@ -1,8 +1,11 @@
 ﻿using ImGuiNET;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Numerics;
+using Dalamud.Game.Text.SeStringHandling.Payloads;
 using Dalamud.Interface;
+using Dalamud.Interface.Components;
 using Dalamud.Interface.Utility;
 using Lumina.Excel.GeneratedSheets;
 
@@ -232,8 +235,7 @@ namespace QuestTracker
                         ImGui.Text(quest.Title);
                         //TODO: if(ImGui.Selectable(quest.Title)) OpenQuestInJournal();
                         ImGui.TableNextColumn();
-                        ImGui.Text(quest.Area);
-                        //TODO: if(ImGui.Selectable(quest.Area)) OpenAreaMap();
+                        if (ImGui.Selectable($"{quest.Area}##{quest.Id[0]}")) OpenAreaMap(quest);
                         ImGui.TableNextColumn();
                         ImGui.Text($"{quest.Level}");
                         ImGui.TableNextRow();
@@ -349,12 +351,21 @@ namespace QuestTracker
             return width;
         }
 
-        //TODO:
-        /*private void OpenAreaMap(uint questId, uint mapId)
+        private void OpenQuestInJournal()
         {
-            var questRow = Plugin.DataManager.GetExcelSheet<Lumina.Excel.GeneratedSheets.Quest>().GetRow(questId);
-            var mapRow = Plugin.DataManager.GetExcelSheet<Map>().GetRow(mapId);
-            Plugin.GameGui.OpenMapWithMapLink();
-        }*/
+            
+        }
+
+        private static void OpenAreaMap(Quest quest)
+        {
+            var questEnumerable = Plugin.DataManager.GetExcelSheet<Lumina.Excel.GeneratedSheets.Quest>()
+                                        .Where(q => quest.Id.Contains(q.RowId) && q.IssuerLocation.Value != null);
+            Level level = questEnumerable.First().IssuerLocation.Value;
+            var mapLink = new MapLinkPayload(level.Territory.Row,
+                                             level.Map.Row,
+                                             (int)(level.X * 1_000f),
+                                             (int)(level.Z * 1_000f));
+            Plugin.GameGui.OpenMapWithMapLink(mapLink);
+        }
     }
 }
