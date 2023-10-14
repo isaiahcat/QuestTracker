@@ -15,6 +15,8 @@ namespace QuestTracker
         public string Name => "Quest Tracker";
 
         private const string CommandName = "/qt";
+        
+        private const string CommandNameAlt = "/quest";
 
         public static DalamudPluginInterface PluginInterface { get; private set; }
         public static ICommandManager CommandManager { get; private set; }
@@ -47,7 +49,12 @@ namespace QuestTracker
 
             CommandManager.AddHandler(CommandName, new CommandInfo(OnCommand)
             {
-                HelpMessage = "/qt: Opens the Quest Tracker"
+                HelpMessage = "Opens the Quest Tracker"
+            });
+            
+            CommandManager.AddHandler(CommandNameAlt, new CommandInfo(OnCommand)
+            {
+                HelpMessage = "Opens the Quest Tracker"
             });
 
             try
@@ -76,8 +83,8 @@ namespace QuestTracker
         public void Dispose()
         {
             this.UI.Dispose();
-
             CommandManager.RemoveHandler(CommandName);
+            CommandManager.RemoveHandler(CommandNameAlt);
         }
 
         private void OnCommand(string command, string args)
