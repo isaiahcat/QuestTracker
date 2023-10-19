@@ -100,7 +100,6 @@ namespace QuestTracker
         {
             this.UI.Visible = true;
             this.UI.SettingsVisible = true;
-            this.Configuration.ResetSelections();
         }
 
         private void DetermineStartArea()

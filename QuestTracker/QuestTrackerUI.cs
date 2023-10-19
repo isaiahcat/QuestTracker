@@ -94,7 +94,7 @@ namespace QuestTracker
                                          ? ImGuiHelpers.ScaledVector2(0)
                                          : ImGuiHelpers.ScaledVector2(0) - iconButtonSize with { X = 0 }, true))
                 {
-                    if (configuration.SidePanelSelection == null && SettingsVisible)
+                    if (SettingsVisible)
                     {
                         DrawSettings();
                     }
@@ -135,10 +135,9 @@ namespace QuestTracker
 
             ImGui.SameLine();
 
-            if (ImGui.Button("Settings"))
+            if (ImGui.Button(SettingsVisible? "Quests" : "Settings"))
             {
-                configuration.ResetSelections();
-                SettingsVisible = true;
+                SettingsVisible = !SettingsVisible;
             }
         }
 
