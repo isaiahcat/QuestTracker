@@ -131,6 +131,12 @@ namespace QuestTracker
             {
                 configuration.ShowSidePanel = !configuration.ShowSidePanel;
                 configuration.Save();
+
+                ImGui.SetWindowSize(new Vector2(
+                                        configuration.ShowSidePanel
+                                            ? ImGui.GetWindowSize().X + GetAdjustedWidth(170)
+                                            : ImGui.GetWindowSize().X - GetAdjustedWidth(170),
+                                        ImGui.GetWindowSize().Y));
             }
 
             ImGui.SameLine();
