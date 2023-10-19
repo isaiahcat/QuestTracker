@@ -5,7 +5,6 @@ using System.Linq;
 using System.Numerics;
 using Dalamud.Game.Text.SeStringHandling.Payloads;
 using Dalamud.Interface;
-using Dalamud.Interface.Components;
 using Dalamud.Interface.Utility;
 using Lumina.Excel.GeneratedSheets;
 
@@ -61,38 +60,39 @@ namespace QuestTracker
             if (!Visible) return;
 
             plugin.UpdateQuestData();
+            iconButtonSize = ImGui.GetItemRectSize() + ImGui.GetStyle().ItemSpacing;
             ImGui.SetNextWindowSize(new Vector2(375, 440), ImGuiCond.FirstUseEver);
             ImGui.SetNextWindowSizeConstraints(new Vector2(375, 240), new Vector2(float.MaxValue, float.MaxValue));
             if (ImGui.Begin(plugin.Name, ref visible))
             {
-                ImGui.BeginGroup();
-                if (ImGui.BeginChild("##category_select",
-                                     ImGuiHelpers.ScaledVector2(GetAdjustedWidth(170), 0) -
-                                     iconButtonSize with { X = 0 }, true, ImGuiWindowFlags.AlwaysAutoResize))
+                if (configuration.ShowSidePanel)
                 {
-                    if (configuration.ShowOverall)
+                    ImGui.BeginGroup();
+                    if (ImGui.BeginChild("##category_select",
+                                         ImGuiHelpers.ScaledVector2(GetAdjustedWidth(170), 0) -
+                                         iconButtonSize with { X = 0 }, true, ImGuiWindowFlags.AlwaysAutoResize))
                     {
-                        ImGui.Text("Overall" + GetDisplayText(plugin.QuestData, true));
-                        ImGui.Spacing();
-                        ImGui.Separator();
-                        ImGui.Spacing();
+                        if (configuration.ShowOverall)
+                        {
+                            ImGui.Text("Overall" + GetDisplayText(plugin.QuestData, true));
+                            ImGui.Spacing();
+                            ImGui.Separator();
+                            ImGui.Spacing();
+                        }
+
+                        DrawSidePanel();
                     }
 
-                    DrawSidePanel();
+                    ImGui.EndChild();
+                    DrawFooter();
+                    ImGui.EndGroup();
+                    ImGui.SameLine();
                 }
 
-                ImGui.EndChild();
-                if (ImGui.Button("Settings"))
-                {
-                    configuration.ResetSelections();
-                    SettingsVisible = true;
-                }
-
-                iconButtonSize = ImGui.GetItemRectSize() + ImGui.GetStyle().ItemSpacing;
-                ImGui.EndGroup();
-
-                ImGui.SameLine();
-                if (ImGui.BeginChild("##category_view", ImGuiHelpers.ScaledVector2(0), true))
+                if (ImGui.BeginChild("##category_view",
+                                     configuration.ShowSidePanel
+                                         ? ImGuiHelpers.ScaledVector2(0)
+                                         : ImGuiHelpers.ScaledVector2(0) - iconButtonSize with { X = 0 }, true))
                 {
                     if (configuration.SidePanelSelection == null && SettingsVisible)
                     {
@@ -100,6 +100,8 @@ namespace QuestTracker
                     }
                     else
                     {
+                        if (!configuration.ShowSidePanel) DrawSidePanelAsDropdown();
+
                         switch (configuration.LayoutOption)
                         {
                             case 0:
@@ -116,9 +118,28 @@ namespace QuestTracker
                 }
 
                 ImGui.EndChild();
+
+                if (!configuration.ShowSidePanel) DrawFooter();
             }
 
             ImGui.End();
+        }
+
+        private void DrawFooter()
+        {
+            if (ImGui.ArrowButton("##side_panel_toggle", configuration.ShowSidePanel ? ImGuiDir.Up : ImGuiDir.Right))
+            {
+                configuration.ShowSidePanel = !configuration.ShowSidePanel;
+                configuration.Save();
+            }
+
+            ImGui.SameLine();
+
+            if (ImGui.Button("Settings"))
+            {
+                configuration.ResetSelections();
+                SettingsVisible = true;
+            }
         }
 
         private void DrawLayout1()
@@ -162,6 +183,35 @@ namespace QuestTracker
             {
                 DrawQuestTable(configuration.DropdownSelection.Quests);
             }
+        }
+
+        private void DrawSidePanelAsDropdown()
+        {
+            if (configuration.SidePanelSelection == null)
+            {
+                configuration.SidePanelSelection = plugin.QuestData.Categories.First();
+                configuration.DropdownSelection = configuration.SidePanelSelection.Categories.Find(c => !c.Hide);
+                configuration.Save();
+            }
+
+            ImGui.SetNextItemWidth(GetAdjustedWidth(300));
+            if (ImGui.BeginCombo("##side_panel_dropdown", GetDisplayText(configuration.SidePanelSelection, false)))
+            {
+                foreach (var category in plugin.QuestData.Categories)
+                {
+                    if (ImGui.Selectable(GetDisplayText(category, false), configuration.SidePanelSelection == category))
+                    {
+                        configuration.SidePanelSelection = category;
+                        configuration.DropdownSelection =
+                            configuration.SidePanelSelection.Categories.Find(c => !c.Hide);
+                        configuration.Save();
+                    }
+                }
+
+                ImGui.EndCombo();
+            }
+
+            ImGui.Spacing();
         }
 
         private void DrawDropdown()
@@ -217,7 +267,7 @@ namespace QuestTracker
             {
                 ImGui.TableSetupColumn("##icon", ImGuiTableColumnFlags.None, 0.10f);
                 ImGui.TableSetupColumn("Title");
-                ImGui.TableSetupColumn("Area", ImGuiTableColumnFlags.None, 0.80f);
+                ImGui.TableSetupColumn("Area", ImGuiTableColumnFlags.None, 0.70f);
                 ImGui.TableSetupColumn("Level", ImGuiTableColumnFlags.None, 0.30f);
                 ImGui.TableHeadersRow();
                 foreach (var quest in quests)
@@ -231,6 +281,7 @@ namespace QuestTracker
                             ImGui.TextUnformatted(FontAwesomeIcon.Check.ToIconString());
                             ImGui.PopFont();
                         }
+
                         ImGui.TableNextColumn();
                         ImGui.Text(quest.Title);
                         //TODO: if(ImGui.Selectable(quest.Title)) OpenQuestInJournal();
@@ -351,10 +402,7 @@ namespace QuestTracker
             return width;
         }
 
-        private void OpenQuestInJournal()
-        {
-            
-        }
+        private void OpenQuestInJournal() { }
 
         private static void OpenAreaMap(Quest quest)
         {

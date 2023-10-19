@@ -8,9 +8,10 @@ namespace QuestTracker
     public class Configuration : IPluginConfiguration
     {
         public int Version { get; set; } = 0;
+        public bool ShowOverall { get; set; } = true;
         public bool ShowCount { get; set; } = true;
         public bool ShowPercentage { get; set; } = false;
-        public bool ShowOverall { get; set; } = true;
+        public bool ShowSidePanel { get; set; } = true;
         public int LayoutOption { get; set; } = 0;
         public int DisplayOption { get; set; } = 0;
         public string StartArea { get; set; } = "";
