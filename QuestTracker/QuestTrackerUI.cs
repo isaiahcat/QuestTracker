@@ -10,16 +10,12 @@ using Lumina.Excel.GeneratedSheets;
 
 namespace QuestTracker
 {
-    // It is good to have this be disposable in general, in case you ever need it to do any cleanup
     class QuestTrackerUI : IDisposable
     {
         private Plugin plugin;
 
         private Configuration configuration;
 
-        private Vector2 iconButtonSize = new(16);
-
-        // this extra bool exists for ImGui, since you can't ref a property
         private bool visible = false;
 
         public bool Visible
@@ -46,170 +42,96 @@ namespace QuestTracker
 
         public void Draw()
         {
-            // This is our only draw handler attached to UIBuilder, so it needs to be
-            // able to draw any windows we might have open.
-            // Each method checks its own visibility/state to ensure it only draws when
-            // it actually makes sense.
-            // There are other ways to do this, but it is generally best to keep the number of
-            // draw delegates as low as possible.
-            DrawMainWindow();
-        }
-
-        private void DrawMainWindow()
-        {
             if (!Visible) return;
 
             plugin.UpdateQuestData();
-            iconButtonSize = ImGui.GetItemRectSize() + ImGui.GetStyle().ItemSpacing;
             ImGui.SetNextWindowSize(new Vector2(375, 440), ImGuiCond.FirstUseEver);
             ImGui.SetNextWindowSizeConstraints(new Vector2(375, 240), new Vector2(float.MaxValue, float.MaxValue));
             if (ImGui.Begin(plugin.Name, ref visible))
             {
-                if (configuration.ShowSidePanel)
+                if (ImGui.BeginTabBar("##tab_bar", ImGuiTabBarFlags.None))
                 {
-                    ImGui.BeginGroup();
-                    if (ImGui.BeginChild("##category_select",
-                                         ImGuiHelpers.ScaledVector2(GetAdjustedWidth(170), 0) -
-                                         iconButtonSize with { X = 0 }, true, ImGuiWindowFlags.AlwaysAutoResize))
+                    if (ImGui.BeginTabItem("Overview##overview_tab"))
                     {
-                        if (configuration.ShowOverall)
-                        {
-                            ImGui.Text("Overall" + GetDisplayText(plugin.QuestData, true));
-                            ImGui.Spacing();
-                            ImGui.Separator();
-                            ImGui.Spacing();
-                        }
-
-                        DrawSidePanel();
+                        DrawOverviewTab();
+                        ImGui.EndTabItem();
                     }
 
-                    ImGui.EndChild();
-                    DrawFooter();
-                    ImGui.EndGroup();
-                    ImGui.SameLine();
+                    if (ImGui.BeginTabItem($"Quests##quest_tab"))
+                    {
+                        DrawQuestsTab();
+                        ImGui.EndTabItem();
+                    }
+
+                    if (ImGui.BeginTabItem($"Settings##settings_tab"))
+                    {
+                        DrawSettingsTab();
+                        ImGui.EndTabItem();
+                    }
+
+                    ImGui.EndTabBar();
                 }
-
-                if (ImGui.BeginChild("##category_view",
-                                     configuration.ShowSidePanel
-                                         ? ImGuiHelpers.ScaledVector2(0)
-                                         : ImGuiHelpers.ScaledVector2(0) - iconButtonSize with { X = 0 }, true))
-                {
-                    if (SettingsVisible)
-                    {
-                        DrawSettings();
-                    }
-                    else
-                    {
-                        if (!configuration.ShowSidePanel) DrawSidePanelAsDropdown();
-
-                        switch (configuration.LayoutOption)
-                        {
-                            case 0:
-                                DrawLayout1();
-                                break;
-                            case 1:
-                                DrawLayout2();
-                                break;
-                            case 2:
-                                DrawLayout3();
-                                break;
-                        }
-                    }
-                }
-
-                ImGui.EndChild();
-
-                if (!configuration.ShowSidePanel) DrawFooter();
             }
 
             ImGui.End();
         }
 
-        private void DrawFooter()
+        private void DrawOverviewTab()
         {
-            if (ImGui.ArrowButton("##side_panel_toggle", configuration.ShowSidePanel ? ImGuiDir.Up : ImGuiDir.Right))
+            ImGui.BeginChild("##overview_tab", ImGuiHelpers.ScaledVector2(0), true);
+            if (ImGui.BeginTable("##overview_table", 3))
             {
-                configuration.ShowSidePanel = !configuration.ShowSidePanel;
-                configuration.Save();
+                ImGui.TableSetupColumn("##title");
+                ImGui.TableSetupColumn("##count", ImGuiTableColumnFlags.None, 0.70f);
+                ImGui.TableSetupColumn("##percentage", ImGuiTableColumnFlags.None, 0.30f);
 
-                ImGui.SetWindowSize(new Vector2(
-                                        configuration.ShowSidePanel
-                                            ? ImGui.GetWindowSize().X + GetAdjustedWidth(170)
-                                            : ImGui.GetWindowSize().X - GetAdjustedWidth(170),
-                                        ImGui.GetWindowSize().Y));
-            }
+                ImGui.TableNextColumn();
+                ImGui.Text("Overall");
+                ImGui.Separator();
+                ImGui.TableNextColumn();
+                ImGui.Text($"{plugin.QuestData.NumComplete}/{plugin.QuestData.Total}");
+                ImGui.Separator();
+                ImGui.TableNextColumn();
+                ImGui.Text($"{plugin.QuestData.NumComplete / plugin.QuestData.Total:P0}%");
+                ImGui.Separator();
+                ImGui.TableNextRow();
 
-            ImGui.SameLine();
-
-            if (ImGui.Button(SettingsVisible? "Quests" : "Settings"))
-            {
-                SettingsVisible = !SettingsVisible;
-            }
-        }
-
-        private void DrawLayout1()
-        {
-            if (configuration.SidePanelSelection == null) return;
-            foreach (var category in configuration.SidePanelSelection.Categories)
-            {
-                if (!category.Hide)
+                foreach (var category in plugin.QuestData.Categories)
                 {
-                    if (ImGui.CollapsingHeader(GetDisplayText(category, false)))
-                    {
-                        DrawQuestList(category);
-                    }
+                    ImGui.TableNextColumn();
+                    ImGui.Text(category.Title);
+                    ImGui.TableNextColumn();
+                    ImGui.Text($"{category.NumComplete}/{category.Total}");
+                    ImGui.TableNextColumn();
+                    ImGui.Text($"{category.NumComplete / category.Total:P0}%");
+                    ImGui.TableNextRow();
                 }
             }
+
+            ImGui.EndTable();
+            ImGui.EndChild();
         }
 
-        private void DrawLayout2()
+        private void DrawQuestsTab()
         {
-            DrawDropdown();
-            DrawQuestList(configuration.DropdownSelection);
-        }
+            ImGui.BeginChild("##quests_tab", ImGuiHelpers.ScaledVector2(0), true);
+            if (configuration.CategorySelection == null) ResetSelections();
 
-        private void DrawLayout3()
-        {
-            DrawDropdown();
-            if (configuration.DropdownSelection.Categories.Count > 0)
-            {
-                foreach (var subcategory in configuration.DropdownSelection.Categories)
-                {
-                    if (!subcategory.Hide)
-                    {
-                        if (ImGui.CollapsingHeader(GetDisplayText(subcategory, false)))
-                        {
-                            DrawQuestTable(subcategory.Quests);
-                        }
-                    }
-                }
-            }
-            else
-            {
-                DrawQuestTable(configuration.DropdownSelection.Quests);
-            }
-        }
-
-        private void DrawSidePanelAsDropdown()
-        {
-            if (configuration.SidePanelSelection == null)
-            {
-                configuration.SidePanelSelection = plugin.QuestData.Categories.First();
-                configuration.DropdownSelection = configuration.SidePanelSelection.Categories.Find(c => !c.Hide);
-                configuration.Save();
-            }
-
-            ImGui.SetNextItemWidth(GetAdjustedWidth(300));
-            if (ImGui.BeginCombo("##side_panel_dropdown", GetDisplayText(configuration.SidePanelSelection, false)))
+            ImGui.SetNextItemWidth(330);
+            if (ImGui.BeginCombo("##category_dropdown", GetDisplayText(configuration.CategorySelection)))
             {
                 foreach (var category in plugin.QuestData.Categories)
                 {
-                    if (ImGui.Selectable(GetDisplayText(category, false), configuration.SidePanelSelection == category))
+                    if (!category.Hide)
                     {
-                        configuration.SidePanelSelection = category;
-                        configuration.DropdownSelection =
-                            configuration.SidePanelSelection.Categories.Find(c => !c.Hide);
-                        configuration.Save();
+                        if (ImGui.Selectable(GetDisplayText(category),
+                                             configuration.CategorySelection == category))
+                        {
+                            configuration.CategorySelection = category;
+                            configuration.SubcategorySelection =
+                                configuration.CategorySelection.Categories.Find(c => !c.Hide);
+                            configuration.Save();
+                        }
                     }
                 }
 
@@ -217,25 +139,18 @@ namespace QuestTracker
             }
 
             ImGui.Spacing();
-        }
-
-        private void DrawDropdown()
-        {
-            if (configuration.DropdownSelection == null) return;
-            ImGui.SetNextItemWidth(GetAdjustedWidth(300));
-            if (ImGui.BeginCombo("##subcategory_select", GetDisplayText(configuration.DropdownSelection, false)))
+            ImGui.SetNextItemWidth(330);
+            if (ImGui.BeginCombo("##subcategory_dropdown", GetDisplayText(configuration.SubcategorySelection)))
             {
-                foreach (var category in configuration.SidePanelSelection.Categories)
+                foreach (var category in configuration.CategorySelection.Categories)
                 {
                     if (!category.Hide)
                     {
-                        if (ImGui.Selectable(GetDisplayText(category, false),
-                                             configuration.DropdownSelection == category))
-                        {
-                            configuration.DropdownSelection = category;
-                        }
+                        if (ImGui.Selectable(GetDisplayText(category),
+                                             configuration.SubcategorySelection == category))
+                            configuration.SubcategorySelection = category;
 
-                        if (configuration.DropdownSelection == category) ImGui.SetItemDefaultFocus();
+                        if (configuration.SubcategorySelection == category) ImGui.SetItemDefaultFocus();
                     }
                 }
 
@@ -243,14 +158,9 @@ namespace QuestTracker
             }
 
             ImGui.Spacing();
-        }
-
-        private void DrawQuestList(QuestData category)
-        {
-            if (category == null) return;
-            if (category.Categories.Count > 0)
+            if (configuration.SubcategorySelection.Categories.Count > 0)
             {
-                foreach (var subcategory in category.Categories)
+                foreach (var subcategory in configuration.SubcategorySelection.Categories)
                 {
                     if (!subcategory.Hide)
                     {
@@ -262,15 +172,17 @@ namespace QuestTracker
             }
             else
             {
-                DrawQuestTable(category.Quests);
+                DrawQuestTable(configuration.SubcategorySelection.Quests);
             }
+
+            ImGui.EndChild();
         }
 
         private void DrawQuestTable(List<Quest> quests)
         {
             if (ImGui.BeginTable("##quest_table", 4))
             {
-                ImGui.TableSetupColumn("##icon", ImGuiTableColumnFlags.None, 0.10f);
+                ImGui.TableSetupColumn("##check", ImGuiTableColumnFlags.None, 0.10f);
                 ImGui.TableSetupColumn("Title");
                 ImGui.TableSetupColumn("Area", ImGuiTableColumnFlags.None, 0.70f);
                 ImGui.TableSetupColumn("Level", ImGuiTableColumnFlags.None, 0.30f);
@@ -289,7 +201,6 @@ namespace QuestTracker
 
                         ImGui.TableNextColumn();
                         ImGui.Text(quest.Title);
-                        //TODO: if(ImGui.Selectable(quest.Title)) OpenQuestInJournal();
                         ImGui.TableNextColumn();
                         if (ImGui.Selectable($"{quest.Area}##{quest.Id[0]}")) OpenAreaMap(quest);
                         ImGui.TableNextColumn();
@@ -302,43 +213,9 @@ namespace QuestTracker
             ImGui.EndTable();
         }
 
-        private void DrawSidePanel()
+        private void DrawSettingsTab()
         {
-            foreach (var category in plugin.QuestData.Categories)
-            {
-                if (ImGui.Selectable(GetDisplayText(category, false), configuration.SidePanelSelection == category))
-                {
-                    configuration.SidePanelSelection = category;
-                    SettingsVisible = false;
-                    configuration.DropdownSelection = configuration.SidePanelSelection.Categories.Find(c => !c.Hide);
-                    configuration.Save();
-                }
-            }
-        }
-
-        private void DrawSettings()
-        {
-            ImGui.SetNextItemWidth(90);
-            var layoutOption = configuration.LayoutOption;
-            string[] layoutList = { "Layout 1", "Layout 2", "Layout 3" };
-            if (ImGui.BeginCombo("##layout_option", layoutList[layoutOption]))
-            {
-                for (int i = 0; i < layoutList.Length; i++)
-                {
-                    if (ImGui.Selectable(layoutList[i]))
-                    {
-                        configuration.LayoutOption = i;
-                        configuration.Save();
-                    }
-
-                    if (layoutOption == i) ImGui.SetItemDefaultFocus();
-                }
-
-                ImGui.EndCombo();
-            }
-
-            ImGui.Spacing();
-
+            ImGui.BeginChild("##settings_tab", ImGuiHelpers.ScaledVector2(0), true);
             ImGui.SetNextItemWidth(130);
             var displayOption = configuration.DisplayOption;
             string[] displayList = { "Show All", "Show Complete", "Show Incomplete" };
@@ -349,7 +226,9 @@ namespace QuestTracker
                     if (ImGui.Selectable(displayList[i]))
                     {
                         configuration.DisplayOption = i;
-                        configuration.ResetSelections();
+                        configuration.Save();
+                        plugin.UpdateQuestData();
+                        ResetSelections();
                     }
 
                     if (displayOption == i) ImGui.SetItemDefaultFocus();
@@ -360,17 +239,6 @@ namespace QuestTracker
 
             ImGui.Spacing();
 
-            // can't ref a property, so use a local copy
-            var showOverall = configuration.ShowOverall;
-            if (ImGui.Checkbox("Show overall", ref showOverall))
-            {
-                configuration.ShowOverall = showOverall;
-                configuration.Save();
-            }
-
-            ImGui.Spacing();
-
-            // can't ref a property, so use a local copy
             var showCount = configuration.ShowCount;
             if (ImGui.Checkbox("Show count \"Main Scenario 502/843\"", ref showCount))
             {
@@ -380,34 +248,39 @@ namespace QuestTracker
 
             ImGui.Spacing();
 
-            // can't ref a property, so use a local copy
             var showPercentage = configuration.ShowPercentage;
             if (ImGui.Checkbox("Show percentage \"Tribal Quests 54%\"", ref showPercentage))
             {
                 configuration.ShowPercentage = showPercentage;
                 configuration.Save();
             }
+
+            ImGui.EndChild();
         }
 
-        private string GetDisplayText(QuestData questData, bool addSymbol)
+        private void ResetSelections()
+        {
+            if (configuration.CategorySelection.Hide)
+            {
+                configuration.CategorySelection = plugin.QuestData.Categories.Find(c => !c.Hide);
+                configuration.SubcategorySelection = configuration.CategorySelection.Categories.Find(c => !c.Hide);
+            }
+
+            if (configuration.SubcategorySelection.Hide)
+            {
+                configuration.SubcategorySelection = configuration.CategorySelection.Categories.Find(c => !c.Hide);
+            }
+
+            configuration.Save();
+        }
+
+        private string GetDisplayText(QuestData questData)
         {
             var text = $"{questData.Title}";
             if (configuration.ShowCount) text += $" {questData.NumComplete}/{questData.Total}";
-            if (configuration.ShowPercentage)
-                text += addSymbol
-                            ? $" {questData.NumComplete / questData.Total:P0}%"
-                            : $" {questData.NumComplete / questData.Total:P0}";
+            if (configuration.ShowPercentage) text += $" {questData.NumComplete / questData.Total:P0}";
             return text;
         }
-
-        private int GetAdjustedWidth(int width)
-        {
-            if (configuration.ShowCount) width += 30;
-            if (configuration.ShowPercentage) width += 20;
-            return width;
-        }
-
-        private void OpenQuestInJournal() { }
 
         private static void OpenAreaMap(Quest quest)
         {
