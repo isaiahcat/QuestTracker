@@ -92,7 +92,7 @@ namespace QuestTracker
                 ImGui.Text($"{plugin.QuestData.NumComplete}/{plugin.QuestData.Total}");
                 ImGui.Separator();
                 ImGui.TableNextColumn();
-                ImGui.Text($"{plugin.QuestData.NumComplete / plugin.QuestData.Total:P0}%");
+                ImGui.Text($"{plugin.QuestData.NumComplete / plugin.QuestData.Total:P2}%");
                 ImGui.Separator();
                 ImGui.TableNextRow();
 
@@ -103,7 +103,7 @@ namespace QuestTracker
                     ImGui.TableNextColumn();
                     ImGui.Text($"{category.NumComplete}/{category.Total}");
                     ImGui.TableNextColumn();
-                    ImGui.Text($"{category.NumComplete / category.Total:P0}%");
+                    ImGui.Text($"{category.NumComplete / category.Total:P2}%");
                     ImGui.TableNextRow();
                 }
             }
@@ -249,7 +249,7 @@ namespace QuestTracker
             ImGui.Spacing();
 
             var showPercentage = configuration.ShowPercentage;
-            if (ImGui.Checkbox("Show percentage \"Tribal Quests 54%\"", ref showPercentage))
+            if (ImGui.Checkbox("Show percentage \"Tribal Quests 32.13%\"", ref showPercentage))
             {
                 configuration.ShowPercentage = showPercentage;
                 configuration.Save();
@@ -278,7 +278,7 @@ namespace QuestTracker
         {
             var text = $"{questData.Title}";
             if (configuration.ShowCount) text += $" {questData.NumComplete}/{questData.Total}";
-            if (configuration.ShowPercentage) text += $" {questData.NumComplete / questData.Total:P0}";
+            if (configuration.ShowPercentage) text += $" {questData.NumComplete / questData.Total:P2}";
             return text;
         }
 
