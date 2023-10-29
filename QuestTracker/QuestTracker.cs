@@ -229,7 +229,7 @@ namespace QuestTracker
         {
             foreach (var id in quest.Id)
             {
-                if (QuestManager.IsQuestComplete(id)) return true;                
+                if (QuestManager.IsQuestComplete(id)) return true;   
             }
             return false;
         }

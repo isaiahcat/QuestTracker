@@ -197,6 +197,8 @@ namespace QuestTracker
                             ImGui.PushFont(UiBuilder.IconFont);
                             ImGui.TextUnformatted(FontAwesomeIcon.Check.ToIconString());
                             ImGui.PopFont();
+                            quest.Hide = configuration.DisplayOption == 2;
+                            DrawQuestsTab();
                         }
 
                         ImGui.TableNextColumn();
