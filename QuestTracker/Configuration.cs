@@ -26,11 +26,13 @@ namespace QuestTracker
 
         public void Save() => this.pluginInterface.SavePluginConfig(this);
 
-        public void ResetFilters()
+        public void Reset()
         {
             StartArea = "";
             GrandCompany = "";
             StartClass = 0;
+            CategorySelection = null;
+            SubcategorySelection = null;
             Save();
         }
     }

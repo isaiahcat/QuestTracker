@@ -79,7 +79,7 @@ namespace QuestTracker
         public void Dispose()
         {
             this.UI.Dispose();
-            Configuration.ResetFilters();
+            Configuration.Reset();
             CommandManager.RemoveHandler(CommandName);
             CommandManager.RemoveHandler(CommandNameAlt);
         }
@@ -125,6 +125,8 @@ namespace QuestTracker
             Configuration.StartArea = QuestManager.IsQuestComplete(65575) ? "Gridania" :
                                       QuestManager.IsQuestComplete(65643) ? "Limsa Lominsa" :
                                       QuestManager.IsQuestComplete(66130) ? "Ul'dah" : "";
+            
+            PluginLog.Debug($"Start Area {Configuration.StartArea}");
         }
 
         private void DetermineGrandCompany()
@@ -132,6 +134,8 @@ namespace QuestTracker
             Configuration.GrandCompany = QuestManager.IsQuestComplete(66216) ? "Twin Adder" :
                                          QuestManager.IsQuestComplete(66217) ? "Maelstrom" :
                                          QuestManager.IsQuestComplete(66218) ? "Immortal Flames" : "";
+            
+            PluginLog.Debug($"Grand Company {Configuration.GrandCompany}");
         }
 
         private void DetermineStartClass()
@@ -155,6 +159,8 @@ namespace QuestTracker
                 QuestManager.IsQuestComplete(65883) && !QuestManager.IsQuestComplete(65882) ? 65882 :
                 // Arcanist
                 QuestManager.IsQuestComplete(65991) && !QuestManager.IsQuestComplete(65990) ? 65990 : 0);
+            
+            PluginLog.Debug($"Start Class {Configuration.StartClass}");
         }
 
         public void UpdateQuestData()

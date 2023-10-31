@@ -198,7 +198,6 @@ namespace QuestTracker
                             ImGui.TextUnformatted(FontAwesomeIcon.Check.ToIconString());
                             ImGui.PopFont();
                             quest.Hide = configuration.DisplayOption == 2;
-                            DrawQuestsTab();
                         }
 
                         ImGui.TableNextColumn();
@@ -262,13 +261,13 @@ namespace QuestTracker
 
         private void ResetSelections()
         {
-            if (configuration.CategorySelection.Hide)
+            if (configuration.CategorySelection == null || configuration.CategorySelection.Hide)
             {
                 configuration.CategorySelection = plugin.QuestData.Categories.Find(c => !c.Hide);
                 configuration.SubcategorySelection = configuration.CategorySelection.Categories.Find(c => !c.Hide);
             }
 
-            if (configuration.SubcategorySelection.Hide)
+            if (configuration.SubcategorySelection == null || configuration.SubcategorySelection.Hide)
             {
                 configuration.SubcategorySelection = configuration.CategorySelection.Categories.Find(c => !c.Hide);
             }

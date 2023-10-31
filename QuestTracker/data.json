@@ -9,6 +9,8 @@
                         {
                             "Title": "Close to Home",
                             "Id": [
+                                65621,
+                                65659,
                                 65660
                             ],
                             "Area": "Gridania",
@@ -18,6 +20,7 @@
                         {
                             "Title": "Close to Home",
                             "Id": [
+                                65644,
                                 65645
                             ],
                             "Area": "Limsa Lominsa",
@@ -27,6 +30,8 @@
                         {
                             "Title": "Close to Home",
                             "Id": [
+                                66104,
+                                66105,
                                 66106
                             ],
                             "Area": "Ul'dah",
