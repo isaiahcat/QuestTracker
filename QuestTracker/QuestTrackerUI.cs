@@ -85,26 +85,50 @@ namespace QuestTracker
                 ImGui.TableSetupColumn("##count", ImGuiTableColumnFlags.None, 0.70f);
                 ImGui.TableSetupColumn("##percentage", ImGuiTableColumnFlags.None, 0.30f);
 
+                var otherQuestsComplete = plugin.QuestData.Categories.Last().NumComplete;
+                var otherQuestsTotal = plugin.QuestData.Categories.Last().Total;
+
+                var overallComplete = configuration.ExcludeOtherQuests
+                                          ? plugin.QuestData.NumComplete - otherQuestsComplete
+                                          : plugin.QuestData.NumComplete;
+                
+                var overallTotal = configuration.ExcludeOtherQuests
+                                       ? plugin.QuestData.Total - otherQuestsTotal
+                                       : plugin.QuestData.Total;
+                
                 ImGui.TableNextColumn();
                 ImGui.Text("Overall");
                 ImGui.Separator();
                 ImGui.TableNextColumn();
-                ImGui.Text($"{plugin.QuestData.NumComplete}/{plugin.QuestData.Total}");
+                ImGui.Text($"{overallComplete}/{overallTotal}");
                 ImGui.Separator();
                 ImGui.TableNextColumn();
-                ImGui.Text($"{plugin.QuestData.NumComplete / plugin.QuestData.Total:P2}%");
+                ImGui.Text($"{overallComplete / overallTotal:P2}%");
                 ImGui.Separator();
                 ImGui.TableNextRow();
 
                 foreach (var category in plugin.QuestData.Categories)
                 {
-                    ImGui.TableNextColumn();
-                    ImGui.Text(category.Title);
-                    ImGui.TableNextColumn();
-                    ImGui.Text($"{category.NumComplete}/{category.Total}");
-                    ImGui.TableNextColumn();
-                    ImGui.Text($"{category.NumComplete / category.Total:P2}%");
-                    ImGui.TableNextRow();
+                    if (category == plugin.QuestData.Categories.Last() && configuration.ExcludeOtherQuests)
+                    {
+                        ImGui.TableNextColumn();
+                        ImGui.TextDisabled(category.Title);
+                        ImGui.TableNextColumn();
+                        ImGui.TextDisabled($"{category.NumComplete}/{category.Total}");
+                        ImGui.TableNextColumn();
+                        ImGui.TextDisabled($"{category.NumComplete / category.Total:P2}%");
+                        ImGui.TableNextRow();
+                    }
+                    else
+                    {
+                        ImGui.TableNextColumn();
+                        ImGui.Text(category.Title);
+                        ImGui.TableNextColumn();
+                        ImGui.Text($"{category.NumComplete}/{category.Total}");
+                        ImGui.TableNextColumn();
+                        ImGui.Text($"{category.NumComplete / category.Total:P2}%");
+                        ImGui.TableNextRow();
+                    }
                 }
             }
 
@@ -253,6 +277,15 @@ namespace QuestTracker
             if (ImGui.Checkbox("Show percentage \"Tribal Quests 32.13%\"", ref showPercentage))
             {
                 configuration.ShowPercentage = showPercentage;
+                configuration.Save();
+            }
+            
+            ImGui.Spacing();
+
+            var excludeOtherQuests = configuration.ExcludeOtherQuests;
+            if (ImGui.Checkbox("Exclude \'Other Quests\' from Overall", ref excludeOtherQuests))
+            {
+                configuration.ExcludeOtherQuests = excludeOtherQuests;
                 configuration.Save();
             }
 

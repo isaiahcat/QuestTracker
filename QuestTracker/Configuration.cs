@@ -11,6 +11,7 @@ namespace QuestTracker
 
         public bool ShowCount { get; set; } = true;
         public bool ShowPercentage { get; set; }
+        public bool ExcludeOtherQuests { get; set; }
         public int DisplayOption { get; set; }
 
         public string StartArea { get; set; } = "";
