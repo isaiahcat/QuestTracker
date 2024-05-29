@@ -14,50 +14,17 @@ public class DataConverter
     public static IDataManager DataManager { get; private set; }
     public static IPluginLog PluginLog { get; private set; }
 
-    private List<Quest> RefQuests;
-    private List<Quest> RawQuests;
-
-    private QuestData QD;
+    private string DirPath;
 
     public DataConverter(DalamudPluginInterface pluginInterface, IDataManager dataManager, IPluginLog pluginLog)
     {
         PluginInterface = pluginInterface;
         DataManager = dataManager;
         PluginLog = pluginLog;
+
+        DirPath = PluginInterface.AssemblyLocation.Directory.Parent.Parent.FullName + "/utils";
         
-        //RefQuests = LoadFromFile("ref.json").Quests;
-        //QD = LoadFromFile("data.json");
-        //CompareDataJson(QD);
-        //WriteResults(QD);
-
         ConvertRawDataTxt();
-    }
-
-    private void CompareDataJson(QuestData questData)
-    {
-        if (questData.Categories.Count > 0)
-        {
-            foreach (var category in questData.Categories)
-            {
-                CompareDataJson(category);
-            }
-        }
-        else
-        {
-            foreach (var quest in questData.Quests)
-            {
-                foreach (var refQuest in RefQuests.FindAll(q => quest.Title == q.Title))
-                {
-                    foreach (var id in refQuest.Id)
-                    {
-                        if (!quest.Id.Contains(id))
-                        {
-                            quest.Id.Add(id);
-                        }   
-                    }
-                }
-            }
-        }
     }
 
     private void ConvertRawDataTxt()
@@ -65,12 +32,11 @@ public class DataConverter
         try
         {
             PluginLog.Debug("Loading data from rawdata.txt");
-            var rawPath = Path.Combine(PluginInterface.AssemblyLocation.Directory.Parent.Parent.FullName+"/utils",
-                                       "rawdata.txt");
+            var rawPath = Path.Combine(DirPath, "rawdata.txt");
             List<string> lines = File.ReadLines(rawPath).ToList();
             PluginLog.Debug("Finished reading");
 
-            RawQuests = new List<Quest>();
+            List<Quest> RawQuests = new List<Quest>();
 
             foreach (var line in lines)
             {
@@ -92,10 +58,6 @@ public class DataConverter
                 {
                     PluginLog.Error($"Match not found for {q.Title}");
                 }
-            //     if (RefQuests.Find(quest => quest.Title == q.Title) != null)
-            //     {
-            //         q.Id = RefQuests.Find(quest => quest.Title == q.Title).Id;
-            //     }
 
                 q.Level = short.Parse(tokens[2]);
 
@@ -111,40 +73,16 @@ public class DataConverter
         }
     }
 
-    private QuestData LoadFromFile(string filename)
-    {
-        try
-        {
-            PluginLog.Debug($"Loading from {filename}");
-            var path = Path.Combine(PluginInterface.AssemblyLocation.Directory.Parent.Parent.FullName, filename);
-            var jsonString = File.ReadAllText(path);
-            var result = JsonConvert.DeserializeObject<QuestData>(jsonString);
-            PluginLog.Debug($"Load from {filename} successful");
-            return result;
-        }
-        catch (Exception e)
-        {
-            PluginLog.Error($"Error loading from {filename}");
-            PluginLog.Error(e.Message);
-            return null;
-        }
-    }
-
     private void WriteResults(Object obj)
     {
-        PluginLog.Debug("Wrting to resultdata.json");
+        PluginLog.Debug("Wrting to results.json");
 
-        var resultPath = Path.Combine(PluginInterface.AssemblyLocation.Directory.Parent.Parent.FullName+"/utils",
-                                      "resultdata.json");
+        var resultPath = Path.Combine(DirPath, "results.json");
         var json = JsonConvert.SerializeObject(obj, Formatting.Indented);
+        json = json.Replace("\n    \"Start\": \"\",\n    \"Gc\": \"\",","");
+        json = json.Replace(",\n    \"Hide\": false","");
         File.WriteAllText(resultPath, json);
 
-        PluginLog.Debug("Finishing writing to resultdata.json");
+        PluginLog.Debug("Finishing writing to results.json");
     }
-}
-
-[Serializable]
-public class IdLookupData
-{
-    public List<Quest> Quests { get; set; } = new();
 }
