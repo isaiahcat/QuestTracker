@@ -11,6 +11,7 @@ namespace QuestTracker;
 public class DataConverter
 {
     public static DalamudPluginInterface PluginInterface { get; private set; }
+    public static IDataManager DataManager { get; private set; }
     public static IPluginLog PluginLog { get; private set; }
 
     private List<Quest> RefQuests;
@@ -18,15 +19,18 @@ public class DataConverter
 
     private QuestData QD;
 
-    public DataConverter(DalamudPluginInterface pluginInterface, IPluginLog pluginLog)
+    public DataConverter(DalamudPluginInterface pluginInterface, IDataManager dataManager, IPluginLog pluginLog)
     {
         PluginInterface = pluginInterface;
+        DataManager = dataManager;
         PluginLog = pluginLog;
+        
+        //RefQuests = LoadFromFile("ref.json").Quests;
+        //QD = LoadFromFile("data.json");
+        //CompareDataJson(QD);
+        //WriteResults(QD);
 
-        RefQuests = LoadFromFile("ref.json").Quests;
-        QD = LoadFromFile("data.json");
-        CompareDataJson(QD);
-        WriteResults(QD);
+        ConvertRawDataTxt();
     }
 
     private void CompareDataJson(QuestData questData)
@@ -61,7 +65,7 @@ public class DataConverter
         try
         {
             PluginLog.Debug("Loading data from rawdata.txt");
-            var rawPath = Path.Combine(PluginInterface.AssemblyLocation.Directory.Parent.Parent.FullName,
+            var rawPath = Path.Combine(PluginInterface.AssemblyLocation.Directory.Parent.Parent.FullName+"/utils",
                                        "rawdata.txt");
             List<string> lines = File.ReadLines(rawPath).ToList();
             PluginLog.Debug("Finished reading");
@@ -75,14 +79,23 @@ public class DataConverter
                 Quest q = new Quest();
                 q.Title = tokens[0];
                 q.Area = tokens[1];
-                if (RefQuests.Find(quest => quest.Title == q.Title) != null)
+                var questLookup = DataManager.GetExcelSheet<Lumina.Excel.GeneratedSheets.Quest>().Where(quest => quest.Name.RawString.Contains(q.Title));
+                if (questLookup.Any())
                 {
-                    q.Id = RefQuests.Find(quest => quest.Title == q.Title).Id;
+                    q.Id = new List<uint>();
+                    foreach (var quest in questLookup)
+                    {
+                        q.Id.Add(quest.RowId);
+                    }
                 }
                 else
                 {
                     PluginLog.Error($"Match not found for {q.Title}");
                 }
+            //     if (RefQuests.Find(quest => quest.Title == q.Title) != null)
+            //     {
+            //         q.Id = RefQuests.Find(quest => quest.Title == q.Title).Id;
+            //     }
 
                 q.Level = short.Parse(tokens[2]);
 
@@ -121,7 +134,7 @@ public class DataConverter
     {
         PluginLog.Debug("Wrting to resultdata.json");
 
-        var resultPath = Path.Combine(PluginInterface.AssemblyLocation.Directory.Parent.Parent.FullName,
+        var resultPath = Path.Combine(PluginInterface.AssemblyLocation.Directory.Parent.Parent.FullName+"/utils",
                                       "resultdata.json");
         var json = JsonConvert.SerializeObject(obj, Formatting.Indented);
         File.WriteAllText(resultPath, json);

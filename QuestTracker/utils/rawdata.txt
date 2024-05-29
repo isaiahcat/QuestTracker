@@ -1,37 +1,6 @@
-Newfound Adventure	The Rising Stones	90
-Bountiful Ruins	Revenant's Toll	90
-Friends for the Road	Thavnair	90
-Alzadaal's Legacy	Thavnair	90
-A Brother's Grief	Weaver's Warding	90
-Sharing the Wealth	Radz-at-Han	90
-Bridging the Rift	Radz-at-Han	90
-Restricted Reading	Old Sharlayan	90
-Void Theory	Thavnair	90
-A Satrap's Duty	Weaver's Warding	90
-In Search of Azdaja	Radz-at-Han	90
-Shadowed Remnants	Hydromantic Terraces	90
-Where Everything Begins	Carcere IV	90
-Groping in the Dark	Troia Keep	90
-Nowhere to Run	Zero's Domain	90
-The Wind Rises	Zero's Domain	90
-Return from the Void	Zero's Domain	90
-A World with Light and Life	Radz-at-Han	90
-Buried Memory	Radz-at-Han	90
-Once More unto the Void	Radz-at-Han	90
-A Cold Reunion	Radz-at-Han	90
-Kindled Spirit	Garlemald	90
-An Unforeseen Bargain	Garlemald	90
-King of the Mountain	Garlemald	90
-A Dragon's Resolve	Lapis Manalis	90
-Paths Barred	Garlemald	90
-Desires Untold	Thavnair	90
-Gods Revel, Lands Tremble	Thavnair	90
-Currying Flavor	Radz-at-Han	90
-Going Haam	Estinien's Chambers	90
-Like Fear to Flame	Old Sharlayan	90
-The Fallen Empire	Garlemald	90
-Bonds of Trust	Garlemald	90
-Lunar Rendezvous	Garlemald	90
-The Red Side of the Moon	Mare Lamentorum	90
-Abyssal Dark	The Red Moon	90
-The Dark Throne	Mare Lamentorum	90
+The Box of Fortune	Limsa Lominsa	15
+With Great Fortune Comes Great Responsibility	Limsa Lominsa	15
+A Golden Opportunity	Ul'dah	15
+Hearts of Gold	The Gold Saucer	15
+Allergic to Sunshine	Limsa Lominsa	30
+I Am the Sunshine	Eastern La Noscea	30
