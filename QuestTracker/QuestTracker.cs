@@ -104,24 +104,6 @@ namespace QuestTracker
 
         private void DetermineStartArea()
         {
-            uint[] closetohome = {65621,65644,65645,65659,65660,66104,66105,66106};
-            
-            foreach (var id in closetohome)
-                if (QuestManager.IsQuestComplete(id))
-                    PluginLog.Debug($"Completed Close to Home {id}");
-
-            uint[] illconceivedventure = {66968,66969,66970};
-            
-            foreach (var id in illconceivedventure)
-                if (QuestManager.IsQuestComplete(id))
-                    PluginLog.Debug($"Completed An Ill-conceived Venture {id}");
-
-            uint[] simplythehest = {65594, 65595, 65596};
-            
-            foreach (var id in simplythehest)
-                if (QuestManager.IsQuestComplete(id))
-                    PluginLog.Debug($"Completed Simply the Hest {id}");
-            
             Configuration.StartArea = QuestManager.IsQuestComplete(65575) ? "Gridania" :
                                       QuestManager.IsQuestComplete(65643) ? "Limsa Lominsa" :
                                       QuestManager.IsQuestComplete(66130) ? "Ul'dah" : "";

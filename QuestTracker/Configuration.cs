@@ -10,14 +10,14 @@ namespace QuestTracker
         public int Version { get; set; } = 0;
 
         public bool ShowCount { get; set; } = true;
-        public bool ShowPercentage { get; set; } = false;
-        public int DisplayOption { get; set; } = 0;
+        public bool ShowPercentage { get; set; }
+        public int DisplayOption { get; set; }
 
         public string StartArea { get; set; } = "";
         public string GrandCompany { get; set; } = "";
-        public uint StartClass { get; set; } = 0;
-        public QuestData CategorySelection { get; set; } = null;
-        public QuestData SubcategorySelection { get; set; } = null;
+        public uint StartClass { get; set; }
+        public QuestData CategorySelection { get; set; }
+        public QuestData SubcategorySelection { get; set; }
 
         [NonSerialized]
         private DalamudPluginInterface pluginInterface;
