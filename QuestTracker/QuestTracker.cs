@@ -5,6 +5,7 @@ using Dalamud.Game.Command;
 using Dalamud.Plugin;
 using Dalamud.IoC;
 using Dalamud.Plugin.Services;
+using Dalamud.Utility;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using Newtonsoft.Json;
 
@@ -40,6 +41,8 @@ namespace QuestTracker
             DataManager = dataManager;
             GameGui = gameGui;
             PluginLog = pluginLog;
+
+            //DataConverter dc = new DataConverter(pluginInterface, dataManager, pluginLog);
 
             this.Configuration = PluginInterface.GetPluginConfig() as Configuration ?? new Configuration();
             this.Configuration.Initialize(PluginInterface);
@@ -174,7 +177,7 @@ namespace QuestTracker
                 questData.Hide = true;
                 foreach (var quest in questData.Quests.ToList())
                 {
-                    if (Configuration.StartArea != "" && quest.Start != "" && Configuration.StartArea != quest.Start)
+                    if (!Configuration.StartArea.IsNullOrEmpty() && !quest.Start.IsNullOrEmpty() && Configuration.StartArea != quest.Start)
                     {
                         if (IsQuestComplete(quest))
                         {
@@ -185,7 +188,7 @@ namespace QuestTracker
                         continue;
                     }
 
-                    if (Configuration.GrandCompany != "" && quest.Gc != "" && Configuration.GrandCompany != quest.Gc)
+                    if (!Configuration.GrandCompany.IsNullOrEmpty() && !quest.Gc.IsNullOrEmpty() && Configuration.GrandCompany != quest.Gc)
                     {
                         if (IsQuestComplete(quest))
                         {

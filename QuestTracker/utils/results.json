@@ -1,68 +1,10 @@
 [
   {
-    "Title": "The Box of Fortune",
+    "Title": "Just Crowning Around",
     "Id": [
-      70124
-    ],
-    "Area": "Limsa Lominsa",
-    "Start": "",
-    "Gc": "",
-    "Level": 15,
-    "Hide": false
-  },
-  {
-    "Title": "With Great Fortune Comes Great Responsibility",
-    "Id": [
-      70125
-    ],
-    "Area": "Limsa Lominsa",
-    "Start": "",
-    "Gc": "",
-    "Level": 15,
-    "Hide": false
-  },
-  {
-    "Title": "A Golden Opportunity",
-    "Id": [
-      70263
-    ],
-    "Area": "Ul'dah",
-    "Start": "",
-    "Gc": "",
-    "Level": 15,
-    "Hide": false
-  },
-  {
-    "Title": "Hearts of Gold",
-    "Id": [
-      70264
+      70337
     ],
     "Area": "The Gold Saucer",
-    "Start": "",
-    "Gc": "",
-    "Level": 15,
-    "Hide": false
-  },
-  {
-    "Title": "Allergic to Sunshine",
-    "Id": [
-      70259
-    ],
-    "Area": "Limsa Lominsa",
-    "Start": "",
-    "Gc": "",
-    "Level": 30,
-    "Hide": false
-  },
-  {
-    "Title": "I Am the Sunshine",
-    "Id": [
-      70260
-    ],
-    "Area": "Eastern La Noscea",
-    "Start": "",
-    "Gc": "",
-    "Level": 30,
-    "Hide": false
+    "Level": 15
   }
 ]

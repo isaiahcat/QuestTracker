@@ -36724,6 +36724,14 @@
                                     ],
                                     "Area": "The Gold Saucer",
                                     "Level": 15
+                                },
+                                {
+                                    "Title": "Of Impish Importance",
+                                    "Id": [
+                                        70350
+                                    ],
+                                    "Area": "Ul'dah",
+                                    "Level": 15
                                 }
                             ]
                         },
@@ -37862,6 +37870,14 @@
                                     ],
                                     "Area": "Gridania",
                                     "Level": 50
+                                },
+                                {
+                                    "Title": "Just Crowning Around",
+                                    "Id": [
+                                        70337
+                                    ],
+                                    "Area": "The Gold Saucer",
+                                    "Level": 15
                                 }
                             ]
                         }

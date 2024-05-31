@@ -78,9 +78,9 @@ public class DataConverter
         PluginLog.Debug("Wrting to results.json");
 
         var resultPath = Path.Combine(DirPath, "results.json");
-        var json = JsonConvert.SerializeObject(obj, Formatting.Indented);
-        json = json.Replace("\n    \"Start\": \"\",\n    \"Gc\": \"\",","");
-        json = json.Replace(",\n    \"Hide\": false","");
+        JsonSerializerSettings config = new JsonSerializerSettings
+            { DefaultValueHandling = DefaultValueHandling.Ignore, NullValueHandling = NullValueHandling.Ignore };
+        var json = JsonConvert.SerializeObject(obj, Formatting.Indented, config);
         File.WriteAllText(resultPath, json);
 
         PluginLog.Debug("Finishing writing to results.json");
