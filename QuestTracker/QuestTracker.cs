@@ -2,8 +2,8 @@
 using System.IO;
 using System.Linq;
 using Dalamud.Game.Command;
+using Dalamud.Interface.Windowing;
 using Dalamud.Plugin;
-using Dalamud.IoC;
 using Dalamud.Plugin.Services;
 using Dalamud.Utility;
 using FFXIVClientStructs.FFXIV.Client.Game;
@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 
 namespace QuestTracker
 {
-    public class Plugin : IDalamudPlugin
+    public sealed class Plugin : IDalamudPlugin
     {
         public string Name => "Quest Tracker";
 
@@ -19,22 +19,22 @@ namespace QuestTracker
         
         private const string CommandNameAlt = "/quest";
 
-        public static DalamudPluginInterface PluginInterface { get; private set; }
+        public static IDalamudPluginInterface PluginInterface { get; private set; }
         public static ICommandManager CommandManager { get; private set; }
         public static IDataManager DataManager { get; private set; }
         public static IGameGui GameGui { get; private set; }
         public static IPluginLog PluginLog { get; private set; }
         private Configuration Configuration { get; init; }
-        private QuestTrackerUI UI { get; init; }
+        private MainWindow UI { get; init; }
 
         public readonly QuestData QuestData = null!;
 
         public Plugin(
-            [RequiredVersion("1.0")] DalamudPluginInterface pluginInterface,
-            [RequiredVersion("1.0")] ICommandManager commandManager,
-            [RequiredVersion("1.0")] IDataManager dataManager,
-            [RequiredVersion("1.0")] IGameGui gameGui,
-            [RequiredVersion("1.0")] IPluginLog pluginLog)
+            IDalamudPluginInterface pluginInterface,
+            ICommandManager commandManager,
+            IDataManager dataManager,
+            IGameGui gameGui,
+            IPluginLog pluginLog)
         {
             PluginInterface = pluginInterface;
             CommandManager = commandManager;
@@ -44,10 +44,10 @@ namespace QuestTracker
 
             //DataConverter dc = new DataConverter(pluginInterface, dataManager, pluginLog);
 
-            this.Configuration = PluginInterface.GetPluginConfig() as Configuration ?? new Configuration();
-            this.Configuration.Initialize(PluginInterface);
+            Configuration = PluginInterface.GetPluginConfig() as Configuration ?? new Configuration();
+            Configuration.Initialize(PluginInterface);
 
-            this.UI = new QuestTrackerUI(this, this.Configuration);
+            UI = new MainWindow(this, Configuration);
 
             CommandManager.AddHandler(CommandName, new CommandInfo(OnCommand)
             {
@@ -81,7 +81,7 @@ namespace QuestTracker
 
         public void Dispose()
         {
-            this.UI.Dispose();
+            UI.Dispose();
             Configuration.Reset();
             CommandManager.RemoveHandler(CommandName);
             CommandManager.RemoveHandler(CommandNameAlt);

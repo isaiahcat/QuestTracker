@@ -10,13 +10,13 @@ namespace QuestTracker;
 
 public class DataConverter
 {
-    public static DalamudPluginInterface PluginInterface { get; private set; }
+    public static IDalamudPluginInterface PluginInterface { get; private set; }
     public static IDataManager DataManager { get; private set; }
     public static IPluginLog PluginLog { get; private set; }
 
     private string DirPath;
 
-    public DataConverter(DalamudPluginInterface pluginInterface, IDataManager dataManager, IPluginLog pluginLog)
+    public DataConverter(IDalamudPluginInterface pluginInterface, IDataManager dataManager, IPluginLog pluginLog)
     {
         PluginInterface = pluginInterface;
         DataManager = dataManager;

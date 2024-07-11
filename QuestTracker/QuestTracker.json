@@ -1,0 +1,12 @@
+{
+    "Author": "isaiahcat", 
+    "Name": "Quest Tracker",
+    "Punchline": "For the quest completionist",
+    "Description": "Easily track quest completion",
+    "ApplicableVersion": "any",
+    "Tags": [
+        "quest",
+        "quests",
+        "tracker"
+    ]
+}

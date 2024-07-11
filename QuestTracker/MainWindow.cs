@@ -6,11 +6,12 @@ using System.Numerics;
 using Dalamud.Game.Text.SeStringHandling.Payloads;
 using Dalamud.Interface;
 using Dalamud.Interface.Utility;
+using Dalamud.Interface.Windowing;
 using Lumina.Excel.GeneratedSheets;
 
 namespace QuestTracker
 {
-    class QuestTrackerUI : IDisposable
+    class MainWindow : Window, IDisposable
     {
         private Plugin plugin;
 
@@ -32,7 +33,8 @@ namespace QuestTracker
             set { this.settingsVisible = value; }
         }
 
-        public QuestTrackerUI(Plugin plugin, Configuration configuration)
+        public MainWindow(Plugin plugin, Configuration configuration)
+            : base("Quest Tracker##main_window", ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse)
         {
             this.plugin = plugin;
             this.configuration = configuration;
@@ -40,7 +42,7 @@ namespace QuestTracker
 
         public void Dispose() { }
 
-        public void Draw()
+        public override void Draw()
         {
             if (!Visible) return;
 

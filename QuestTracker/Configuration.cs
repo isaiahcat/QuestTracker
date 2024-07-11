@@ -12,7 +12,7 @@ namespace QuestTracker
         public bool ShowCount { get; set; } = true;
         public bool ShowPercentage { get; set; }
         public bool ExcludeOtherQuests { get; set; }
-        public int DisplayOption { get; set; }
+        public int DisplayOption { get; set; } 
 
         public string StartArea { get; set; } = "";
         public string GrandCompany { get; set; } = "";
@@ -21,9 +21,9 @@ namespace QuestTracker
         public QuestData SubcategorySelection { get; set; }
 
         [NonSerialized]
-        private DalamudPluginInterface pluginInterface;
+        private IDalamudPluginInterface pluginInterface;
 
-        public void Initialize(DalamudPluginInterface pluginInterface) => this.pluginInterface = pluginInterface;
+        public void Initialize(IDalamudPluginInterface pluginInterface) => this.pluginInterface = pluginInterface;
 
         public void Save() => this.pluginInterface.SavePluginConfig(this);
 
