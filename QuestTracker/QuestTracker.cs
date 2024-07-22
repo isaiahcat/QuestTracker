@@ -2,7 +2,6 @@
 using System.IO;
 using System.Linq;
 using Dalamud.Game.Command;
-using Dalamud.Interface.Windowing;
 using Dalamud.Plugin;
 using Dalamud.Plugin.Services;
 using Dalamud.Utility;
@@ -25,7 +24,7 @@ namespace QuestTracker
         public static IGameGui GameGui { get; private set; }
         public static IPluginLog PluginLog { get; private set; }
         private Configuration Configuration { get; init; }
-        private MainWindow UI { get; init; }
+        private MainWindow MainWindow { get; init; }
 
         public readonly QuestData QuestData = null!;
 
@@ -47,7 +46,7 @@ namespace QuestTracker
             Configuration = PluginInterface.GetPluginConfig() as Configuration ?? new Configuration();
             Configuration.Initialize(PluginInterface);
 
-            UI = new MainWindow(this, Configuration);
+            MainWindow = new MainWindow(this, Configuration);
 
             CommandManager.AddHandler(CommandName, new CommandInfo(OnCommand)
             {
@@ -77,32 +76,34 @@ namespace QuestTracker
 
             PluginInterface.UiBuilder.Draw += DrawUI;
             PluginInterface.UiBuilder.OpenConfigUi += DrawConfigUI;
+            PluginInterface.UiBuilder.OpenMainUi += DrawMainUI;
         }
 
         public void Dispose()
         {
-            UI.Dispose();
+            MainWindow.Dispose();
             Configuration.Reset();
             CommandManager.RemoveHandler(CommandName);
             CommandManager.RemoveHandler(CommandNameAlt);
         }
 
-        private void OnCommand(string command, string args)
-        {
-            // in response to the slash command, just display our main ui
-            this.UI.Visible = true;
-            this.UI.SettingsVisible = false;
-        }
+        private void OnCommand(string command, string args) => DrawMainUI();
 
         private void DrawUI()
         {
-            this.UI.Draw();
+            MainWindow.Draw();
         }
 
         private void DrawConfigUI()
         {
-            this.UI.Visible = true;
-            this.UI.SettingsVisible = true;
+            MainWindow.Visible = true;
+            MainWindow.SettingsVisible = true;
+        }
+
+        private void DrawMainUI()
+        {
+            MainWindow.Visible = true;
+            MainWindow.SettingsVisible = false;
         }
 
         private void DetermineStartArea()
