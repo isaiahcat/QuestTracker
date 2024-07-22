@@ -13281,6 +13281,14 @@
                                     "Level": 3
                                 },
                                 {
+                                    "Title": "Bottled Fantasy",
+                                    "Id": [
+                                        70723
+                                    ],
+                                    "Area": "Ul'dah",
+                                    "Level": 1
+                                },
+                                {
                                     "Title": "Fantastic Voyage",
                                     "Id": [
                                         65925
@@ -33790,6 +33798,20 @@
                                     "Level": 80
                                 }
                             ]
+                        },
+                        {
+                            "Title": "Viper Quests",
+                            "Categories": [],
+                            "Quests": [
+                                {
+                                    "Title": "Enter the Viper",
+                                    "Id": [
+                                        70384
+                                    ],
+                                    "Area": "Ul'dah",
+                                    "Level": 80
+                                }
+                            ]
                         }
                     ],
                     "Quests": []
@@ -34765,6 +34787,20 @@
                                     ],
                                     "Area": "Idyllshire",
                                     "Level": 80
+                                }
+                            ]
+                        },
+                        {
+                            "Title": "Sage Quests",
+                            "Categories": [],
+                            "Quests": [
+                                {
+                                    "Title": "The Joy of Pictomancy",
+                                    "Id": [
+                                        70390
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 8
                                 }
                             ]
                         },

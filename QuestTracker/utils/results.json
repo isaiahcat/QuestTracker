@@ -1,10 +1,26 @@
 [
   {
-    "Title": "Just Crowning Around",
+    "Title": "Bottled Fantasy",
     "Id": [
-      70337
+      70723
     ],
-    "Area": "The Gold Saucer",
-    "Level": 15
+    "Area": "Ul'dah",
+    "Level": 1
+  },
+  {
+    "Title": "Enter the Viper",
+    "Id": [
+      70384
+    ],
+    "Area": "Ul'dah",
+    "Level": 80
+  },
+  {
+    "Title": "The Joy of Pictomancy",
+    "Id": [
+      70390
+    ],
+    "Area": "Gridania",
+    "Level": 8
   }
 ]
