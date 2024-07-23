@@ -15,6 +15,8 @@ namespace QuestTracker
     {
         private Plugin plugin;
 
+        private QuestDataManager questDataManager;
+
         private Configuration configuration;
 
         private bool visible = false;
@@ -33,10 +35,11 @@ namespace QuestTracker
             set { this.settingsVisible = value; }
         }
 
-        public MainWindow(Plugin plugin, Configuration configuration)
+        public MainWindow(Plugin plugin, QuestDataManager questDataManager, Configuration configuration)
             : base("Quest Tracker##main_window", ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse)
         {
             this.plugin = plugin;
+            this.questDataManager = questDataManager;
             this.configuration = configuration;
         }
 
@@ -46,7 +49,7 @@ namespace QuestTracker
         {
             if (!Visible) return;
 
-            plugin.UpdateQuestData();
+            questDataManager.UpdateQuestData();
             ImGui.SetNextWindowSize(new Vector2(375, 440), ImGuiCond.FirstUseEver);
             ImGui.SetNextWindowSizeConstraints(new Vector2(375, 240), new Vector2(float.MaxValue, float.MaxValue));
             if (ImGui.Begin(plugin.Name, ref visible))
@@ -218,7 +221,7 @@ namespace QuestTracker
                     if (!quest.Hide)
                     {
                         ImGui.TableNextColumn();
-                        if (Plugin.IsQuestComplete(quest))
+                        if (QuestDataManager.IsQuestComplete(quest))
                         {
                             ImGui.PushFont(UiBuilder.IconFont);
                             ImGui.TextUnformatted(FontAwesomeIcon.Check.ToIconString());
@@ -254,7 +257,7 @@ namespace QuestTracker
                     {
                         configuration.DisplayOption = i;
                         configuration.Save();
-                        plugin.UpdateQuestData();
+                        questDataManager.UpdateQuestData();
                         ResetSelections();
                     }
 
