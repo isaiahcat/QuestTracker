@@ -7400,8 +7400,7 @@
                         }
                     ]
                 }
-            ],
-            "Quests": []
+            ]
         },
         {
             "Title": "Chronicles of a New Era",
@@ -7930,7 +7929,6 @@
                     "Categories": [
                         {
                             "Title": "Omega Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The Hunt for Omega",
@@ -8056,7 +8054,6 @@
                         },
                         {
                             "Title": "Omega: Beyond the Rift",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "A Heartless Hypothesis",
@@ -8076,8 +8073,7 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Chronicles of a New Era - Return to Ivalice",
@@ -8794,8 +8790,7 @@
                         }
                     ]
                 }
-            ],
-            "Quests": []
+            ]
         },
         {
             "Title": "Sidequests",
@@ -8805,7 +8800,6 @@
                     "Categories": [
                         {
                             "Title": "Tales of the Dragonsong War",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The Paths We Walk",
@@ -8851,7 +8845,6 @@
                         },
                         {
                             "Title": "Tales from the Shadows",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "One Final Journey",
@@ -8865,7 +8858,6 @@
                         },
                         {
                             "Title": "Tales of Newfound Adventure",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Shadowed Pasts",
@@ -8885,15 +8877,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Hildibrand Sidequests",
                     "Categories": [
                         {
                             "Title": "Hildibrand Adventures",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The Rise and Fall of Gentlemen",
@@ -9067,7 +9057,6 @@
                         },
                         {
                             "Title": "Further Hildibrand Adventures",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "A Gentleman Falls, Rather than Flies",
@@ -9137,7 +9126,6 @@
                         },
                         {
                             "Title": "Even Further Hildibrand Adventures",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "A Hingan Tale: Nashu Goes East",
@@ -9215,7 +9203,6 @@
                         },
                         {
                             "Title": "Somehow Further Hildibrand Adventures",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The Sleeping Gentleman",
@@ -9301,7 +9288,6 @@
                         },
                         {
                             "Title": "Manderville Weapons",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BF Make It a Manderville",
@@ -9369,15 +9355,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Weapon Enhancement Sidequests",
                     "Categories": [
                         {
                             "Title": "Zodiac Weapons",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Up in Arms",
@@ -9497,7 +9481,6 @@
                         },
                         {
                             "Title": "Anima Weapons",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "An Unexpected Proposal",
@@ -9615,7 +9598,6 @@
                         },
                         {
                             "Title": "The Forbidden Land, Eureka",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "And We Shall Call It Eureka",
@@ -9629,7 +9611,6 @@
                         },
                         {
                             "Title": "Resistance Weapons",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Hail to the Queen",
@@ -9953,15 +9934,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Records of Unusual Endeavors",
                     "Categories": [
                         {
                             "Title": "Doman Adventurers' Guild Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Toll Booty",
@@ -9991,7 +9970,6 @@
                         },
                         {
                             "Title": "Doman Reconstruction Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Precious Reclamation",
@@ -10029,7 +10007,6 @@
                         },
                         {
                             "Title": "Ishgardian Restoration Main Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Towards the Firmament",
@@ -10139,7 +10116,6 @@
                         },
                         {
                             "Title": "Ishgardian Restoration Sidequests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "If Songs Had Wings",
@@ -10345,7 +10321,6 @@
                         },
                         {
                             "Title": "Splendorous Tools",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "An Original Improvement",
@@ -10439,7 +10414,6 @@
                         },
                         {
                             "Title": "Palace of the Dead",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The House That Death Built",
@@ -10469,7 +10443,6 @@
                         },
                         {
                             "Title": "Heaven-on-High",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Knocking on Heaven's Door",
@@ -10491,7 +10464,6 @@
                         },
                         {
                             "Title": "Eureka Orthos",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Delve into Myth",
@@ -10521,7 +10493,6 @@
                         },
                         {
                             "Title": "Island Sanctuary Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Seeking Sanctuary",
@@ -10575,7 +10546,6 @@
                         },
                         {
                             "Title": "Variant Dungeons",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "A Key to the Past",
@@ -10627,15 +10597,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Side Story Quests",
                     "Categories": [
                         {
                             "Title": "Tales from the Calamity",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Remembering the Past",
@@ -10657,7 +10625,6 @@
                         },
                         {
                             "Title": "Delivery Moogle Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Of Errant Epistles",
@@ -10863,7 +10830,6 @@
                         },
                         {
                             "Title": "Scholasticate Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Keeping the Ledger",
@@ -10973,7 +10939,6 @@
                         },
                         {
                             "Title": "Void Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The Hero's Journey",
@@ -11003,7 +10968,6 @@
                         },
                         {
                             "Title": "Tataru's Grand Endeavor",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Small Business, Big Dreams",
@@ -11063,15 +11027,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Lominsan Sidequests",
                     "Categories": [
                         {
                             "Title": "Limsa Lominsa",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Coming to Limsa Lominsa",
@@ -11325,7 +11287,6 @@
                         },
                         {
                             "Title": "Wolves' Den Pier",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "It's Time to Duel",
@@ -11355,7 +11316,6 @@
                         },
                         {
                             "Title": "Middle La Noscea",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Rocks in a Hard Place",
@@ -11431,7 +11391,6 @@
                         },
                         {
                             "Title": "Lower La Noscea",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Cry Me a Liver",
@@ -11611,7 +11570,6 @@
                         },
                         {
                             "Title": "Eastern La Noscea",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Leves of Costa del Sol",
@@ -11753,7 +11711,6 @@
                         },
                         {
                             "Title": "Western La Noscea",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Simply the Hest",
@@ -12017,7 +11974,6 @@
                         },
                         {
                             "Title": "Upper La Noscea",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The Hottest of Box Lunches",
@@ -12071,7 +12027,6 @@
                         },
                         {
                             "Title": "Outer La Noscea",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Never Trout That I Love",
@@ -12163,15 +12118,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Gridanian Sidequests",
                     "Categories": [
                         {
                             "Title": "Gridania",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Coming to Gridania",
@@ -12417,7 +12370,6 @@
                         },
                         {
                             "Title": "Central Shroud",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Idle Initiatives",
@@ -12596,7 +12548,6 @@
                         },
                         {
                             "Title": "East Shroud",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Leves of Hawthorne",
@@ -12714,7 +12665,6 @@
                         },
                         {
                             "Title": "South Shroud",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Leves of Quarrymill",
@@ -12912,7 +12862,6 @@
                         },
                         {
                             "Title": "North Shroud",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Jumping at Shadows",
@@ -13149,15 +13098,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Ul'dahn Sidequests",
                     "Categories": [
                         {
                             "Title": "Ul'dah",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Coming to Ul'dah",
@@ -13393,7 +13340,6 @@
                         },
                         {
                             "Title": "The Waking Sands",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Primal Fear",
@@ -13432,7 +13378,6 @@
                         },
                         {
                             "Title": "Chocobo Square",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "So You Want to Be a Jockey",
@@ -13454,7 +13399,6 @@
                         },
                         {
                             "Title": "The Gold Saucer",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "World of Wonders",
@@ -13492,7 +13436,6 @@
                         },
                         {
                             "Title": "Western Thanalan",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The Greatest Story Never Told",
@@ -13744,7 +13687,6 @@
                         },
                         {
                             "Title": "Central Thanalan",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The Slaying of the Shrews",
@@ -13863,7 +13805,6 @@
                         },
                         {
                             "Title": "Eastern Thanalan",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Leves of Camp Drybone",
@@ -14085,7 +14026,6 @@
                         },
                         {
                             "Title": "Southern Thanalan",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Leves of Little Ala Mhigo",
@@ -14259,7 +14199,6 @@
                         },
                         {
                             "Title": "Northern Thanalan",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Thieves and Robbers",
@@ -14327,15 +14266,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Coerthan Sidequests",
                     "Categories": [
                         {
                             "Title": "Coerthas Central Highlands",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Leves of the Observatorium",
@@ -14693,7 +14630,6 @@
                         },
                         {
                             "Title": "Coerthas Western Highlands",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Contingency Supplies",
@@ -15009,15 +14945,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Mor Dhonan Sidequests",
                     "Categories": [
                         {
                             "Title": "Mor Dhona",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "A Legend for a Legend",
@@ -15349,15 +15283,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Ishgardian Sidequests",
                     "Categories": [
                         {
                             "Title": "Ishgard",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Remembering Ishgard",
@@ -15545,15 +15477,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Abalathian Sidequests",
                     "Categories": [
                         {
                             "Title": "The Sea of Clouds",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The Way of the Dodo",
@@ -15845,15 +15775,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Dravanian Sidequests",
                     "Categories": [
                         {
                             "Title": "Matoya's Cave",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Saro Roggo's Common Life",
@@ -15907,7 +15835,6 @@
                         },
                         {
                             "Title": "Idyllshire",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Fiery Wings, Fiery Hearts",
@@ -16177,7 +16104,6 @@
                         },
                         {
                             "Title": "The Dravanian Forelands",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Some Bad News",
@@ -16648,7 +16574,6 @@
                         },
                         {
                             "Title": "The Dravanian Hinterlands",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Louder than Words",
@@ -16758,7 +16683,6 @@
                         },
                         {
                             "Title": "The Churning Mists",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The Bathing Bully",
@@ -17267,15 +17191,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Azys Lla Sidequests",
                     "Categories": [
                         {
                             "Title": "Azys Lla",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Basic Training",
@@ -17391,15 +17313,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Gyr Abanian Sidequests",
                     "Categories": [
                         {
                             "Title": "Rhalgr's Reach",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "None Forgotten, None Forsaken",
@@ -17510,7 +17430,6 @@
                         },
                         {
                             "Title": "The Fringes",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Magiteknical Failure",
@@ -17740,7 +17659,6 @@
                         },
                         {
                             "Title": "The Peaks",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Dark Water",
@@ -18186,7 +18104,6 @@
                         },
                         {
                             "Title": "The Lochs",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The Dragon Made",
@@ -18270,15 +18187,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Othardian Sidequests",
                     "Categories": [
                         {
                             "Title": "The Ruby Sea",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "A New Fishing Ex-spear-ience",
@@ -18700,7 +18615,6 @@
                         },
                         {
                             "Title": "Yanxia",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Something Smells",
@@ -18994,7 +18908,6 @@
                         },
                         {
                             "Title": "The Azim Steppe",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Silent Banquet",
@@ -19414,15 +19327,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Hingan Sidequests",
                     "Categories": [
                         {
                             "Title": "Kugane",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "A Lone Wolf No More",
@@ -19586,15 +19497,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Lakeland Sidequests",
                     "Categories": [
                         {
                             "Title": "Lakeland",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Stock and Barrel",
@@ -19832,7 +19741,6 @@
                         },
                         {
                             "Title": "The Crystarium",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE A Cry for Help",
@@ -19996,15 +19904,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Kholusian Sidequests",
                     "Categories": [
                         {
                             "Title": "Eulmore",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE My Heart Will (Not) Go On",
@@ -20122,7 +20028,6 @@
                         },
                         {
                             "Title": "Kholusia",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Before the Tide Comes",
@@ -20470,15 +20375,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Amh Araeng Sidequests",
                     "Categories": [
                         {
                             "Title": "Amh Araeng",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Worm Food",
@@ -20890,15 +20793,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Il Mheg Sidequests",
                     "Categories": [
                         {
                             "Title": "Il Mheg",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE What's in a Name",
@@ -21262,15 +21163,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Rak'tika Sidequests",
                     "Categories": [
                         {
                             "Title": "The Rak'tika Greatwood",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Barking Up the Right Tree",
@@ -21642,15 +21541,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Tempest Sidequests",
                     "Categories": [
                         {
                             "Title": "The Tempest",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Ondo Dream of Oranges",
@@ -21806,15 +21703,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Sharlayan Sidequests",
                     "Categories": [
                         {
                             "Title": "Labyrinthos",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE It's Not the Heat, It's the Humidity",
@@ -22132,7 +22027,6 @@
                         },
                         {
                             "Title": "Old Sharlayan",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Wings of Hope",
@@ -22336,15 +22230,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Thavnairian Sidequests",
                     "Categories": [
                         {
                             "Title": "Radz-at-Han",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE A Bond Eternal",
@@ -22414,7 +22306,6 @@
                         },
                         {
                             "Title": "Thavnair",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Fruit Savior",
@@ -22706,15 +22597,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Garlean Sidequests",
                     "Categories": [
                         {
                             "Title": "Garlemald",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Your Inventory Is Not Full",
@@ -22982,15 +22871,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Mare Lamentorum Sidequests",
                     "Categories": [
                         {
                             "Title": "Mare Lamentorum",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE True Carrot Crimes",
@@ -23154,15 +23041,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Elpis Sidequests",
                     "Categories": [
                         {
                             "Title": "Elpis",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE The Ore the Merrier",
@@ -23558,15 +23443,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Ultima Thule Sidequests",
                     "Categories": [
                         {
                             "Title": "Ultima Thule",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE The Sound of Fear",
@@ -23730,11 +23613,9 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 }
-            ],
-            "Quests": []
+            ]
         },
         {
             "Title": "Tribal Quests",
@@ -23744,7 +23625,6 @@
                     "Categories": [
                         {
                             "Title": "Main Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Peace for Thanalan",
@@ -23790,7 +23670,6 @@
                         },
                         {
                             "Title": "Daily Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "A Shell to Scry On",
@@ -24034,15 +23913,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Sylph Quests",
                     "Categories": [
                         {
                             "Title": "Main Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Seeking Solace",
@@ -24088,7 +23965,6 @@
                         },
                         {
                             "Title": "Daily Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Deck the Hut",
@@ -24332,15 +24208,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Kobold Quests",
                     "Categories": [
                         {
                             "Title": "Main Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Highway Robbery",
@@ -24386,7 +24260,6 @@
                         },
                         {
                             "Title": "Daily Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Rubbish for Refuse",
@@ -24630,15 +24503,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Sahagin Quests",
                     "Categories": [
                         {
                             "Title": "Main Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "They Came from the Deep",
@@ -24684,7 +24555,6 @@
                         },
                         {
                             "Title": "Daily Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Standard Procedure",
@@ -24928,15 +24798,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Ixal Quests",
                     "Categories": [
                         {
                             "Title": "Main Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "A Bad Bladder",
@@ -25006,7 +24874,6 @@
                         },
                         {
                             "Title": "Daily Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Deliverance",
@@ -25282,15 +25149,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Vanu Vanu Quests",
                     "Categories": [
                         {
                             "Title": "Main Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Three Beaks to the Wind",
@@ -25360,7 +25225,6 @@
                         },
                         {
                             "Title": "Daily Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Veni, Vundu, Vici",
@@ -25604,15 +25468,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Vath Quests",
                     "Categories": [
                         {
                             "Title": "Main Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE The Naming of Vath",
@@ -25666,7 +25528,6 @@
                         },
                         {
                             "Title": "Daily Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Getting the Shaft",
@@ -25830,15 +25691,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Moogle Quests",
                     "Categories": [
                         {
                             "Title": "Main Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Tricks and Stones",
@@ -25908,7 +25767,6 @@
                         },
                         {
                             "Title": "Daily Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE With a Little Help",
@@ -26152,15 +26010,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Kojin Quests",
                     "Categories": [
                         {
                             "Title": "Main Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Heaven-sent",
@@ -26214,7 +26070,6 @@
                         },
                         {
                             "Title": "Daily Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Best Served Foul",
@@ -26410,15 +26265,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Ananta Quests",
                     "Categories": [
                         {
                             "Title": "Main Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Brooding Broodmother",
@@ -26472,7 +26325,6 @@
                         },
                         {
                             "Title": "Daily Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE A Real Fixer-upper",
@@ -26700,15 +26552,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Namazu Quests",
                     "Categories": [
                         {
                             "Title": "Main Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Something Fishy This Way Comes",
@@ -26770,7 +26620,6 @@
                         },
                         {
                             "Title": "Daily Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE The Importance of Being Yes, Yes",
@@ -26998,15 +26847,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Pixie Quests",
                     "Categories": [
                         {
                             "Title": "Main Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Manic Pixie Dream Realm",
@@ -27060,7 +26907,6 @@
                         },
                         {
                             "Title": "Daily Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Where There's Wool, There's a Way",
@@ -27288,15 +27134,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Qitari Quests",
                     "Categories": [
                         {
                             "Title": "Main Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE The Stewards of Note",
@@ -27398,7 +27242,6 @@
                         },
                         {
                             "Title": "Daily Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE A Tool's Errand",
@@ -27626,15 +27469,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Dwarf Quests",
                     "Categories": [
                         {
                             "Title": "Main Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE It's Dwarfin' Time",
@@ -27688,7 +27529,6 @@
                         },
                         {
                             "Title": "Daily Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Lakeland Neighbors",
@@ -27916,15 +27756,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Loporrit Quests",
                     "Categories": [
                         {
                             "Title": "Main Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Must Be Dreaming(way)",
@@ -27978,7 +27816,6 @@
                         },
                         {
                             "Title": "Daily Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Don't Stop the Music",
@@ -28206,15 +28043,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Omicron Quests",
                     "Categories": [
                         {
                             "Title": "Main Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE The Café at the End of the Universe",
@@ -28268,7 +28103,6 @@
                         },
                         {
                             "Title": "Daily Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Signs of the Past",
@@ -28496,15 +28330,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Arkasodara Quests",
                     "Categories": [
                         {
                             "Title": "Main Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Hippos Born to Run",
@@ -28558,7 +28390,6 @@
                         },
                         {
                             "Title": "Daily Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "\uE0BE Ridin' Flyers for Flyin' Riders",
@@ -28786,15 +28617,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Tribal Alliance Quests",
                     "Categories": [
                         {
                             "Title": "A Realm Reborn Tribal Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Call of the Wild (Twin Adder)",
@@ -28872,7 +28701,6 @@
                         },
                         {
                             "Title": "Heavensward Tribal Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "When Good Dragons Go Bad",
@@ -28910,7 +28738,6 @@
                         },
                         {
                             "Title": "Stormblood Tribal Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The Ananta Maid's Tail",
@@ -28948,7 +28775,6 @@
                         },
                         {
                             "Title": "Endwalker Tribal Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Dinner and a Show",
@@ -28968,11 +28794,9 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 }
-            ],
-            "Quests": []
+            ]
         },
         {
             "Title": "Class & Job Quests",
@@ -28982,7 +28806,6 @@
                     "Categories": [
                         {
                             "Title": "Gladiator Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Way of the Gladiator",
@@ -29054,7 +28877,6 @@
                         },
                         {
                             "Title": "Pugilist Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Way of the Pugilist",
@@ -29126,7 +28948,6 @@
                         },
                         {
                             "Title": "Marauder Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Way of the Marauder",
@@ -29198,7 +29019,6 @@
                         },
                         {
                             "Title": "Lancer Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Way of the Lancer",
@@ -29270,7 +29090,6 @@
                         },
                         {
                             "Title": "Archer Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Way of the Archer",
@@ -29341,7 +29160,6 @@
                         },
                         {
                             "Title": "Rogue Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "My First Daggers",
@@ -29425,15 +29243,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Disciple of Magic Quests",
                     "Categories": [
                         {
                             "Title": "Conjurer Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Way of the Conjurer",
@@ -29505,7 +29321,6 @@
                         },
                         {
                             "Title": "Thaumaturge Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Way of the Thaumaturge",
@@ -29577,7 +29392,6 @@
                         },
                         {
                             "Title": "Arcanist Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Way of the Arcanist",
@@ -29655,15 +29469,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Disciple of the Hand Quests",
                     "Categories": [
                         {
                             "Title": "Carpenter Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Way of the Carpenter",
@@ -29845,7 +29657,6 @@
                         },
                         {
                             "Title": "Blacksmith Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Way of the Blacksmith",
@@ -30027,7 +29838,6 @@
                         },
                         {
                             "Title": "Armorer Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Way of the Armorer",
@@ -30209,7 +30019,6 @@
                         },
                         {
                             "Title": "Goldsmith Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Way of the Goldsmith",
@@ -30391,7 +30200,6 @@
                         },
                         {
                             "Title": "Leatherworker Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Way of the Leatherworker",
@@ -30573,7 +30381,6 @@
                         },
                         {
                             "Title": "Weaver Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Way of the Weaver",
@@ -30755,7 +30562,6 @@
                         },
                         {
                             "Title": "Alchemist Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Way of the Alchemist",
@@ -30937,7 +30743,6 @@
                         },
                         {
                             "Title": "Culinarian Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Way of the Culinarian",
@@ -31117,15 +30922,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Disciple of the Land Quests",
                     "Categories": [
                         {
                             "Title": "Miner Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Way of the Miner",
@@ -31307,7 +31110,6 @@
                         },
                         {
                             "Title": "Botanist Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Way of the Botanist",
@@ -31489,7 +31291,6 @@
                         },
                         {
                             "Title": "Fisher Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Way of the Fisher",
@@ -31669,15 +31470,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Crystalline Mean Quests",
                     "Categories": [
                         {
                             "Title": "Facet of Forging Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Iola, Forgemaster",
@@ -31707,7 +31506,6 @@
                         },
                         {
                             "Title": "Facet of Crafting Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Cherished Memories",
@@ -31737,7 +31535,6 @@
                         },
                         {
                             "Title": "Facet of Nourishing Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Friends of a Feather",
@@ -31767,7 +31564,6 @@
                         },
                         {
                             "Title": "Facet of Gathering Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "On the Trail of a Myth",
@@ -31797,7 +31593,6 @@
                         },
                         {
                             "Title": "Facet of Fishing Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Well Eel Be Damned",
@@ -31827,7 +31622,6 @@
                         },
                         {
                             "Title": "Crystalline Mean Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The Crystalline Mean",
@@ -31847,15 +31641,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Studium Quests",
                     "Categories": [
                         {
                             "Title": "Faculty of Archaeology Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Professor Rurusha's New Friend",
@@ -31917,7 +31709,6 @@
                         },
                         {
                             "Title": "Faculty of Astronomy Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "In Search of the Azure Star",
@@ -31979,7 +31770,6 @@
                         },
                         {
                             "Title": "Faculty of Medicine Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Perfectly Awful",
@@ -32041,7 +31831,6 @@
                         },
                         {
                             "Title": "Faculty of Anthropology Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Cultured Pursuits",
@@ -32103,7 +31892,6 @@
                         },
                         {
                             "Title": "Faculty of Aetherology Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Fear the Thesis",
@@ -32165,7 +31953,6 @@
                         },
                         {
                             "Title": "Studium Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The Faculty",
@@ -32185,15 +31972,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Disciple of War Job Quests",
                     "Categories": [
                         {
                             "Title": "Paladin Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Paladin's Pledge",
@@ -32351,7 +32136,6 @@
                         },
                         {
                             "Title": "Monk Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Brother from Another Mother",
@@ -32509,7 +32293,6 @@
                         },
                         {
                             "Title": "Warrior Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Pride and Duty (Will Take You from the Mountain)",
@@ -32675,7 +32458,6 @@
                         },
                         {
                             "Title": "Dragoon Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Eye of the Dragon",
@@ -32841,7 +32623,6 @@
                         },
                         {
                             "Title": "Bard Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "A Song of Bards and Bowmen",
@@ -32999,7 +32780,6 @@
                         },
                         {
                             "Title": "Ninja Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Peasants by Day, Ninjas by Night",
@@ -33181,7 +32961,6 @@
                         },
                         {
                             "Title": "Dark Knight Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Our End",
@@ -33331,7 +33110,6 @@
                         },
                         {
                             "Title": "Machinist Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Savior of Skysteel",
@@ -33513,7 +33291,6 @@
                         },
                         {
                             "Title": "Samurai Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The Way of the Samurai",
@@ -33623,7 +33400,6 @@
                         },
                         {
                             "Title": "Gunbreaker Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The Makings of a Gunbreaker",
@@ -33685,7 +33461,6 @@
                         },
                         {
                             "Title": "Dancer Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Shall We Dance",
@@ -33747,7 +33522,6 @@
                         },
                         {
                             "Title": "Reaper Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The Killer Instinct",
@@ -33801,7 +33575,6 @@
                         },
                         {
                             "Title": "Viper Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Enter the Viper",
@@ -33813,15 +33586,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Disciple of Magic Job Quests",
                     "Categories": [
                         {
                             "Title": "White Mage Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Seer Folly",
@@ -33987,7 +33758,6 @@
                         },
                         {
                             "Title": "Black Mage Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Taking the Black",
@@ -34145,7 +33915,6 @@
                         },
                         {
                             "Title": "Summoner Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Austerities of Flame",
@@ -34304,7 +34073,6 @@
                         },
                         {
                             "Title": "Scholar Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Forgotten but Not Gone",
@@ -34462,7 +34230,6 @@
                         },
                         {
                             "Title": "Astrologian Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Stairway to the Heavens",
@@ -34628,7 +34395,6 @@
                         },
                         {
                             "Title": "Red Mage Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Taking the Red",
@@ -34738,7 +34504,6 @@
                         },
                         {
                             "Title": "Sage Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Sage's Path",
@@ -34792,7 +34557,6 @@
                         },
                         {
                             "Title": "Sage Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The Joy of Pictomancy",
@@ -34806,7 +34570,6 @@
                         },
                         {
                             "Title": "Blue Mage Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Out of the Blue",
@@ -35018,15 +34781,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Role Quests",
                     "Categories": [
                         {
                             "Title": "Tank Role Quests (Shadowbringers)",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The Man with Too Many Scars",
@@ -35080,7 +34841,6 @@
                         },
                         {
                             "Title": "Healer Role Quests (Shadowbringers)",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Traditions and Travails",
@@ -35134,7 +34894,6 @@
                         },
                         {
                             "Title": "Physical DPS Role Quests (Shadowbringers)",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "No Greater Sport",
@@ -35188,7 +34947,6 @@
                         },
                         {
                             "Title": "Magical Ranged DPS Role Quests (Shadowbringers)",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Hollow Pursuits",
@@ -35242,7 +35000,6 @@
                         },
                         {
                             "Title": "Role Quests (Shadowbringers)",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Shadow Walk with Me",
@@ -35264,7 +35021,6 @@
                         },
                         {
                             "Title": "Tank Role Quests (Endwalker)",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Shrouded in Peril",
@@ -35318,7 +35074,6 @@
                         },
                         {
                             "Title": "Healer Role Quests (Endwalker)",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Far from Free",
@@ -35372,7 +35127,6 @@
                         },
                         {
                             "Title": "Melee DPS Role Quests (Endwalker)",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Storm Clouds Brewing",
@@ -35426,7 +35180,6 @@
                         },
                         {
                             "Title": "Physical Ranged DPS Role Quests (Endwalker)",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Seeds of Disquiet",
@@ -35480,7 +35233,6 @@
                         },
                         {
                             "Title": "Magical Ranged DPS Role Quests (Endwalker)",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Our Aching Souls",
@@ -35534,7 +35286,6 @@
                         },
                         {
                             "Title": "Role Quests (Endwalker)",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Bitter Snow",
@@ -35570,11 +35321,9 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 }
-            ],
-            "Quests": []
+            ]
         },
         {
             "Title": "Other Quests",
@@ -35584,7 +35333,6 @@
                     "Categories": [
                         {
                             "Title": "Maelstrom Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "A Pup No Longer (Maelstrom)",
@@ -35633,7 +35381,6 @@
                         },
                         {
                             "Title": "Order of the Twin Adder Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "A Pup No Longer (Twin Adder)",
@@ -35682,7 +35429,6 @@
                         },
                         {
                             "Title": "Immortal Flames Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "A Pup No Longer (Immortal Flames)",
@@ -35729,15 +35475,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Seasonal Events",
                     "Categories": [
                         {
                             "Title": "Heavensturn Events",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "A Horse for Heavensturn",
@@ -35911,7 +35655,6 @@
                         },
                         {
                             "Title": "Valentione's Day Events",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The Puissance of Love",
@@ -36157,7 +35900,6 @@
                         },
                         {
                             "Title": "Valentione's & Little Ladies' Day Events",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "A Delivery of Love",
@@ -36179,7 +35921,6 @@
                         },
                         {
                             "Title": "Little Ladies' Day Events",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "All the Little Ladies (Gridania)",
@@ -36401,7 +36142,6 @@
                         },
                         {
                             "Title": "Hatching-tide Events",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Egg-hunting We Will Go (Gridania)",
@@ -36647,7 +36387,6 @@
                         },
                         {
                             "Title": "Gold Saucer Festivities",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "And Then There Were Some",
@@ -36773,7 +36512,6 @@
                         },
                         {
                             "Title": "Moonfire Faire Events",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Streets of Moonfire (Gridania)",
@@ -37099,7 +36837,6 @@
                         },
                         {
                             "Title": "Rising Events",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "What Blooms in the Night",
@@ -37209,7 +36946,6 @@
                         },
                         {
                             "Title": "All Saints' Wake Events",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "Not-so-evil Dead",
@@ -37511,7 +37247,6 @@
                         },
                         {
                             "Title": "Starlight Celebration Events",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "A Starlight Miracle",
@@ -37779,15 +37514,13 @@
                                 }
                             ]
                         }
-                    ],
-                    "Quests": []
+                    ]
                 },
                 {
                     "Title": "Special Quests",
                     "Categories": [
                         {
                             "Title": "Special Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "The Ties That Bind",
@@ -37801,7 +37534,6 @@
                         },
                         {
                             "Title": "Collaboration Quests",
-                            "Categories": [],
                             "Quests": [
                                 {
                                     "Title": "For the Winsome",
