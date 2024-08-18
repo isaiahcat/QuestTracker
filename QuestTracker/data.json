@@ -8789,6 +8789,59 @@
                             "Level": 90
                         }
                     ]
+                },
+                {
+                    "Title": "Chronicles of a New Era - The Arcadion",
+                    "Quests": [
+                        {
+                            "Title": "A New Challenger Appears",
+                            "Id": [
+                                70496
+                            ],
+                            "Area": "Solution Nine",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "The Claw in the Dark",
+                            "Id": [
+                                70497
+                            ],
+                            "Area": "Greenroom",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "Sweet Poison",
+                            "Id": [
+                                70498
+                            ],
+                            "Area": "Greenroom",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "Yaana's Yarn",
+                            "Id": [
+                                70499
+                            ],
+                            "Area": "Greenroom",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "Vile Heat",
+                            "Id": [
+                                70500
+                            ],
+                            "Area": "Greenroom",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "The Neoteric Witch",
+                            "Id": [
+                                70501
+                            ],
+                            "Area": "Greenroom",
+                            "Level": 100
+                        }
+                    ]
                 }
             ]
         },
