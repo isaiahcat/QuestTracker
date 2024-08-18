@@ -35723,6 +35723,284 @@
                                     "Level": 90
                                 }
                             ]
+                        },
+                        {
+                            "Title": "Tank Role Quests (Dawntrail)",
+                            "Quests": [
+                                {
+                                    "Title": "The Narwhal Beckons",
+                                    "Id": [
+                                        70354
+                                    ],
+                                    "Area": "Tuliyollal",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Sleepless in Ishgard",
+                                    "Id": [
+                                        70355
+                                    ],
+                                    "Area": "Ishgard",
+                                    "Level": 92
+                                },
+                                {
+                                    "Title": "Between Sleep and Death",
+                                    "Id": [
+                                        70356
+                                    ],
+                                    "Area": "Ishgard",
+                                    "Level": 94
+                                },
+                                {
+                                    "Title": "Beacon in the Darkness",
+                                    "Id": [
+                                        70357
+                                    ],
+                                    "Area": "Ishgard",
+                                    "Level": 96
+                                },
+                                {
+                                    "Title": "Awakened, Not Stirred",
+                                    "Id": [
+                                        70358
+                                    ],
+                                    "Area": "Ishgard",
+                                    "Level": 98
+                                },
+                                {
+                                    "Title": "Dreams of a New Day",
+                                    "Id": [
+                                        70359
+                                    ],
+                                    "Area": "Ishgard",
+                                    "Level": 100
+                                }
+                            ]
+                        },
+                        {
+                            "Title": "Healer Role Quests (Dawntrail)",
+                            "Quests": [
+                                {
+                                    "Title": "In the Sting of Things",
+                                    "Id": [
+                                        70360
+                                    ],
+                                    "Area": "Tuliyollal",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Causing Problems on Purpose",
+                                    "Id": [
+                                        70361
+                                    ],
+                                    "Area": "Limsa Lominsa",
+                                    "Level": 92
+                                },
+                                {
+                                    "Title": "Living among the Deadly",
+                                    "Id": [
+                                        70362
+                                    ],
+                                    "Area": "Limsa Lominsa",
+                                    "Level": 94
+                                },
+                                {
+                                    "Title": "Taste of a Toxin Paradise",
+                                    "Id": [
+                                        70363
+                                    ],
+                                    "Area": "Limsa Lominsa",
+                                    "Level": 96
+                                },
+                                {
+                                    "Title": "Downed by the River",
+                                    "Id": [
+                                        70364
+                                    ],
+                                    "Area": "Limsa Lominsa",
+                                    "Level": 98
+                                },
+                                {
+                                    "Title": "An Antidote for Anarchy",
+                                    "Id": [
+                                        70365
+                                    ],
+                                    "Area": "Limsa Lominsa",
+                                    "Level": 100
+                                }
+                            ]
+                        },
+                        {
+                            "Title": "Melee DPS Role Quests (Dawntrail)",
+                            "Quests": [
+                                {
+                                    "Title": "The Hunter and the Hunted",
+                                    "Id": [
+                                        70366
+                                    ],
+                                    "Area": "Tuliyollal",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "A Sea of Blood",
+                                    "Id": [
+                                        70367
+                                    ],
+                                    "Area": "Kugane",
+                                    "Level": 92
+                                },
+                                {
+                                    "Title": "Who's Who",
+                                    "Id": [
+                                        70368
+                                    ],
+                                    "Area": "Kugane",
+                                    "Level": 94
+                                },
+                                {
+                                    "Title": "Cornered Prey",
+                                    "Id": [
+                                        70369
+                                    ],
+                                    "Area": "Kugane",
+                                    "Level": 96
+                                },
+                                {
+                                    "Title": "Impostor Syndrome",
+                                    "Id": [
+                                        70370
+                                    ],
+                                    "Area": "Kugane",
+                                    "Level": 98
+                                },
+                                {
+                                    "Title": "A Hunter True",
+                                    "Id": [
+                                        70371
+                                    ],
+                                    "Area": "Kugane",
+                                    "Level": 100
+                                }
+                            ]
+                        },
+                        {
+                            "Title": "Physical Ranged DPS Role Quests (Dawntrail)",
+                            "Quests": [
+                                {
+                                    "Title": "To Steal a Steelhog",
+                                    "Id": [
+                                        70372
+                                    ],
+                                    "Area": "Tuliyollal",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Bandits Abound",
+                                    "Id": [
+                                        70373
+                                    ],
+                                    "Area": "Rhalgr's Reach",
+                                    "Level": 92
+                                },
+                                {
+                                    "Title": "Take Me to Your Leader",
+                                    "Id": [
+                                        70374
+                                    ],
+                                    "Area": "The Lochs",
+                                    "Level": 94
+                                },
+                                {
+                                    "Title": "The Milk of Mamool Ja Kindness",
+                                    "Id": [
+                                        70375
+                                    ],
+                                    "Area": "The Peaks",
+                                    "Level": 96
+                                },
+                                {
+                                    "Title": "Ally in the Alley",
+                                    "Id": [
+                                        70376
+                                    ],
+                                    "Area": "The Peaks",
+                                    "Level": 98
+                                },
+                                {
+                                    "Title": "The Mightiest Shield",
+                                    "Id": [
+                                        70377
+                                    ],
+                                    "Area": "The Lochs",
+                                    "Level": 100
+                                }
+                            ]
+                        },
+                        {
+                            "Title": "Magical Ranged DPS Role Quests (Dawntrail)",
+                            "Quests": [
+                                {
+                                    "Title": "Power Forgotten",
+                                    "Id": [
+                                        70378
+                                    ],
+                                    "Area": "Tuliyollal",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "A Brand of Justice",
+                                    "Id": [
+                                        70379
+                                    ],
+                                    "Area": "Thavnair",
+                                    "Level": 92
+                                },
+                                {
+                                    "Title": "The Seeds of Popularity",
+                                    "Id": [
+                                        70380
+                                    ],
+                                    "Area": "Thavnair",
+                                    "Level": 94
+                                },
+                                {
+                                    "Title": "Floundering Fame",
+                                    "Id": [
+                                        70381
+                                    ],
+                                    "Area": "Thavnair",
+                                    "Level": 96
+                                },
+                                {
+                                    "Title": "Behind the Helm",
+                                    "Id": [
+                                        70382
+                                    ],
+                                    "Area": "Thavnair",
+                                    "Level": 98
+                                },
+                                {
+                                    "Title": "Heroes and Pretenders",
+                                    "Id": [
+                                        70383
+                                    ],
+                                    "Area": "Thavnair",
+                                    "Level": 100
+                                }
+                            ]
+                        },
+                        {
+                            "Title": "Role Quests (Dawntrail)",
+                            "Quests": [
+                                {
+                                    "Title": "Uncouth Customers",
+                                    "Id": [
+                                        70353
+                                    ],
+                                    "Area": "Tuliyollal",
+                                    "Level": 90
+                                }
+                            ]
                         }
                     ]
                 }
