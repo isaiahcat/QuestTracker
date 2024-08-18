@@ -1,8 +1,6 @@
 # QuestTracker
 A FFXIV Dalamud plugin for the quest completionist
 
-~ 6.5 quests coming soon ~
-
 For any suggestions or issues, feel free to ping me @isaiahcat on the [XIVLauncher/Dalamud discord server](https://goat.place/).
 
 ### Overview
