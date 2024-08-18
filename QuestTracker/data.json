@@ -24502,54 +24502,546 @@
                         {
                             "Title": "Heritage Found",
                             "Quests": [
-
+                                {
+                                    "Title": "\uE0BE Gwok Away",
+                                    "Id": [
+                                        70685
+                                    ],
+                                    "Area": "Heritage Found",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Natural Selection",
+                                    "Id": [
+                                        70686
+                                    ],
+                                    "Area": "Heritage Found",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE The Miracle of Electrope",
+                                    "Id": [
+                                        70687
+                                    ],
+                                    "Area": "Heritage Found",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Fear and Lightning in the Thunderyards",
+                                    "Id": [
+                                        70688
+                                    ],
+                                    "Area": "Heritage Found",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Stressed Testing",
+                                    "Id": [
+                                        70689
+                                    ],
+                                    "Area": "Heritage Found",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Refined Tastes",
+                                    "Id": [
+                                        70690
+                                    ],
+                                    "Area": "Heritage Found",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Aunty Knows Best",
+                                    "Id": [
+                                        70696
+                                    ],
+                                    "Area": "Heritage Found",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Yyupye's Dirt",
+                                    "Id": [
+                                        70697
+                                    ],
+                                    "Area": "Heritage Found",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE What She Left Behind",
+                                    "Id": [
+                                        70698
+                                    ],
+                                    "Area": "Heritage Found",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE All That She Carried",
+                                    "Id": [
+                                        70699
+                                    ],
+                                    "Area": "Heritage Found",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE History Reforged",
+                                    "Id": [
+                                        70691
+                                    ],
+                                    "Area": "Heritage Found",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Phyt for Survival",
+                                    "Id": [
+                                        70692
+                                    ],
+                                    "Area": "Heritage Found",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE A Well-oiled Machine",
+                                    "Id": [
+                                        70693
+                                    ],
+                                    "Area": "Heritage Found",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Storm's Traces",
+                                    "Id": [
+                                        70694
+                                    ],
+                                    "Area": "Heritage Found",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE He Who Remembers",
+                                    "Id": [
+                                        70695
+                                    ],
+                                    "Area": "Heritage Found",
+                                    "Level": 90
+                                }
                             ]
                         },
                         {
                             "Title": "Shaaloani",
                             "Quests": [
-
+                                {
+                                    "Title": "\uE0BE A Private Delivery",
+                                    "Id": [
+                                        70655
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE A Sobering Proposition",
+                                    "Id": [
+                                        70656
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Taste of the Wilds",
+                                    "Id": [
+                                        70657
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Gentle Giants",
+                                    "Id": [
+                                        70659
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Bomb Disposal",
+                                    "Id": [
+                                        70661
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE A Refined Perspective",
+                                    "Id": [
+                                        70662
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Working on a Full Stomach",
+                                    "Id": [
+                                        70665
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Meeting of the Spirits",
+                                    "Id": [
+                                        70666
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Watching Big Brother",
+                                    "Id": [
+                                        70667
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Tastes Like Home",
+                                    "Id": [
+                                        70670
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE When the Bill Comes Due",
+                                    "Id": [
+                                        70676
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Broken Record",
+                                    "Id": [
+                                        70677
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Back on Stage",
+                                    "Id": [
+                                        70678
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE A Family's Worth",
+                                    "Id": [
+                                        70679
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Snakes on a Train(line)",
+                                    "Id": [
+                                        70671
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE A Mount with a View",
+                                    "Id": [
+                                        70673
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE It's a Terrible Ring to Lose",
+                                    "Id": [
+                                        70672
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Rroneek Seeker",
+                                    "Id": [
+                                        70674
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE The Horns That Bind Us",
+                                    "Id": [
+                                        70675
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Fruitful Endeavors",
+                                    "Id": [
+                                        70658
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Death by Popoto",
+                                    "Id": [
+                                        70668
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Waiting One's Turn",
+                                    "Id": [
+                                        70660
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Surprising Source of Fiber",
+                                    "Id": [
+                                        70663
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE A Grave Matter",
+                                    "Id": [
+                                        70664
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE A Tool Tale",
+                                    "Id": [
+                                        70669
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE A Bad Case of the Blue Devils",
+                                    "Id": [
+                                        70680
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Down in the Mouth",
+                                    "Id": [
+                                        70681
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Listen to Your Elders",
+                                    "Id": [
+                                        70682
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Back in Blue",
+                                    "Id": [
+                                        70683
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Dig for Victory",
+                                    "Id": [
+                                        70684
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                }
                             ]
                         },
                         {
                             "Title": "Solution Nine",
                             "Quests": [
-
-                            ]
-                        },
-                        {
-                            "Title": "Yak T'el",
-                            "Quests": [
-
+                                {
+                                    "Title": "\uE0BE Credits Where Credits Are Due",
+                                    "Id": [
+                                        70700
+                                    ],
+                                    "Area": "Solution Nine",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE True Vue Blues",
+                                    "Id": [
+                                        70701
+                                    ],
+                                    "Area": "Solution Nine",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Problem Child, Solution Nine",
+                                    "Id": [
+                                        70702
+                                    ],
+                                    "Area": "Solution Nine",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE An Usher's Lament",
+                                    "Id": [
+                                        70703
+                                    ],
+                                    "Area": "Solution Nine",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Towering Troubles",
+                                    "Id": [
+                                        70704
+                                    ],
+                                    "Area": "Solution Nine",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE A Fitting Send-off",
+                                    "Id": [
+                                        70705
+                                    ],
+                                    "Area": "Solution Nine",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Rousing Mister Robot",
+                                    "Id": [
+                                        70706
+                                    ],
+                                    "Area": "Solution Nine",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Of Lightning Rings and Romance",
+                                    "Id": [
+                                        70707
+                                    ],
+                                    "Area": "Solution Nine",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Warrior of Light, Wrangler of Cats",
+                                    "Id": [
+                                        70708
+                                    ],
+                                    "Area": "Solution Nine",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Tasteful Memories",
+                                    "Id": [
+                                        70709
+                                    ],
+                                    "Area": "Solution Nine",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Trial by Spire",
+                                    "Id": [
+                                        70541
+                                    ],
+                                    "Area": "Solution Nine",
+                                    "Level": 100
+                                },
+                                {
+                                    "Title": "Something Stray in the Neighborhood",
+                                    "Id": [
+                                        70550
+                                    ],
+                                    "Area": "Solution Nine",
+                                    "Level": 100
+                                }
                             ]
                         }
                     ]
                 },
                 {
-                    "Title": "Ultima Thule Sidequests",
+                    "Title": "Unlost World Sidequests",
                     "Categories": [
                         {
-                            "Title": "Kozama'uka",
+                            "Title": "Living Memory",
                             "Quests": [
-
-                            ]
-                        },
-                        {
-                            "Title": "Tuliyollal",
-                            "Quests": [
-
-                            ]
-                        },
-                        {
-                            "Title": "Urqopacha",
-                            "Quests": [
-
-                            ]
-                        },
-                        {
-                            "Title": "Yak T'el",
-                            "Quests": [
-
+                                {
+                                    "Title": "\uE0BE Well-wishing at the Wishing Well",
+                                    "Id": [
+                                        70710
+                                    ],
+                                    "Area": "Living Memory",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE The Canals of History",
+                                    "Id": [
+                                        70711
+                                    ],
+                                    "Area": "Living Memory",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Perplexing Puzzles, Endless Fun",
+                                    "Id": [
+                                        70712
+                                    ],
+                                    "Area": "Living Memory",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Brotherly Bonds Know No Barrier",
+                                    "Id": [
+                                        70713
+                                    ],
+                                    "Area": "Living Memory",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Volcanic Disruptions",
+                                    "Id": [
+                                        70714
+                                    ],
+                                    "Area": "Living Memory",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Blueprint Protocol",
+                                    "Id": [
+                                        70715
+                                    ],
+                                    "Area": "Living Memory",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Lindblum, We Hardly Knew Ye",
+                                    "Id": [
+                                        70716
+                                    ],
+                                    "Area": "Living Memory",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Leaving This Place for Good",
+                                    "Id": [
+                                        70717
+                                    ],
+                                    "Area": "Living Memory",
+                                    "Level": 90
+                                }
                             ]
                         }
                     ]
