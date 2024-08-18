@@ -33906,6 +33906,46 @@
                                     ],
                                     "Area": "Ul'dah",
                                     "Level": 80
+                                },
+                                {
+                                    "Title": "Fangs of the Viper",
+                                    "Id": [
+                                        70385
+                                    ],
+                                    "Area": "Ul'dah",
+                                    "Level": 80
+                                },
+                                {
+                                    "Title": "Viper in the Vidraal's Shadow",
+                                    "Id": [
+                                        70386
+                                    ],
+                                    "Area": "Ul'dah",
+                                    "Level": 83
+                                },
+                                {
+                                    "Title": "Vipers on the Hunt",
+                                    "Id": [
+                                        70387
+                                    ],
+                                    "Area": "South Shroud",
+                                    "Level": 85
+                                },
+                                {
+                                    "Title": "Into the Viper Pit",
+                                    "Id": [
+                                        70388
+                                    ],
+                                    "Area": "South Shroud",
+                                    "Level": 88
+                                },
+                                {
+                                    "Title": "Vengeance of the Viper",
+                                    "Id": [
+                                        70389
+                                    ],
+                                    "Area": "South Shroud",
+                                    "Level": 90
                                 }
                             ]
                         }
@@ -34887,7 +34927,47 @@
                                         70390
                                     ],
                                     "Area": "Gridania",
-                                    "Level": 8
+                                    "Level": 80
+                                },
+                                {
+                                    "Title": "Mind over Manor",
+                                    "Id": [
+                                        70391
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 80
+                                },
+                                {
+                                    "Title": "Perspectives in Pursuit",
+                                    "Id": [
+                                        70392
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 83
+                                },
+                                {
+                                    "Title": "The Crate Beyond",
+                                    "Id": [
+                                        70393
+                                    ],
+                                    "Area": "Coerthas Central Highlands",
+                                    "Level": 85
+                                },
+                                {
+                                    "Title": "Beruru's Clues",
+                                    "Id": [
+                                        70394
+                                    ],
+                                    "Area": "Kugane",
+                                    "Level": 88
+                                },
+                                {
+                                    "Title": "Somewhere Only She Knows",
+                                    "Id": [
+                                        70395
+                                    ],
+                                    "Area": "Ul'dah",
+                                    "Level": 90
                                 }
                             ]
                         },
