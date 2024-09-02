@@ -71,9 +71,11 @@
     <PackageReference Include="DalamudPackager" Version="2.1.13" />
   </ItemGroup>
 
-  
-
   <ItemGroup>
     <Content Include="QuestTracker.yaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="data.json" />
   </ItemGroup>
 </Project>
