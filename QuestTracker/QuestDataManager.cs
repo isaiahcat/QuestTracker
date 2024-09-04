@@ -30,9 +30,9 @@ namespace QuestTracker
             try
             {
                 pluginLog.Debug("Loading QuestData from data.json");
-
-                var path = Path.Combine(pluginInterface.AssemblyLocation.Directory.Parent.Parent.FullName, "data.json");
-                var jsonString = File.ReadAllText(path);
+                using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("QeustTracker.data.json");
+                using var stringStream = new StreamReader(stream);
+                var jsonString = stringStream.ReadToEnd();
                 plugin.QuestData = JsonConvert.DeserializeObject<QuestData>(jsonString);
 
                 pluginLog.Debug("Load successful");
