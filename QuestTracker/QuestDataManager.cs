@@ -145,13 +145,21 @@ namespace QuestTracker
                     }
                     
                     // ARR "Call of the Wild" Tribal Alliance Quests
-                    if (QuestManager.IsQuestComplete(67001) && (quest.Id.Contains(67002) || quest.Id.Contains(67003)))
-                    {
-                        questData.Quests.Remove(quest);
-                    } else if (QuestManager.IsQuestComplete(67002) && (quest.Id.Contains(67001) || quest.Id.Contains(67003)))
-                    {
-                        questData.Quests.Remove(quest);
-                    } else if (QuestManager.IsQuestComplete(67003) && (quest.Id.Contains(67001) || quest.Id.Contains(67002)))
+                    if ((QuestManager.IsQuestComplete(67001) && (quest.Id.Contains(67002) || quest.Id.Contains(67003))) ||
+                        (QuestManager.IsQuestComplete(67002) && (quest.Id.Contains(67001) || quest.Id.Contains(67003))) ||
+                        (QuestManager.IsQuestComplete(67003) && (quest.Id.Contains(67001) || quest.Id.Contains(67002))) ||
+                    // YorHa "Heads or Tails"
+                        (QuestManager.IsQuestComplete(69256) && quest.Id.Contains(69257)) || 
+                        (QuestManager.IsQuestComplete(69257) && quest.Id.Contains(69256)) || 
+                    // Qitari "The First Stela"
+                        (QuestManager.IsQuestComplete(69336) && quest.Id.Contains(69337)) || 
+                        (QuestManager.IsQuestComplete(69337) && quest.Id.Contains(69336)) || 
+                    // Qitari "The Second Stela"
+                        (QuestManager.IsQuestComplete(69338) && quest.Id.Contains(69339)) || 
+                        (QuestManager.IsQuestComplete(69339) && quest.Id.Contains(69338)) || 
+                    // Qitari "The Third Stela"
+                        (QuestManager.IsQuestComplete(69340) && quest.Id.Contains(69341)) || 
+                        (QuestManager.IsQuestComplete(69341) && quest.Id.Contains(69340))) 
                     {
                         questData.Quests.Remove(quest);
                     }
