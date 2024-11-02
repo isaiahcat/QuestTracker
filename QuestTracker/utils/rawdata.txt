@@ -1,100 +1,15 @@
-A New World to Explore	Old Sharlayan	90
-The Nation of Tuliyollal	Tuliyollal	90
-A City of Stairs	Tuliyollal	90
-A Saga in Stone	Tuliyollal	90
-The Rite of Succession	Tuliyollal	90
-To Kozama'uka	Tuliyollal	90
-A Festive People	Kozama'uka	90
-The Feat of Reeds	Kozama'uka	90
-A Well-mannered Shipwright	Kozama'uka	90
-The Lifting of Wings	Kozama'uka	90
-Knowing the Hanuhanu	Kozama'uka	90
-To Urqopacha	Tuliyollal	90
-Traders of Happiness	Urqopacha	90
-The Feat of Gold	Urqopacha	90
-Mablu's Dream	Urqopacha	90
-A Premium Deal	Urqopacha	90
-Wuk Lamat in the Saddle	Urqopacha	90
-Knowing the Pelupelu	Urqopacha	90
-The Success of Others	Tuliyollal	91
-For All Turali	Tuliyollal	91
-A Leaking Workpot	Kozama'uka	92
-Lending a Helphand	Kozama'uka	92
-The Feat of Pots	Kozama'uka	92
-A Father First	Tuliyollal	92
-The Shape of Peace	Tuliyollal	92
-Lost Promise	Kozama'uka	92
-A Brother's Duty	Kozama'uka	92
-Feeding the River	Kozama'uka	92
-Sibling Rescue	Kozama'uka	92
-History's Keepers	Kozama'uka	93
-The Feat of Proof	Urqopacha	93
-The High Luminary	Urqopacha	93
-An Echo of Madness	Urqopacha	93
-Pointing the Way	Urqopacha	93
-The Skyruin	Urqopacha	93
-The Feat of Ice	Urqopacha	93
-The Promise of Peace	Urqopacha	93
-The Leap to Yak T'el	Tuliyollal	94
-Village of the Hunt	Yak T'el	94
-A History of Violence	Yak T'el	94
-The Feat of Repast	Yak T'el	94
-A Father's Grief	Yak T'el	94
-Taking a Stand	Yak T'el	94
-Into the Traverse	Yak T'el	94
-City of Silence	Yak T'el	94
-Blessed Siblings	Yak T'el	94
-Scale of Trust	Yak T'el	94
-Mamook Speaks	Yak T'el	95
-The Feat of the Brotherhood	Yak T'el	95
-Road to the Golden City	Yak T'el	95
-Dawn of a New Tomorrow	Tuliyollal	95
-Ever Greater, Ever Brighter	Tuliyollal	95
-The Long Road to Xak Tural	Tuliyollal	95
-Saddled Up	Shaaloani	95
-Braced for Trouble	Shaaloani	95
-Blowing Smoke	Shaaloani	95
-Law of the Land	Shaaloani	95
-On Track	Shaaloani	95
-One with Nature	Shaaloani	96
-And the Land Would Tremble	Shaaloani	96
-No Time for Tears	Sunperch	96
-Pick up the Pieces	Tuliyollal	96
-Together as One	Sunperch	96
-In Yyasulani's Shadow	Tuliyollal	96
-Putting Plans into Locomotion	Shaaloani	96
-A Hot Commodity	Shaaloani	96
-All Aboard	Shaaloani	97
-The Land of Levin	Heritage Found	97
-A Royal Welcome	Heritage Found	97
-A Day in the Life	Heritage Found	97
-On the Cloud	Heritage Found	97
-Gone and Forgotten	Earthen Sky Hideout	97
-Embracing Oblivion	Heritage Found	97
-Solution Nine	Earthen Sky Hideout	97
-The Queen's Tour	Solution Nine	97
-Her People, Her Family	Solution Nine	98
-Scales of Blue	Solution Nine	98
-Gives You Teeth	Solution Nine	98
-Little Footfalls	The Backroom	98
-Drowned Vestiges	Heritage Found	98
-Memories of a Knight	Heritage Found	98
-At a Crossroads	Heritage Found	98
-The Protector and the Destroyer	Heritage Found	98
-A Comforting Hand	Solution Nine	99
-Unto the Summit	The Backroom	99
-The Resilient Son	Heritage Found	99
-A New Family	The Backroom	99
-In Pursuit of Sphene	Tuliyollal	99
-Through the Gate of Gold	Tuliyollal	99
-Those Who Live Forever	Living Memory	99
-In Serenity and Sorrow	Living Memory	99
-The Land of Dreams	Living Memory	99
-A Knight of Alexandria	Living Memory	99
-The Sanctuary of the Strong	Living Memory	100
-The Taste of Family	Living Memory	100
-Leafing through the Past	Living Memory	100
-An Explorer's Delight	Living Memory	100
-In Search of Discovery	Living Memory	100
-A Journey Never-ending	Living Memory	100
-Dawntrail	Living Memory	100
+The Symbol of Love	Gridania	15
+It's All about Heart	Gridania	15
+The Princesses and the Eggs	Gridania	15
+Peatie in Pink	Central Shroud	15
+Fire Red, Beast Green	Limsa Lominsa	30
+Festival Fan Frenzy	Eastern La Noscea	30
+Siblings Rising	Ul'dah	15
+What Drives Us	Ul'dah	15
+The Fright Stuff	Gridania	15
+A Charmed Life	Gridania	15
+The Aether-starved Ahriman	Gridania	15
+All Fiends Sated on All Saints' Wake	Gridania	15
+Blue Starlight	Gridania	15
+Together at a Distance	Gridania	15
+Starlight Surprise	Gridania	15

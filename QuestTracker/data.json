@@ -38858,6 +38858,22 @@
                                     ],
                                     "Area": "Gridania",
                                     "Level": 15
+                                },
+                                {
+                                    "Title": "The Symbol of Love",
+                                    "Id": [
+                                        70344
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "It's All about Heart",
+                                    "Id": [
+                                        70345
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 15
                                 }
                             ]
                         },
@@ -39099,6 +39115,27 @@
                                         70256
                                     ],
                                     "Area": "Ul'dah",
+                                    "Level": 15
+                                }
+                            ]
+                        },
+                        {
+                            "Title": "Little Ladies' & Hatching-tide Events",
+                            "Quests": [
+                                {
+                                    "Title": "The Princesses and the Eggs",
+                                    "Id": [
+                                        70346
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "Peatie in Pink",
+                                    "Id": [
+                                        70347
+                                    ],
+                                    "Area": "Central Shroud",
                                     "Level": 15
                                 }
                             ]
@@ -39795,6 +39832,22 @@
                                     ],
                                     "Area": "Eastern La Noscea",
                                     "Level": 30
+                                },
+                                {
+                                    "Title": "Fire Red, Beast Green",
+                                    "Id": [
+                                        70718
+                                    ],
+                                    "Area": "Limsa Lominsa",
+                                    "Level": 30
+                                },
+                                {
+                                    "Title": "Festival Fan Frenzy",
+                                    "Id": [
+                                        70719
+                                    ],
+                                    "Area": "Eastern La Noscea",
+                                    "Level": 30
                                 }
                             ]
                         },
@@ -39901,6 +39954,22 @@
                                     "Title": "Newfound Journey",
                                     "Id": [
                                         70080
+                                    ],
+                                    "Area": "Ul'dah",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "Siblings Rising",
+                                    "Id": [
+                                        70301
+                                    ],
+                                    "Area": "Ul'dah",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "What Drives Us",
+                                    "Id": [
+                                        70302
                                     ],
                                     "Area": "Ul'dah",
                                     "Level": 15
@@ -40205,6 +40274,38 @@
                                     ],
                                     "Area": "Gridania",
                                     "Level": 15
+                                },
+                                {
+                                    "Title": "The Fright Stuff",
+                                    "Id": [
+                                        70321
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "A Charmed Life",
+                                    "Id": [
+                                        70322
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "The Aether-starved Ahriman",
+                                    "Id": [
+                                        70720
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "All Fiends Sated on All Saints' Wake",
+                                    "Id": [
+                                        70721
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 15
                                 }
                             ]
                         },
@@ -40471,6 +40572,30 @@
                                     "Title": "The Ghost of Starlight Present",
                                     "Id": [
                                         70195
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "Blue Starlight",
+                                    "Id": [
+                                        70317
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "Together at a Distance",
+                                    "Id": [
+                                        70318
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "Starlight Surprise",
+                                    "Id": [
+                                        70319
                                     ],
                                     "Area": "Gridania",
                                     "Level": 15
