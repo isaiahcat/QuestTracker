@@ -68,7 +68,7 @@
       <HintPath>$(DalamudLibPath)Lumina.Excel.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <PackageReference Include="DalamudPackager" Version="2.1.13" />
+    <PackageReference Update="DalamudPackager" Version="2.1.13" />
   </ItemGroup>
 
   <ItemGroup>
