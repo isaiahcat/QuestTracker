@@ -7,7 +7,7 @@ using Dalamud.Game.Text.SeStringHandling.Payloads;
 using Dalamud.Interface;
 using Dalamud.Interface.Utility;
 using Dalamud.Interface.Windowing;
-using Lumina.Excel.GeneratedSheets;
+using Lumina.Excel.Sheets;
 
 namespace QuestTracker
 {
@@ -323,11 +323,11 @@ namespace QuestTracker
 
         private static void OpenAreaMap(Quest quest)
         {
-            var questEnumerable = Plugin.DataManager.GetExcelSheet<Lumina.Excel.GeneratedSheets.Quest>()
-                                        .Where(q => quest.Id.Contains(q.RowId) && q.IssuerLocation.Value != null);
+            var questEnumerable = Plugin.DataManager.GetExcelSheet<Lumina.Excel.Sheets.Quest>()
+                                        .Where(q => quest.Id.Contains(q.RowId) && q.IssuerLocation.Value.RowId != null);
             Level level = questEnumerable.First().IssuerLocation.Value;
-            var mapLink = new MapLinkPayload(level.Territory.Row,
-                                             level.Map.Row,
+            var mapLink = new MapLinkPayload(level.Territory.RowId,
+                                             level.Map.RowId,
                                              (int)(level.X * 1_000f),
                                              (int)(level.Z * 1_000f));
             Plugin.GameGui.OpenMapWithMapLink(mapLink);

@@ -45,7 +45,7 @@ public class DataConverter
                 Quest q = new Quest();
                 q.Title = tokens[0];
                 q.Area = tokens[1];
-                var questLookup = DataManager.GetExcelSheet<Lumina.Excel.GeneratedSheets.Quest>().Where(quest => quest.Name.RawString.Contains(q.Title));
+                var questLookup = DataManager.GetExcelSheet<Lumina.Excel.Sheets.Quest>().Where(quest => quest.Name.ToString().Contains(q.Title));
                 if (questLookup.Any())
                 {
                     q.Id = new List<uint>();
