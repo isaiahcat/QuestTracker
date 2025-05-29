@@ -10418,6 +10418,35 @@
                                     "Level": 90
                                 }
                             ]
+                        },
+                        {
+                            "Title": "Inconceivably Further Hildibrand Adventures",
+                            "Quests": [
+                                {
+                                    "Title": "The Case of the Displaced Inspector",
+                                    "Id": [
+                                        70728
+                                    ],
+                                    "Area": "Tuliyollal",
+                                    "Level": 100
+                                },
+                                {
+                                    "Title": "Wizened Testimony",
+                                    "Id": [
+                                        70831
+                                    ],
+                                    "Area": "Solution Nine",
+                                    "Level": 100
+                                },
+                                {
+                                    "Title": "The Case of the Fiendish Fugitives",
+                                    "Id": [
+                                        70832
+                                    ],
+                                    "Area": "Shrouded Laboratory",
+                                    "Level": 100
+                                }
+                            ]
                         }
                     ]
                 },
@@ -11682,6 +11711,27 @@
                                         70789
                                     ],
                                     "Area": "Old Sharlayan",
+                                    "Level": 10
+                                }
+                            ]
+                        },
+                        {
+                            "Title": "Cosmic Exploration Sidequests",
+                            "Quests": [
+                                {
+                                    "Title": "A Manager's Patience",
+                                    "Id": [
+                                        70859
+                                    ],
+                                    "Area": "Sinus Ardorum",
+                                    "Level": 10
+                                },
+                                {
+                                    "Title": "A Manager's Persistence",
+                                    "Id": [
+                                        70860
+                                    ],
+                                    "Area": "Sinus Ardorum",
                                     "Level": 10
                                 }
                             ]
@@ -25145,6 +25195,14 @@
                                     "Level": 90
                                 },
                                 {
+                                    "Title": "When Death Comes to Dinner",
+                                    "Id": [
+                                        70843
+                                    ],
+                                    "Area": "Tuliyollal",
+                                    "Level": 100
+                                },
+                                {
                                     "Title": "A New Dawn, a New Hunt",
                                     "Id": [
                                         70545
@@ -31733,6 +31791,38 @@
                                     ],
                                     "Area": "Yak T'el",
                                     "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE A Hoobigo's Return",
+                                    "Id": [
+                                        70793
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE The Boon of Boonewa",
+                                    "Id": [
+                                        70794
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE A New Yak T'el",
+                                    "Id": [
+                                        70795
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE The Pride of Mamook",
+                                    "Id": [
+                                        70795
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
                                 }
                             ]
                         },
@@ -31751,6 +31841,14 @@
                                     "Title": "\uE0BE Taking Your Leavings",
                                     "Id": [
                                         70798
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Cultivating Data",
+                                    "Id": [
+                                        70799
                                     ],
                                     "Area": "Yak T'el",
                                     "Level": 90
@@ -31804,6 +31902,30 @@
                                     "Level": 90
                                 },
                                 {
+                                    "Title": "\uE0BE Pain Relief",
+                                    "Id": [
+                                        70806
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 1
+                                },
+                                {
+                                    "Title": "\uE0BE Stimulating Growth",
+                                    "Id": [
+                                        70807
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Fresh Cleaning Supplies",
+                                    "Id": [
+                                        70808
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
                                     "Title": "\uE0BE Shine a Light on the Problem",
                                     "Id": [
                                         70809
@@ -31815,6 +31937,118 @@
                                     "Title": "\uE0BE A Measure of Influence",
                                     "Id": [
                                         70810
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Promoting Produce",
+                                    "Id": [
+                                        70811
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Rough Around the Edges",
+                                    "Id": [
+                                        70812
+                                    ],
+                                    "Area": "\"Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Building a Better Smoke Bomb",
+                                    "Id": [
+                                        70813
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Remedies at the Ready",
+                                    "Id": [
+                                        70814
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE A Welcoming Fragrance",
+                                    "Id": [
+                                        70815
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Fruit of Friendship",
+                                    "Id": [
+                                        70816
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Vital Vegetables",
+                                    "Id": [
+                                        70817
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Creative Composting",
+                                    "Id": [
+                                        70818
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Stores to Dry For",
+                                    "Id": [
+                                        70819
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Keeping the Lights On",
+                                    "Id": [
+                                        70820
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Gifts of the Gainery",
+                                    "Id": [
+                                        70821
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE A Seasoning for Soup",
+                                    "Id": [
+                                        70822
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Store-to-door Delivery",
+                                    "Id": [
+                                        70823
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Above-average Beverage",
+                                    "Id": [
+                                        70824
                                     ],
                                     "Area": "Yak T'el",
                                     "Level": 90
@@ -35320,6 +35554,14 @@
                                     ],
                                     "Area": "Tuliyollal",
                                     "Level": 90
+                                },
+                                {
+                                    "Title": "Appreciated Value",
+                                    "Id": [
+                                        70503
+                                    ],
+                                    "Area": "Tuliyollal",
+                                    "Level": 100
                                 }
                             ]
                         }
