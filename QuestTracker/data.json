@@ -771,8 +771,8 @@
                                 66216
                             ],
                             "Area": "The Waking Sands",
-                            "Gc": "Twin Adder",
-                            "Level": 20
+                            "Level": 20,
+                            "Gc": "Twin Adder"
                         },
                         {
                             "Title": "The Company You Keep (Maelstrom)",
@@ -780,8 +780,8 @@
                                 66217
                             ],
                             "Area": "The Waking Sands",
-                            "Gc": "Maelstrom",
-                            "Level": 20
+                            "Level": 20,
+                            "Gc": "Maelstrom"
                         },
                         {
                             "Title": "The Company You Keep (Immortal Flames)",
@@ -789,8 +789,8 @@
                                 66218
                             ],
                             "Area": "The Waking Sands",
-                            "Gc": "Immortal Flames",
-                            "Level": 20
+                            "Level": 20,
+                            "Gc": "Immortal Flames"
                         },
                         {
                             "Title": "Wood's Will Be Done",
@@ -798,8 +798,8 @@
                                 66219
                             ],
                             "Area": "Gridania",
-                            "Gc": "Twin Adder",
-                            "Level": 20
+                            "Level": 20,
+                            "Gc": "Twin Adder"
                         },
                         {
                             "Title": "Till Sea Swallows All",
@@ -807,8 +807,8 @@
                                 66220
                             ],
                             "Area": "Limsa Lominsa",
-                            "Gc": "Maelstrom",
-                            "Level": 20
+                            "Level": 20,
+                            "Gc": "Maelstrom"
                         },
                         {
                             "Title": "For Coin and Country",
@@ -816,8 +816,8 @@
                                 66221
                             ],
                             "Area": "Ul'dah",
-                            "Gc": "Immortal Flames",
-                            "Level": 20
+                            "Level": 20,
+                            "Gc": "Immortal Flames"
                         },
                         {
                             "Title": "Sylph-management",
@@ -8203,6 +8203,126 @@
                             ],
                             "Area": "Living Memory",
                             "Level": 100
+                        },
+                        {
+                            "Title": "A Royal Invitation",
+                            "Id": [
+                                70780
+                            ],
+                            "Area": "Tuliyollal",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "Alexandria Mourns",
+                            "Id": [
+                                70781
+                            ],
+                            "Area": "The Backroom",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "In Search of the Past",
+                            "Id": [
+                                70782
+                            ],
+                            "Area": "Solution Nine",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "Among the Abandoned",
+                            "Id": [
+                                70783
+                            ],
+                            "Area": "Shrouded Laboratory",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "Guidance of the Hhetso",
+                            "Id": [
+                                70784
+                            ],
+                            "Area": "The Backroom",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "The Warmth of Family",
+                            "Id": [
+                                70785
+                            ],
+                            "Area": "Shaaloani",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "Crossroads",
+                            "Id": [
+                                70786
+                            ],
+                            "Area": "Shaaloani",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "A Glimmer of the Past",
+                            "Id": [
+                                70835
+                            ],
+                            "Area": "The Backroom",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "Memories of a Bygone Age",
+                            "Id": [
+                                70836
+                            ],
+                            "Area": "Break Room",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "In Search of Meaning",
+                            "Id": [
+                                70837
+                            ],
+                            "Area": "Solution Nine",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "A Jewel Shattered",
+                            "Id": [
+                                70838
+                            ],
+                            "Area": "Solution Nine",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "The Meeting",
+                            "Id": [
+                                70839
+                            ],
+                            "Area": "Solution Nine",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "Descent to the Foundation",
+                            "Id": [
+                                70840
+                            ],
+                            "Area": "The Backroom",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "Shared Paths",
+                            "Id": [
+                                70841
+                            ],
+                            "Area": "Throne Room",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "Seekers of Eternity",
+                            "Id": [
+                                70842
+                            ],
+                            "Area": "Solution Nine",
+                            "Level": 100
                         }
                     ]
                 }
@@ -9646,6 +9766,91 @@
                             ],
                             "Area": "Greenroom",
                             "Level": 100
+                        },
+                        {
+                            "Title": "Souls under Siege",
+                            "Id": [
+                                70825
+                            ],
+                            "Area": "Solution Nine",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "The Dancing King",
+                            "Id": [
+                                70826
+                            ],
+                            "Area": "Greenroom",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "Art at War",
+                            "Id": [
+                                70827
+                            ],
+                            "Area": "Greenroom",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "Twisted Vengeance",
+                            "Id": [
+                                70828
+                            ],
+                            "Area": "Greenroom",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "Family Matters",
+                            "Id": [
+                                70829
+                            ],
+                            "Area": "Tritails Training",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "The Lone Wolf",
+                            "Id": [
+                                70830
+                            ],
+                            "Area": "Greenroom",
+                            "Level": 100
+                        }
+                    ]
+                },
+                {
+                    "Title": "Chronicles of a New Era - Echoes of Vana'diel",
+                    "Quests": [
+                        {
+                            "Title": "An Otherworldly Encounter",
+                            "Id": [
+                                70769
+                            ],
+                            "Area": "Tuliyollal",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "It All Began with a Stone",
+                            "Id": [
+                                70770
+                            ],
+                            "Area": "Lower Jeuno",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "That World Was Called Vana'diel",
+                            "Id": [
+                                70771
+                            ],
+                            "Area": "Lower Jeuno",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "Jeuno",
+                            "Id": [
+                                70772
+                            ],
+                            "Area": "Tuliyollal",
+                            "Level": 100
                         }
                     ]
                 }
@@ -10341,7 +10546,7 @@
                                     "Level": 60
                                 },
                                 {
-                                    "Title": " Soul without Life",
+                                    "Title": "\uE0BF Soul without Life",
                                     "Id": [
                                         67748
                                     ],
@@ -10349,7 +10554,7 @@
                                     "Level": 60
                                 },
                                 {
-                                    "Title": " Toughening Up",
+                                    "Title": "\uE0BF Toughening Up",
                                     "Id": [
                                         67749
                                     ],
@@ -10357,7 +10562,7 @@
                                     "Level": 60
                                 },
                                 {
-                                    "Title": " Coming into Its Own",
+                                    "Title": "\uE0BF Coming into Its Own",
                                     "Id": [
                                         67750
                                     ],
@@ -10365,7 +10570,7 @@
                                     "Level": 60
                                 },
                                 {
-                                    "Title": " Finding Your Voice",
+                                    "Title": "\uE0BF Finding Your Voice",
                                     "Id": [
                                         67820
                                     ],
@@ -10373,7 +10578,7 @@
                                     "Level": 60
                                 },
                                 {
-                                    "Title": " A Dream Fulfilled",
+                                    "Title": "\uE0BF A Dream Fulfilled",
                                     "Id": [
                                         67864
                                     ],
@@ -10381,7 +10586,7 @@
                                     "Level": 60
                                 },
                                 {
-                                    "Title": " Future Proof",
+                                    "Title": "\uE0BF Future Proof",
                                     "Id": [
                                         67915
                                     ],
@@ -10405,7 +10610,7 @@
                                     "Level": 60
                                 },
                                 {
-                                    "Title": " Born Again Anima",
+                                    "Title": "\uE0BF Born Again Anima",
                                     "Id": [
                                         67932
                                     ],
@@ -10437,7 +10642,7 @@
                                     "Level": 60
                                 },
                                 {
-                                    "Title": " Best Friends Forever",
+                                    "Title": "\uE0BF Best Friends Forever",
                                     "Id": [
                                         67940
                                     ],
@@ -10487,7 +10692,7 @@
                                     "Level": 80
                                 },
                                 {
-                                    "Title": " Fire in the Forge",
+                                    "Title": "\uE0BF Fire in the Forge",
                                     "Id": [
                                         69380
                                     ],
@@ -10495,7 +10700,7 @@
                                     "Level": 80
                                 },
                                 {
-                                    "Title": " Resistance Is (Not) Futile",
+                                    "Title": "\uE0BF Resistance Is (Not) Futile",
                                     "Id": [
                                         69381
                                     ],
@@ -10591,7 +10796,7 @@
                                     "Level": 80
                                 },
                                 {
-                                    "Title": " For Want of a Memory",
+                                    "Title": "\uE0BF For Want of a Memory",
                                     "Id": [
                                         69506
                                     ],
@@ -10599,7 +10804,7 @@
                                     "Level": 80
                                 },
                                 {
-                                    "Title": " The Will to Resist",
+                                    "Title": "\uE0BF The Will to Resist",
                                     "Id": [
                                         69507
                                     ],
@@ -10647,7 +10852,7 @@
                                     "Level": 80
                                 },
                                 {
-                                    "Title": " Change of Arms",
+                                    "Title": "\uE0BF Change of Arms",
                                     "Id": [
                                         69574
                                     ],
@@ -10663,7 +10868,7 @@
                                     "Level": 80
                                 },
                                 {
-                                    "Title": " A New Path of Resistance",
+                                    "Title": "\uE0BF A New Path of Resistance",
                                     "Id": [
                                         69576
                                     ],
@@ -10775,12 +10980,33 @@
                                     "Level": 80
                                 },
                                 {
-                                    "Title": " Irresistible",
+                                    "Title": "\uE0BF Irresistible",
                                     "Id": [
                                         69637
                                     ],
                                     "Area": "Gangos",
                                     "Level": 80
+                                }
+                            ]
+                        },
+                        {
+                            "Title": "Phantom Weapons",
+                            "Quests": [
+                                {
+                                    "Title": "Arcane Artistry",
+                                    "Id": [
+                                        70855
+                                    ],
+                                    "Area": "Phantom Village",
+                                    "Level": 100
+                                },
+                                {
+                                    "Title": "\uE0BF Forging the Phantasmal",
+                                    "Id": [
+                                        70856
+                                    ],
+                                    "Area": "Phantom Village",
+                                    "Level": 100
                                 }
                             ]
                         }
@@ -11128,7 +11354,7 @@
                                     "Level": 80
                                 },
                                 {
-                                    "Title": " Ever Skyward",
+                                    "Title": "\uE0BF Ever Skyward",
                                     "Id": [
                                         69429
                                     ],
@@ -11136,7 +11362,7 @@
                                     "Level": 80
                                 },
                                 {
-                                    "Title": " The Tools of Tomorrow",
+                                    "Title": "\uE0BF The Tools of Tomorrow",
                                     "Id": [
                                         69430
                                     ],
@@ -11152,7 +11378,7 @@
                                     "Level": 80
                                 },
                                 {
-                                    "Title": " The Pinnacle of Possibility",
+                                    "Title": "\uE0BF The Pinnacle of Possibility",
                                     "Id": [
                                         69519
                                     ],
@@ -11160,7 +11386,7 @@
                                     "Level": 80
                                 },
                                 {
-                                    "Title": " Greater Heights",
+                                    "Title": "\uE0BF Greater Heights",
                                     "Id": [
                                         69520
                                     ],
@@ -11181,7 +11407,7 @@
                                     "Level": 90
                                 },
                                 {
-                                    "Title": " A Dedicated Tool",
+                                    "Title": "\uE0BF A Dedicated Tool",
                                     "Id": [
                                         70267
                                     ],
@@ -11189,7 +11415,7 @@
                                     "Level": 90
                                 },
                                 {
-                                    "Title": " An Adaptive Tool",
+                                    "Title": "\uE0BF An Adaptive Tool",
                                     "Id": [
                                         70268
                                     ],
@@ -11205,7 +11431,7 @@
                                     "Level": 90
                                 },
                                 {
-                                    "Title": " A Tool of Her Own",
+                                    "Title": "\uE0BF A Tool of Her Own",
                                     "Id": [
                                         70304
                                     ],
@@ -11213,7 +11439,7 @@
                                     "Level": 90
                                 },
                                 {
-                                    "Title": " A Tool without Compare",
+                                    "Title": "\uE0BF A Tool without Compare",
                                     "Id": [
                                         70305
                                     ],
@@ -11444,6 +11670,104 @@
                                     ],
                                     "Area": "Thavnair",
                                     "Level": 90
+                                }
+                            ]
+                        },
+                        {
+                            "Title": "Cosmic Exploration Main Quests",
+                            "Quests": [
+                                {
+                                    "Title": "A Cosmic Homecoming",
+                                    "Id": [
+                                        70789
+                                    ],
+                                    "Area": "Old Sharlayan",
+                                    "Level": 10
+                                }
+                            ]
+                        },
+                        {
+                            "Title": "The Occult Crescent",
+                            "Quests": [
+                                {
+                                    "Title": "One Last Hurrah",
+                                    "Id": [
+                                        70845
+                                    ],
+                                    "Area": "Tuliyollal",
+                                    "Level": 100
+                                },
+                                {
+                                    "Title": "The Phantom Village",
+                                    "Id": [
+                                        70846
+                                    ],
+                                    "Area": "Phantom Village",
+                                    "Level": 100
+                                },
+                                {
+                                    "Title": "Unfamiliar Territory",
+                                    "Id": [
+                                        70847
+                                    ],
+                                    "Area": "Phantom Village",
+                                    "Level": 100
+                                },
+                                {
+                                    "Title": "New Job, Old Tricks",
+                                    "Id": [
+                                        70848
+                                    ],
+                                    "Area": "South Horn",
+                                    "Level": 100
+                                },
+                                {
+                                    "Title": "The Ancient Arts of War",
+                                    "Id": [
+                                        70849
+                                    ],
+                                    "Area": "South Horn",
+                                    "Level": 100
+                                },
+                                {
+                                    "Title": "Creatures of the Crescent",
+                                    "Id": [
+                                        70850
+                                    ],
+                                    "Area": "South Horn",
+                                    "Level": 100
+                                },
+                                {
+                                    "Title": "A Ruined Land",
+                                    "Id": [
+                                        70851
+                                    ],
+                                    "Area": "South Horn",
+                                    "Level": 100
+                                },
+                                {
+                                    "Title": "A Common Thread",
+                                    "Id": [
+                                        70852
+                                    ],
+                                    "Area": "South Horn",
+                                    "Level": 100
+                                },
+                                {
+                                    "Title": "Past and Crescent",
+                                    "Id": [
+                                        70853
+                                    ],
+                                    "Area": "South Horn",
+                                    "Level": 100
+                                },
+                                {
+                                    "Title": "Mysteries Abide",
+                                    "Id": [
+                                        70854
+                                    ],
+                                    "Area": "Phantom Village",
+                                    "Level": 100
                                 }
                             ]
                         }
@@ -12082,8 +12406,8 @@
                                         66237
                                     ],
                                     "Area": "Limsa Lominsa",
-                                    "Gc": "Maelstrom",
-                                    "Level": 20
+                                    "Level": 20,
+                                    "Gc": "Maelstrom"
                                 },
                                 {
                                     "Title": "A Faerie Tale Come True",
@@ -13149,8 +13473,8 @@
                                         66236
                                     ],
                                     "Area": "Gridania",
-                                    "Gc": "Twin Adder",
-                                    "Level": 20
+                                    "Level": 20,
+                                    "Gc": "Twin Adder"
                                 },
                                 {
                                     "Title": "Broadening Horizons",
@@ -14143,8 +14467,8 @@
                                         66238
                                     ],
                                     "Area": "Ul'dah",
-                                    "Gc": "Immortal Flames",
-                                    "Level": 20
+                                    "Level": 20,
+                                    "Gc": "Immortal Flames"
                                 },
                                 {
                                     "Title": "Gone to Pieces",
@@ -24859,6 +25183,14 @@
                                     ],
                                     "Area": "Tuliyollal",
                                     "Level": 100
+                                },
+                                {
+                                    "Title": "Laying New Tracks",
+                                    "Id": [
+                                        70775
+                                    ],
+                                    "Area": "Tuliyollal",
+                                    "Level": 90
                                 }
                             ]
                         },
@@ -25713,6 +26045,22 @@
                                     "Title": "\uE0BE Dig for Victory",
                                     "Id": [
                                         70684
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "The Weight of a Train",
+                                    "Id": [
+                                        70776
+                                    ],
+                                    "Area": "Shaaloani",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "His Heart Blazes On",
+                                    "Id": [
+                                        70777
                                     ],
                                     "Area": "Shaaloani",
                                     "Level": 90
@@ -31076,6 +31424,405 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "Title": "Pelupelu Quests",
+                    "Categories": [
+                        {
+                            "Title": "Main Quests",
+                            "Quests": [
+                                {
+                                    "Title": "\uE0BE An Intrepid New Enterprise",
+                                    "Id": [
+                                        70729
+                                    ],
+                                    "Area": "Tuliyollal",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE A Tentative First Tour",
+                                    "Id": [
+                                        70730
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Earthenshire Awaits",
+                                    "Id": [
+                                        70731
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Recruitment Drive",
+                                    "Id": [
+                                        70732
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE A Guest from Across the Salt",
+                                    "Id": [
+                                        70733
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Partners in Pel",
+                                    "Id": [
+                                        70734
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                }
+                            ]
+                        },
+                        {
+                            "Title": "Daily Quests",
+                            "Quests": [
+                                {
+                                    "Title": "\uE0BE A Notion of Promotion",
+                                    "Id": [
+                                        70735
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE A Sackful of Memories",
+                                    "Id": [
+                                        70736
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Ferocious Foliage, Fearful Tourists",
+                                    "Id": [
+                                        70737
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Community Outreach in Kozanuakiy",
+                                    "Id": [
+                                        70738
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Preventative Measures",
+                                    "Id": [
+                                        70739
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Burden of Beasts",
+                                    "Id": [
+                                        70740
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Growing as a Guide",
+                                    "Id": [
+                                        70741
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Bag Your Pardon",
+                                    "Id": [
+                                        70742
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Thrilled to Be Here",
+                                    "Id": [
+                                        70743
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Canvassing in Kozama'uka",
+                                    "Id": [
+                                        70744
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Reed between the Lines",
+                                    "Id": [
+                                        70745
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE The Rudiments of Fiend Removal",
+                                    "Id": [
+                                        70746
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE The Nectar Collector",
+                                    "Id": [
+                                        70747
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Starting from Scrap",
+                                    "Id": [
+                                        70748
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Advisor vs. Predator",
+                                    "Id": [
+                                        70749
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Let Mobbie Be Your Guide",
+                                    "Id": [
+                                        70750
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE The Popularity of Punutiys",
+                                    "Id": [
+                                        70751
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Breath of Foul Air",
+                                    "Id": [
+                                        70752
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Big Bellies to Fill",
+                                    "Id": [
+                                        70753
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE The Hand That Feeds",
+                                    "Id": [
+                                        70754
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Born to Run Away",
+                                    "Id": [
+                                        70755
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Bird Meat's Back on the Menu",
+                                    "Id": [
+                                        70756
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE A Sympathetic Ear",
+                                    "Id": [
+                                        70757
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Worth the Weight",
+                                    "Id": [
+                                        70758
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE In Time for Lunch",
+                                    "Id": [
+                                        70759
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE His Swarm Enemy",
+                                    "Id": [
+                                        70760
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Seasoned Adventurer",
+                                    "Id": [
+                                        70761
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Animal Friendship",
+                                    "Id": [
+                                        70762
+                                    ],
+                                    "Area": "Kozama'uka",
+                                    "Level": 90
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Title": "Mamool Ja Quests",
+                    "Categories": [
+                        {
+                            "Title": "Main Quests",
+                            "Quests": [
+                                {
+                                    "Title": "\uE0BE Cultivating Hope",
+                                    "Id": [
+                                        70791
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Doppro Tradition",
+                                    "Id": [
+                                        70792
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                }
+                            ]
+                        },
+                        {
+                            "Title": "Daily Quests",
+                            "Quests": [
+                                {
+                                    "Title": "\uE0BE Root of the Problem",
+                                    "Id": [
+                                        70797
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Taking Your Leavings",
+                                    "Id": [
+                                        70798
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Toil for the Soil",
+                                    "Id": [
+                                        70800
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Stem's the Breaks",
+                                    "Id": [
+                                        70801
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE All Tools' Maintenance",
+                                    "Id": [
+                                        70802
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Healing the Fields",
+                                    "Id": [
+                                        70803
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Bonding with Branchbearers",
+                                    "Id": [
+                                        70804
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Bugs Begone",
+                                    "Id": [
+                                        70805
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE Shine a Light on the Problem",
+                                    "Id": [
+                                        70809
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "\uE0BE A Measure of Influence",
+                                    "Id": [
+                                        70810
+                                    ],
+                                    "Area": "Yak T'el",
+                                    "Level": 90
+                                }
+                            ]
+                        }
+                    ],
+                    "Quests": []
                 }
             ]
         },
@@ -38280,6 +39027,38 @@
                                     ],
                                     "Area": "Tuliyollal",
                                     "Level": 90
+                                },
+                                {
+                                    "Title": "Picking Up the Torch",
+                                    "Id": [
+                                        70724
+                                    ],
+                                    "Area": "Tuliyollal",
+                                    "Level": 100
+                                },
+                                {
+                                    "Title": "Imposing Views",
+                                    "Id": [
+                                        70725
+                                    ],
+                                    "Area": "Ul'dah",
+                                    "Level": 100
+                                },
+                                {
+                                    "Title": "Enforcing Freedom",
+                                    "Id": [
+                                        70726
+                                    ],
+                                    "Area": "Southern Thanalan",
+                                    "Level": 100
+                                },
+                                {
+                                    "Title": "Bar the Passage",
+                                    "Id": [
+                                        70727
+                                    ],
+                                    "Area": "Tuliyollal",
+                                    "Level": 100
                                 }
                             ]
                         }
@@ -38302,8 +39081,8 @@
                                         66640
                                     ],
                                     "Area": "Limsa Lominsa",
-                                    "Gc": "Maelstrom",
-                                    "Level": 30
+                                    "Level": 30,
+                                    "Gc": "Maelstrom"
                                 },
                                 {
                                     "Title": "Like Civilized Men and Women (Maelstrom)",
@@ -38311,8 +39090,8 @@
                                         67064
                                     ],
                                     "Area": "Limsa Lominsa",
-                                    "Gc": "Maelstrom",
-                                    "Level": 30
+                                    "Level": 30,
+                                    "Gc": "Maelstrom"
                                 },
                                 {
                                     "Title": "Shadows Uncast (Maelstrom)",
@@ -38336,8 +39115,8 @@
                                         67100
                                     ],
                                     "Area": "Limsa Lominsa",
-                                    "Gc": "Maelstrom",
-                                    "Level": 50
+                                    "Level": 50,
+                                    "Gc": "Maelstrom"
                                 }
                             ]
                         },
@@ -38350,8 +39129,8 @@
                                         66641
                                     ],
                                     "Area": "Gridania",
-                                    "Gc": "Twin Adder",
-                                    "Level": 30
+                                    "Level": 30,
+                                    "Gc": "Twin Adder"
                                 },
                                 {
                                     "Title": "Like Civilized Men and Women (Twin Adder)",
@@ -38359,8 +39138,8 @@
                                         67063
                                     ],
                                     "Area": "Gridania",
-                                    "Gc": "Twin Adder",
-                                    "Level": 30
+                                    "Level": 30,
+                                    "Gc": "Twin Adder"
                                 },
                                 {
                                     "Title": "Shadows Uncast (Twin Adder)",
@@ -38384,8 +39163,8 @@
                                         67099
                                     ],
                                     "Area": "Gridania",
-                                    "Gc": "Twin Adder",
-                                    "Level": 50
+                                    "Level": 50,
+                                    "Gc": "Twin Adder"
                                 }
                             ]
                         },
@@ -38398,8 +39177,8 @@
                                         66642
                                     ],
                                     "Area": "Ul'dah",
-                                    "Gc": "Immortal Flames",
-                                    "Level": 30
+                                    "Level": 30,
+                                    "Gc": "Immortal Flames"
                                 },
                                 {
                                     "Title": "Like Civilized Men and Women (Immortal Flames)",
@@ -38407,8 +39186,8 @@
                                         67065
                                     ],
                                     "Area": "Ul'dah",
-                                    "Gc": "Immortal Flames",
-                                    "Level": 30
+                                    "Level": 30,
+                                    "Gc": "Immortal Flames"
                                 },
                                 {
                                     "Title": "Shadows Uncast (Immortal Flames)",
@@ -38432,8 +39211,8 @@
                                         67101
                                     ],
                                     "Area": "Ul'dah",
-                                    "Gc": "Immortal Flames",
-                                    "Level": 50
+                                    "Level": 50,
+                                    "Gc": "Immortal Flames"
                                 }
                             ]
                         }
