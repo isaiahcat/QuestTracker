@@ -8328,6 +8328,14 @@
                             ],
                             "Area": "Solution Nine",
                             "Level": 100
+                        },
+                        {
+                            "Title": "Targeted Tragedy",
+                            "Id": [
+                                70900
+                            ],
+                            "Area": "The Backroom",
+                            "Level": 100
                         }
                     ]
                 }
@@ -9853,6 +9861,14 @@
                             "Title": "Jeuno",
                             "Id": [
                                 70772
+                            ],
+                            "Area": "Tuliyollal",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "Dreams of Paradise",
+                            "Id": [
+                                70862
                             ],
                             "Area": "Tuliyollal",
                             "Level": 100
