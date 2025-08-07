@@ -8336,6 +8336,78 @@
                             ],
                             "Area": "The Backroom",
                             "Level": 100
+                        },
+                        {
+                            "Title": "The Endless Choice",
+                            "Id": [
+                                70901
+                            ],
+                            "Area": "Solution Nine",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "My Memories and Yours",
+                            "Id": [
+                                70902
+                            ],
+                            "Area": "Solution Nine",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "A Darkness in the Heart",
+                            "Id": [
+                                70903
+                            ],
+                            "Area": "Earthen Sky Hideout",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "Preservation Their Purpose",
+                            "Id": [
+                                70904
+                            ],
+                            "Area": "Solution Nine",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "A Calculated Evolution",
+                            "Id": [
+                                70905
+                            ],
+                            "Area": "Containment Complex 10-29",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "One of Our Own",
+                            "Id": [
+                                70906
+                            ],
+                            "Area": "The Backroom",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "A Terminal Invitation",
+                            "Id": [
+                                70907
+                            ],
+                            "Area": "Living Memory",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "Blades in Waiting",
+                            "Id": [
+                                70908
+                            ],
+                            "Area": "Heritage Found",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "The Promise of Tomorrow",
+                            "Id": [
+                                70909
+                            ],
+                            "Area": "The Backroom",
+                            "Level": 100
                         }
                     ]
                 }
@@ -9871,6 +9943,30 @@
                                 70862
                             ],
                             "Area": "Tuliyollal",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "Northward",
+                            "Id": [
+                                70863
+                            ],
+                            "Area": "Lower Jeuno",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "For Whom the Verse Is Sung",
+                            "Id": [
+                                70864
+                            ],
+                            "Area": "Shaaloani",
+                            "Level": 100
+                        },
+                        {
+                            "Title": "Apocalypse Nigh",
+                            "Id": [
+                                70865
+                            ],
+                            "Area": "Shaaloani",
                             "Level": 100
                         }
                     ]
