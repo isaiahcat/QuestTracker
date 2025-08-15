@@ -35,6 +35,8 @@ namespace QuestTracker
             set { this.settingsVisible = value; }
         }
 
+        private string searchText = "";
+
         public MainWindow(Plugin plugin, QuestDataManager questDataManager, Configuration configuration)
             : base("Quest Tracker##main_window", ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse)
         {
@@ -96,11 +98,11 @@ namespace QuestTracker
                 var overallComplete = configuration.ExcludeOtherQuests
                                           ? plugin.QuestData.NumComplete - otherQuestsComplete
                                           : plugin.QuestData.NumComplete;
-                
+
                 var overallTotal = configuration.ExcludeOtherQuests
                                        ? plugin.QuestData.Total - otherQuestsTotal
                                        : plugin.QuestData.Total;
-                
+
                 ImGui.TableNextColumn();
                 ImGui.Text("Overall");
                 ImGui.Separator();
@@ -146,65 +148,220 @@ namespace QuestTracker
             ImGui.BeginChild("##quests_tab", ImGuiHelpers.ScaledVector2(0), true);
             if (configuration.CategorySelection == null) ResetSelections();
 
-            ImGui.SetNextItemWidth(330);
-            if (ImGui.BeginCombo("##category_dropdown", GetDisplayText(configuration.CategorySelection)))
+            // If there's search text, show search results (this is global, not category-specific)
+            if (!string.IsNullOrWhiteSpace(searchText))
             {
-                foreach (var category in plugin.QuestData.Categories)
+                ImGui.SetNextItemWidth(-1);
+                ImGui.InputTextWithHint("##search_input", "Search all quests...", ref searchText, 256);
+                ImGui.Spacing();
+
+                DrawSearchResults();
+            }
+            else
+            {
+                float availableWidth = ImGui.GetContentRegionAvail().X;
+                float searchBoxWidth = 400;
+                float spacing = ImGui.GetStyle().ItemSpacing.X;
+                float comboWidth = 400;
+
+                ImGui.SetNextItemWidth(comboWidth);
+                if (ImGui.BeginCombo("##category_dropdown", GetDisplayText(configuration.CategorySelection)))
                 {
-                    if (!category.Hide)
+                    foreach (var category in plugin.QuestData.Categories)
                     {
-                        if (ImGui.Selectable(GetDisplayText(category),
-                                             configuration.CategorySelection == category))
+                        if (!category.Hide)
                         {
-                            configuration.CategorySelection = category;
-                            configuration.SubcategorySelection =
-                                configuration.CategorySelection.Categories.Find(c => !c.Hide);
-                            configuration.Save();
+                            if (ImGui.Selectable(GetDisplayText(category),
+                                                 configuration.CategorySelection == category))
+                            {
+                                configuration.CategorySelection = category;
+                                configuration.SubcategorySelection =
+                                    configuration.CategorySelection.Categories.Find(c => !c.Hide);
+                                configuration.Save();
+                            }
+                        }
+                    }
+
+                    ImGui.EndCombo();
+                }
+
+                // Right-align the search box on the same line
+                ImGui.SameLine(availableWidth - searchBoxWidth);
+                ImGui.SetNextItemWidth(searchBoxWidth);
+                ImGui.InputTextWithHint("##search_input", "Search all quests...", ref searchText, 256);
+
+                ImGui.Spacing();
+                ImGui.SetNextItemWidth(comboWidth);
+                if (ImGui.BeginCombo("##subcategory_dropdown", GetDisplayText(configuration.SubcategorySelection)))
+                {
+                    foreach (var category in configuration.CategorySelection.Categories)
+                    {
+                        if (!category.Hide)
+                        {
+                            if (ImGui.Selectable(GetDisplayText(category),
+                                                 configuration.SubcategorySelection == category))
+                                configuration.SubcategorySelection = category;
+
+                            if (configuration.SubcategorySelection == category) ImGui.SetItemDefaultFocus();
+                        }
+                    }
+
+                    ImGui.EndCombo();
+                }
+
+                ImGui.Spacing();
+                if (configuration.SubcategorySelection.Categories.Count > 0)
+                {
+                    foreach (var subcategory in configuration.SubcategorySelection.Categories)
+                    {
+                        if (!subcategory.Hide)
+                        {
+                            ImGui.TextDisabled($"{subcategory.Title}");
+                            ImGui.Separator();
+                            DrawQuestTable(subcategory.Quests);
+                        }
+                    }
+                }
+                else
+                {
+                    DrawQuestTable(configuration.SubcategorySelection.Quests);
+                }
+            }
+
+            ImGui.EndChild();
+        }
+
+        private void DrawSearchResults()
+        {
+            var allQuests = GetQuests();
+            var filteredQuests = allQuests.Where(questWithCategory =>
+                questWithCategory.quest.Title.Contains(searchText, StringComparison.OrdinalIgnoreCase) ||
+                questWithCategory.quest.Area.Contains(searchText, StringComparison.OrdinalIgnoreCase)).ToList();
+
+            ImGui.Text($"Search Results ({filteredQuests.Count} found)");
+            ImGui.Separator();
+
+            var availableSize = ImGui.GetContentRegionAvail();
+            if (ImGui.BeginChild("##search_results_scroll", new Vector2(availableSize.X, availableSize.Y), false, ImGuiWindowFlags.HorizontalScrollbar))
+            {
+                if (ImGui.BeginTable("##global_quest_table", 5, 
+                    ImGuiTableFlags.Resizable | 
+                    ImGuiTableFlags.BordersOuter | 
+                    ImGuiTableFlags.BordersV | 
+                    ImGuiTableFlags.ScrollX |
+                    ImGuiTableFlags.SizingFixedFit))
+                {
+                    ImGui.TableSetupColumn("##check", ImGuiTableColumnFlags.WidthFixed, 30.0f);
+                    ImGui.TableSetupColumn("Title", ImGuiTableColumnFlags.WidthFixed, 200.0f);
+                    ImGui.TableSetupColumn("Category", ImGuiTableColumnFlags.WidthFixed, 250.0f);
+                    ImGui.TableSetupColumn("Area", ImGuiTableColumnFlags.WidthFixed, 180.0f);
+                    ImGui.TableSetupColumn("Level", ImGuiTableColumnFlags.WidthFixed, 60.0f);
+                    ImGui.TableHeadersRow();
+
+                    foreach (var questWithCategory in filteredQuests)
+                    {
+                        if (!questWithCategory.quest.Hide)
+                        {
+                            ImGui.TableNextColumn();
+                            if (QuestDataManager.IsQuestComplete(questWithCategory.quest))
+                            {
+                                ImGui.PushFont(UiBuilder.IconFont);
+                                ImGui.TextUnformatted(FontAwesomeIcon.Check.ToIconString());
+                                ImGui.PopFont();
+                                questWithCategory.quest.Hide = configuration.DisplayOption == 2;
+                            }
+
+                            ImGui.TableNextColumn();
+                            ImGui.Text(questWithCategory.quest.Title);
+
+                            ImGui.TableNextColumn();
+
+                            // Use the direct parent category title instead of the full path
+                            if (ImGui.Selectable($"{questWithCategory.directParentCategory.Title}##{questWithCategory.quest.Id[0]}_category"))
+                            {
+                                NavigateToCategory(questWithCategory.topLevelCategory, questWithCategory.directParentCategory);
+                            }
+
+                            ImGui.TableNextColumn();
+                            if (ImGui.Selectable($"{questWithCategory.quest.Area}##{questWithCategory.quest.Id[0]}"))
+                                OpenAreaMap(questWithCategory.quest);
+                            ImGui.TableNextColumn();
+                            ImGui.Text($"{questWithCategory.quest.Level}");
+                            ImGui.TableNextRow();
                         }
                     }
                 }
 
-                ImGui.EndCombo();
+                ImGui.EndTable();
+            }
+            ImGui.EndChild();
+        }
+
+        private List<(Quest quest, string categoryPath, QuestData topLevelCategory, QuestData directParentCategory)> GetQuests()
+        {
+            var allQuests = new List<(Quest quest, string categoryPath, QuestData topLevelCategory, QuestData directParentCategory)>();
+
+            foreach (var category in plugin.QuestData.Categories)
+            {
+                if (!category.Hide)
+                {
+                    GetQuestsData(category, category, category.Title, allQuests);
+                }
             }
 
-            ImGui.Spacing();
-            ImGui.SetNextItemWidth(330);
-            if (ImGui.BeginCombo("##subcategory_dropdown", GetDisplayText(configuration.SubcategorySelection)))
+            return allQuests;
+        }
+
+        private void GetQuestsData(QuestData currentCategory, QuestData topLevelCategory, string categoryPath, List<(Quest quest, string categoryPath, QuestData topLevelCategory, QuestData directParentCategory)> allQuests)
+        {
+            foreach (var quest in currentCategory.Quests)
             {
-                foreach (var category in configuration.CategorySelection.Categories)
-                {
-                    if (!category.Hide)
-                    {
-                        if (ImGui.Selectable(GetDisplayText(category),
-                                             configuration.SubcategorySelection == category))
-                            configuration.SubcategorySelection = category;
-
-                        if (configuration.SubcategorySelection == category) ImGui.SetItemDefaultFocus();
-                    }
-                }
-
-                ImGui.EndCombo();
+                allQuests.Add((quest, categoryPath, topLevelCategory, currentCategory));
             }
 
-            ImGui.Spacing();
-            if (configuration.SubcategorySelection.Categories.Count > 0)
+            foreach (var subCategory in currentCategory.Categories)
             {
-                foreach (var subcategory in configuration.SubcategorySelection.Categories)
+                if (!subCategory.Hide)
                 {
-                    if (!subcategory.Hide)
-                    {
-                        ImGui.TextDisabled($"{subcategory.Title}");
-                        ImGui.Separator();
-                        DrawQuestTable(subcategory.Quests);
-                    }
+                    var newPath = $"{categoryPath} > {subCategory.Title}";
+                    GetQuestsData(subCategory, topLevelCategory, newPath, allQuests);
                 }
+            }
+        }
+
+        private void NavigateToCategory(QuestData topLevelCategory, QuestData directParentCategory)
+        {
+            searchText = "";
+
+            configuration.CategorySelection = topLevelCategory;
+
+            if (directParentCategory == topLevelCategory)
+            {
+                configuration.SubcategorySelection = topLevelCategory.Categories.Find(c => !c.Hide);
             }
             else
             {
-                DrawQuestTable(configuration.SubcategorySelection.Quests);
+                configuration.SubcategorySelection = directParentCategory;
             }
 
-            ImGui.EndChild();
+            configuration.Save();
+        }
+
+        private void GetQuests(QuestData questData, string categoryPath, List<(Quest quest, string categoryPath)> allQuests)
+        {
+            foreach (var quest in questData.Quests)
+            {
+                allQuests.Add((quest, categoryPath));
+            }
+
+            foreach (var subCategory in questData.Categories)
+            {
+                if (!subCategory.Hide)
+                {
+                    var newPath = $"{categoryPath} > {subCategory.Title}";
+                    GetQuests(subCategory, newPath, allQuests);
+                }
+            }
         }
 
         private void DrawQuestTable(List<Quest> quests)
@@ -284,7 +441,7 @@ namespace QuestTracker
                 configuration.ShowPercentage = showPercentage;
                 configuration.Save();
             }
-            
+
             ImGui.Spacing();
 
             var excludeOtherQuests = configuration.ExcludeOtherQuests;
