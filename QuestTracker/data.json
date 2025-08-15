@@ -9585,136 +9585,154 @@
                 },
                 {
                     "Title": "Chronicles of a New Era - Pandæmonium",
-                    "Quests": [
+                    "Categories": [
                         {
-                            "Title": "The Crystal from Beyond",
-                            "Id": [
-                                70011
-                            ],
-                            "Area": "Old Sharlayan",
-                            "Level": 90
+                            "Title": "Pandæmonium",
+                            "Quests": [
+                                {
+                                    "Title": "The Crystal from Beyond",
+                                    "Id": [
+                                        70011
+                                    ],
+                                    "Area": "Old Sharlayan",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Where Familiars Dare",
+                                    "Id": [
+                                        70012
+                                    ],
+                                    "Area": "Elpis",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Under the Surface",
+                                    "Id": [
+                                        70013
+                                    ],
+                                    "Area": "The Gates of Pandæmonium",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "The Fires of Creation",
+                                    "Id": [
+                                        70014
+                                    ],
+                                    "Area": "The Gates of Pandæmonium",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Who Wards the Warders?",
+                                    "Id": [
+                                        70015
+                                    ],
+                                    "Area": "The Gates of Pandæmonium",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "An Unwelcome Visitor",
+                                    "Id": [
+                                        70171
+                                    ],
+                                    "Area": "Labyrinthos",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Masks of the Father",
+                                    "Id": [
+                                        70172
+                                    ],
+                                    "Area": "The Gates of Pandæmonium",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "A Keyward's Gaol",
+                                    "Id": [
+                                        70173
+                                    ],
+                                    "Area": "The Gates of Pandæmonium",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Servant of Violence",
+                                    "Id": [
+                                        70174
+                                    ],
+                                    "Area": "The Gates of Pandæmonium",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "One Final Wish",
+                                    "Id": [
+                                        70175
+                                    ],
+                                    "Area": "The Gates of Pandæmonium",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Truth Imperfect",
+                                    "Id": [
+                                        70176
+                                    ],
+                                    "Area": "Stygian Insenescence Cells",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Eater of Souls",
+                                    "Id": [
+                                        70292
+                                    ],
+                                    "Area": "Labyrinthos",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Pandæmonium Awakens",
+                                    "Id": [
+                                        70293
+                                    ],
+                                    "Area": "The Aitiascope",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "The Emissary's Judgment",
+                                    "Id": [
+                                        70294
+                                    ],
+                                    "Area": "The Dæmons' Nest",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "A Mother's Touch",
+                                    "Id": [
+                                        70295
+                                    ],
+                                    "Area": "The Dæmons' Nest",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Guided by the Past",
+                                    "Id": [
+                                        70296
+                                    ],
+                                    "Area": "The Aitiascope",
+                                    "Level": 90
+                                }
+                            ]
                         },
                         {
-                            "Title": "Where Familiars Dare",
-                            "Id": [
-                                70012
-                            ],
-                            "Area": "Elpis",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "Under the Surface",
-                            "Id": [
-                                70013
-                            ],
-                            "Area": "The Gates of Pandæmonium",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "The Fires of Creation",
-                            "Id": [
-                                70014
-                            ],
-                            "Area": "The Gates of Pandæmonium",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "Who Wards the Warders?",
-                            "Id": [
-                                70015
-                            ],
-                            "Area": "The Gates of Pandæmonium",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "An Unwelcome Visitor",
-                            "Id": [
-                                70171
-                            ],
-                            "Area": "Labyrinthos",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "Masks of the Father",
-                            "Id": [
-                                70172
-                            ],
-                            "Area": "The Gates of Pandæmonium",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "A Keyward's Gaol",
-                            "Id": [
-                                70173
-                            ],
-                            "Area": "The Gates of Pandæmonium",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "Servant of Violence",
-                            "Id": [
-                                70174
-                            ],
-                            "Area": "The Gates of Pandæmonium",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "One Final Wish",
-                            "Id": [
-                                70175
-                            ],
-                            "Area": "The Gates of Pandæmonium",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "Truth Imperfect",
-                            "Id": [
-                                70176
-                            ],
-                            "Area": "Stygian Insenescence Cells",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "Eater of Souls",
-                            "Id": [
-                                70292
-                            ],
-                            "Area": "Labyrinthos",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "Pandæmonium Awakens",
-                            "Id": [
-                                70293
-                            ],
-                            "Area": "The Aitiascope",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "The Emissary's Judgment",
-                            "Id": [
-                                70294
-                            ],
-                            "Area": "The Dæmons' Nest",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "A Mother's Touch",
-                            "Id": [
-                                70295
-                            ],
-                            "Area": "The Dæmons' Nest",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "Guided by the Past",
-                            "Id": [
-                                70296
-                            ],
-                            "Area": "The Aitiascope",
-                            "Level": 90
+                            "Title": "Pandæmonium: Epilogue",
+                            "Quests": [
+                                {
+                                    "Title": "A Present from the Present",
+                                    "Id": [
+                                        70788
+                                    ],
+                                    "Area": "Old Sharlayan",
+                                    "Level": 90
+                                }
+                            ]
                         }
-                    ]
+                    ],
                 },
                 {
                     "Title": "Chronicles of a New Era - Myths of the Realm",
