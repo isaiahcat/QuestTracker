@@ -9732,7 +9732,7 @@
                                 }
                             ]
                         }
-                    ],
+                    ]
                 },
                 {
                     "Title": "Chronicles of a New Era - Myths of the Realm",
@@ -39768,6 +39768,30 @@
                                     ],
                                     "Area": "Limsa Lominsa",
                                     "Level": 15
+                                },
+                                {
+                                    "Title": "To Be a Mascot",
+                                    "Id": [
+                                        70215
+                                    ],
+                                    "Area": "Limsa Lominsa",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "Unlike a Dragon",
+                                    "Id": [
+                                        70216
+                                    ],
+                                    "Area": "Middle La Noscea",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "Heavensssturn Trivia",
+                                    "Id": [
+                                        70722
+                                    ],
+                                    "Area": "Limsa Lominsa",
+                                    "Level": 15
                                 }
                             ]
                         },
@@ -40029,6 +40053,14 @@
                                     ],
                                     "Area": "Gridania",
                                     "Level": 15
+                                },
+                                {
+                                    "Title": "I Promise You a Rose Garden",
+                                    "Id": [
+                                        70787
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 15
                                 }
                             ]
                         },
@@ -40268,6 +40300,22 @@
                                     "Title": "Inheritance",
                                     "Id": [
                                         70256
+                                    ],
+                                    "Area": "Ul'dah",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "A Princely Persona",
+                                    "Id": [
+                                        70773
+                                    ],
+                                    "Area": "Ul'dah",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "A Princely Debut",
+                                    "Id": [
+                                        70774
                                     ],
                                     "Area": "Ul'dah",
                                     "Level": 15
@@ -40537,6 +40585,22 @@
                                     ],
                                     "Area": "Gridania",
                                     "Level": 15
+                                },
+                                {
+                                    "Title": "In Pursuit of Eggcellence",
+                                    "Id": [
+                                        70778
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "Eggceeding Expectations",
+                                    "Id": [
+                                        70779
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 15
                                 }
                             ]
                         },
@@ -40659,6 +40723,14 @@
                                     "Title": "Of Impish Importance",
                                     "Id": [
                                         70350
+                                    ],
+                                    "Area": "Ul'dah",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "Royal Rumblings",
+                                    "Id": [
+                                        70858
                                     ],
                                     "Area": "Ul'dah",
                                     "Level": 15
@@ -41127,6 +41199,22 @@
                                         70302
                                     ],
                                     "Area": "Ul'dah",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "Rising to the Call",
+                                    "Id": [
+                                        70551
+                                    ],
+                                    "Area": "Limsa Lominsa",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "We Who Are About to Set Sail Salute You",
+                                    "Id": [
+                                        70552
+                                    ],
+                                    "Area": "Limsa Lominsa",
                                     "Level": 15
                                 }
                             ]
@@ -41751,6 +41839,22 @@
                                     "Title": "Starlight Surprise",
                                     "Id": [
                                         70319
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "Reach for the Stalls",
+                                    "Id": [
+                                        70763
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "Spreading the Warmth and Cheer",
+                                    "Id": [
+                                        70764
                                     ],
                                     "Area": "Gridania",
                                     "Level": 15
