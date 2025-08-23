@@ -9585,134 +9585,152 @@
                 },
                 {
                     "Title": "Chronicles of a New Era - Pandæmonium",
-                    "Quests": [
+                    "Categories": [
                         {
-                            "Title": "The Crystal from Beyond",
-                            "Id": [
-                                70011
-                            ],
-                            "Area": "Old Sharlayan",
-                            "Level": 90
+                            "Title": "Pandæmonium",
+                            "Quests": [
+                                {
+                                    "Title": "The Crystal from Beyond",
+                                    "Id": [
+                                        70011
+                                    ],
+                                    "Area": "Old Sharlayan",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Where Familiars Dare",
+                                    "Id": [
+                                        70012
+                                    ],
+                                    "Area": "Elpis",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Under the Surface",
+                                    "Id": [
+                                        70013
+                                    ],
+                                    "Area": "The Gates of Pandæmonium",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "The Fires of Creation",
+                                    "Id": [
+                                        70014
+                                    ],
+                                    "Area": "The Gates of Pandæmonium",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Who Wards the Warders?",
+                                    "Id": [
+                                        70015
+                                    ],
+                                    "Area": "The Gates of Pandæmonium",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "An Unwelcome Visitor",
+                                    "Id": [
+                                        70171
+                                    ],
+                                    "Area": "Labyrinthos",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Masks of the Father",
+                                    "Id": [
+                                        70172
+                                    ],
+                                    "Area": "The Gates of Pandæmonium",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "A Keyward's Gaol",
+                                    "Id": [
+                                        70173
+                                    ],
+                                    "Area": "The Gates of Pandæmonium",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Servant of Violence",
+                                    "Id": [
+                                        70174
+                                    ],
+                                    "Area": "The Gates of Pandæmonium",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "One Final Wish",
+                                    "Id": [
+                                        70175
+                                    ],
+                                    "Area": "The Gates of Pandæmonium",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Truth Imperfect",
+                                    "Id": [
+                                        70176
+                                    ],
+                                    "Area": "Stygian Insenescence Cells",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Eater of Souls",
+                                    "Id": [
+                                        70292
+                                    ],
+                                    "Area": "Labyrinthos",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Pandæmonium Awakens",
+                                    "Id": [
+                                        70293
+                                    ],
+                                    "Area": "The Aitiascope",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "The Emissary's Judgment",
+                                    "Id": [
+                                        70294
+                                    ],
+                                    "Area": "The Dæmons' Nest",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "A Mother's Touch",
+                                    "Id": [
+                                        70295
+                                    ],
+                                    "Area": "The Dæmons' Nest",
+                                    "Level": 90
+                                },
+                                {
+                                    "Title": "Guided by the Past",
+                                    "Id": [
+                                        70296
+                                    ],
+                                    "Area": "The Aitiascope",
+                                    "Level": 90
+                                }
+                            ]
                         },
                         {
-                            "Title": "Where Familiars Dare",
-                            "Id": [
-                                70012
-                            ],
-                            "Area": "Elpis",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "Under the Surface",
-                            "Id": [
-                                70013
-                            ],
-                            "Area": "The Gates of Pandæmonium",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "The Fires of Creation",
-                            "Id": [
-                                70014
-                            ],
-                            "Area": "The Gates of Pandæmonium",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "Who Wards the Warders?",
-                            "Id": [
-                                70015
-                            ],
-                            "Area": "The Gates of Pandæmonium",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "An Unwelcome Visitor",
-                            "Id": [
-                                70171
-                            ],
-                            "Area": "Labyrinthos",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "Masks of the Father",
-                            "Id": [
-                                70172
-                            ],
-                            "Area": "The Gates of Pandæmonium",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "A Keyward's Gaol",
-                            "Id": [
-                                70173
-                            ],
-                            "Area": "The Gates of Pandæmonium",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "Servant of Violence",
-                            "Id": [
-                                70174
-                            ],
-                            "Area": "The Gates of Pandæmonium",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "One Final Wish",
-                            "Id": [
-                                70175
-                            ],
-                            "Area": "The Gates of Pandæmonium",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "Truth Imperfect",
-                            "Id": [
-                                70176
-                            ],
-                            "Area": "Stygian Insenescence Cells",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "Eater of Souls",
-                            "Id": [
-                                70292
-                            ],
-                            "Area": "Labyrinthos",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "Pandæmonium Awakens",
-                            "Id": [
-                                70293
-                            ],
-                            "Area": "The Aitiascope",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "The Emissary's Judgment",
-                            "Id": [
-                                70294
-                            ],
-                            "Area": "The Dæmons' Nest",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "A Mother's Touch",
-                            "Id": [
-                                70295
-                            ],
-                            "Area": "The Dæmons' Nest",
-                            "Level": 90
-                        },
-                        {
-                            "Title": "Guided by the Past",
-                            "Id": [
-                                70296
-                            ],
-                            "Area": "The Aitiascope",
-                            "Level": 90
+                            "Title": "Pandæmonium: Epilogue",
+                            "Quests": [
+                                {
+                                    "Title": "A Present from the Present",
+                                    "Id": [
+                                        70788
+                                    ],
+                                    "Area": "Old Sharlayan",
+                                    "Level": 90
+                                }
+                            ]
                         }
                     ]
                 },
@@ -39750,6 +39768,30 @@
                                     ],
                                     "Area": "Limsa Lominsa",
                                     "Level": 15
+                                },
+                                {
+                                    "Title": "To Be a Mascot",
+                                    "Id": [
+                                        70215
+                                    ],
+                                    "Area": "Limsa Lominsa",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "Unlike a Dragon",
+                                    "Id": [
+                                        70216
+                                    ],
+                                    "Area": "Middle La Noscea",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "Heavensssturn Trivia",
+                                    "Id": [
+                                        70722
+                                    ],
+                                    "Area": "Limsa Lominsa",
+                                    "Level": 15
                                 }
                             ]
                         },
@@ -40011,6 +40053,14 @@
                                     ],
                                     "Area": "Gridania",
                                     "Level": 15
+                                },
+                                {
+                                    "Title": "I Promise You a Rose Garden",
+                                    "Id": [
+                                        70787
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 15
                                 }
                             ]
                         },
@@ -40250,6 +40300,22 @@
                                     "Title": "Inheritance",
                                     "Id": [
                                         70256
+                                    ],
+                                    "Area": "Ul'dah",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "A Princely Persona",
+                                    "Id": [
+                                        70773
+                                    ],
+                                    "Area": "Ul'dah",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "A Princely Debut",
+                                    "Id": [
+                                        70774
                                     ],
                                     "Area": "Ul'dah",
                                     "Level": 15
@@ -40519,6 +40585,22 @@
                                     ],
                                     "Area": "Gridania",
                                     "Level": 15
+                                },
+                                {
+                                    "Title": "In Pursuit of Eggcellence",
+                                    "Id": [
+                                        70778
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "Eggceeding Expectations",
+                                    "Id": [
+                                        70779
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 15
                                 }
                             ]
                         },
@@ -40641,6 +40723,14 @@
                                     "Title": "Of Impish Importance",
                                     "Id": [
                                         70350
+                                    ],
+                                    "Area": "Ul'dah",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "Royal Rumblings",
+                                    "Id": [
+                                        70858
                                     ],
                                     "Area": "Ul'dah",
                                     "Level": 15
@@ -41109,6 +41199,22 @@
                                         70302
                                     ],
                                     "Area": "Ul'dah",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "Rising to the Call",
+                                    "Id": [
+                                        70551
+                                    ],
+                                    "Area": "Limsa Lominsa",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "We Who Are About to Set Sail Salute You",
+                                    "Id": [
+                                        70552
+                                    ],
+                                    "Area": "Limsa Lominsa",
                                     "Level": 15
                                 }
                             ]
@@ -41733,6 +41839,22 @@
                                     "Title": "Starlight Surprise",
                                     "Id": [
                                         70319
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "Reach for the Stalls",
+                                    "Id": [
+                                        70763
+                                    ],
+                                    "Area": "Gridania",
+                                    "Level": 15
+                                },
+                                {
+                                    "Title": "Spreading the Warmth and Cheer",
+                                    "Id": [
+                                        70764
                                     ],
                                     "Area": "Gridania",
                                     "Level": 15
