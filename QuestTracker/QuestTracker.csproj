@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Dalamud.NET.Sdk/13.0.0">
   <PropertyGroup>
-    <PluginVersion>1.1.1.0</PluginVersion>
+    <PluginVersion>1.1.2.0</PluginVersion>
   </PropertyGroup>
 
   <PropertyGroup>
